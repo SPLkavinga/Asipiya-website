@@ -51,7 +51,7 @@ function Home() {
                 style={{ backgroundImage: `url(${backgroundImg})` }}
             >
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+                <div className="absolute inset-0 z-0 bg-black bg-opacity-50"></div>
 
                 {/* Image on the right side */}
                 <div className="w-full md:w-1/2 h-[250px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-32">
@@ -59,18 +59,18 @@ function Home() {
                 </div>
 
                 {/* Text content on the left side */}
-                <div className="w-full text-center md:w-1/2 md:pr-8 md:text-left px-4 md:px-52 py-8 md:py-0 z-10">
+                <div className="z-10 w-full px-4 py-8 text-center md:w-1/2 md:pr-8 md:text-left md:px-52 md:py-0">
                     <h2 className="text-4xl font-bold text-white">Empowering Lives</h2>
                     <h2 className="text-4xl font-bold text-white">Globally</h2>
                     <h2 className="text-4xl font-bold text-white">With Trusted Microfinance</h2>
                     <h2 className="mb-4 text-4xl font-bold text-white">Solutions.</h2>
-                    <p className="text-base text-white mb-8">
+                    <p className="mb-8 text-base text-white">
                         Empowering Businesses with Scalable and Flexible Microfinance Solutions.
                     </p>
 
                     {/* Button below the text content */}
                     <Link
-                        className="font-bold bg-purple-600 border-2 rounded-full px-7 py-2 text-white"
+                        className="py-2 font-bold text-white bg-purple-600 border-2 rounded-full px-7"
                         to="/About"
                     >
                         Let's get started
@@ -80,8 +80,8 @@ function Home() {
             <br />
 
             <div>
-                <p className='text-center text-5xl font-bold'>Our <span className='text-purple-600'> Services</span> </p>
-                <p className='text-center mt-4 text-slate-500'>
+                <p className='text-5xl font-bold text-center'>Our <span className='text-purple-600'> Services</span> </p>
+                <p className='mt-4 text-center text-slate-500'>
                     At Asipiya Soft Solutions, we specialize in designing scalable microfinance solutions that drive your 
                     business forward in the digital era.  
                 </p>
@@ -93,21 +93,21 @@ function Home() {
 
 
             {/*Service section */}
-            <div className="bg-purple-50 py-12">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+            <div className="py-12 bg-purple-50">
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <h2 className="mb-8 text-2xl font-bold text-center text-gray-800">
                     Explore Our Services
                 </h2>
 
                 {/* Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="bg-purple-50 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
+                            className="p-6 text-center transition rounded-lg shadow-md bg-purple-50 hover:shadow-lg"
                         >
-                            <div className="text-5xl mb-4">{feature.icon}</div>
-                            <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                            <div className="mb-4 text-5xl">{feature.icon}</div>
+                            <h3 className="mb-2 text-lg font-semibold text-gray-800">
                                 {feature.title}
                             </h3>
                             <p className="text-sm text-gray-600">{feature.description}</p>
@@ -117,7 +117,7 @@ function Home() {
 
                 {/* Button */}
                 <div className="mt-12 text-center">
-                    <button className="bg-purple-600 text-white text-lg font-semibold px-6 py-1 rounded-full hover:bg-purple-700 transition">
+                    <button className="px-6 py-1 text-lg font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
                         Learn More
                     </button>
                 </div>
@@ -136,9 +136,9 @@ function Home() {
                 />
             </div>
 
-            <div className="w-full text-center md:w-1/2 md:pr-8 md:text-left mx-32">
+            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
                 <h2 className="text-4xl font-bold text-purple-600 md:mb-2">Revolutionary </h2>
-                <h2 className="text-4xl font-bold  md:mb-2">Microfinance Solutions</h2>
+                <h2 className="text-4xl font-bold md:mb-2">Microfinance Solutions</h2>
                 <h2 className="mb-4 text-4xl font-bold">Development</h2>
                 <p className="text-base">
                     Building scalable microfinance solutions, ready-to-launch tools, and applications powered by cutting-edge 
@@ -152,39 +152,45 @@ function Home() {
             <img className="w-full h-auto mt-4 mb-8" src={frame} alt="" />
         </div>
 
-         {/* Latest Project Section*/}
-         <div>
-    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-800 mb-8">
-        Our Latest Project
-    </h2>
-    <div className="flex flex-wrap justify-center gap-8 md:gap-24 mb-10">
-        <img 
-            src={Project1} 
-            alt="project 1" 
-            className="w-full sm:w-64 md:w-80 lg:w-80 h-auto" 
-        />
-        <img 
-            src={Project3} 
-            alt="project 2" 
-            className="w-full sm:w-64 md:w-80 lg:w-80 h-auto" 
-        />
-        <img 
-            src={Project2} 
-            alt="project 3" 
-            className="w-full sm:w-64 md:w-80 lg:w-80 h-auto" 
-        />
-    </div>
-</div>
-
-
-
+        {/* Latest Project Section*/}
+        <div>
+            <h2 className="mb-8 text-2xl font-bold text-center text-gray-800 sm:text-3xl md:text-4xl">
+                Our Latest Project
+            </h2>
+            <div className="flex flex-wrap justify-center gap-8 mb-10 md:gap-24">
+                {[
+                    { src: Project1, alt: "Project 1", name: "Micro Services", link: "/project1" },
+                    { src: Project2, alt: "Project 2", name: "Project Name 2", link: "/project2" },
+                    { src: Project3, alt: "Project 3", name: "Project Name 3", link: "/project3" },
+                ].map((project, index) => (
+                    <div key={index} className="relative w-full group sm:w-64 md:w-80 lg:w-80">
+                        <img 
+                            src={project.src} 
+                            alt={project.alt} 
+                            className="w-full h-auto transition duration-300 group-hover:blur-sm"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center transition duration-300 opacity-0 group-hover:opacity-100">
+                            <div className="text-center">
+                                <p className="mb-2 text-lg font-semibold text-white">{project.name}</p>
+                                <a 
+                                    href={project.link} 
+                                    className="px-4 py-2 text-white transition duration-300 bg-gray-800 rounded-md hover:bg-gray-700"
+                                >
+                                    See More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
 
 
 
         {/* Clients Review Section*/}
-        <div className="flex flex-col md:flex-row items-center justify-between p-6 md:p-12 bg-white">
+        <div className="flex flex-col items-center justify-between p-6 bg-white md:flex-row md:p-12">
             {/* Left: Review Card */}
-            <div className="w-full md:w-1/2 flex justify-center md:justify-start md:ml-36">
+            <div className="flex justify-center w-full md:w-1/2 md:justify-start md:ml-36">
                 <div className="p-6 bg-white shadow-lg rounded-lg w-[90%] md:w-[75%]">
                 <h3 className="text-lg font-semibold">Samantha Payne</h3>
                 <p className="text-sm text-gray-500">Graphic Designer</p>
@@ -196,16 +202,16 @@ function Home() {
                     Your company has been great at keeping me in work, they always line
                     something else up.
                 </p>
-                <p className="text-xs text-gray-400 mt-4">23 Nov 2021</p>
+                <p className="mt-4 text-xs text-gray-400">23 Nov 2021</p>
                 </div>
             </div>
 
             {/* Right: Title and Description */}
-            <div className="w-full md:w-1/2 text-center md:text-left mt-8 md:mt-0 md:m-20">
+            <div className="w-full mt-8 text-center md:w-1/2 md:text-left md:mt-0 md:m-20">
                 <h2 className="text-3xl font-bold">
                 <span className="text-purple-600">Client’s</span> Reviews
                 </h2>
-                <p className="text-gray-600 mt-4 text-sm">
+                <p className="mt-4 text-sm text-gray-600">
                 Our clients trust us for delivering reliable, innovative microfinance
                 solutions that drive growth and success across industries worldwide.
                 </p>
@@ -224,11 +230,11 @@ function Home() {
                 
                 <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-14 md:m-10">
                     <h2 className="text-4xl font-bold "><span className='text-purple-600'>Countries </span>We Serve</h2>
-                    <p className="text-base mt-4">
+                    <p className="mt-4 text-base">
                         We offer innovative microfinance solutions in Dubai, the United States, Canada, Singapore, Sri lanka and 
                         Australia, empowering businesses and communities with reliable financial support.
                     </p>
-                    <img className='mt-6 h-10' src={img4} alt="" />
+                    <img className='h-10 mt-6' src={img4} alt="" />
                 </div>
             </div>
             
@@ -236,13 +242,13 @@ function Home() {
 
             {/* Cooperate section */}
             <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                <p className="text-4xl text-black text-center font-bold">
-                    LET'S DEVELOP, <span className="text-purple-600 font-bold">LETS COOPERATE!</span>
+                <p className="text-4xl font-bold text-center text-black">
+                    LET'S DEVELOP, <span className="font-bold text-purple-600">LETS COOPERATE!</span>
                 </p>
                 <img className="mt-5 mb-5" src={img5} alt="Centered_Image" />
                 <Link
                     to="/your-target-path"
-                    className="px-8 py-2 bg-white text-black font-bold rounded-full border border-black  transition"
+                    className="px-8 py-2 font-bold text-black transition bg-white border border-black rounded-full"
                 >
                     Let's Talk
                 </Link>
