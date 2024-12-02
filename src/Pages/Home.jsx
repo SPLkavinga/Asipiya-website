@@ -11,6 +11,7 @@ import Project2 from "../assets/project 2.jpg"
 import Project3 from "../assets/project 3.jpg"
 import backgroundImg from '../assets/background.png';
 import frame from '../assets/Frame 4.png'
+import WhyChooseUs from './../Components/WhyChooseUs';
 
 
 function Home() {
@@ -41,29 +42,30 @@ function Home() {
             icon: "📄", // Replace this with an actual image if necessary
         },
     ];
+
     return (
         <>
             <NavBar />
 
             {/* Full-screen background section */}
             <div
-                className="relative flex flex-col md:flex-row-reverse items-center justify-center w-full h-auto bg-cover bg-center md:h-[450px]"
+                className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row-reverse md:h-screen"
                 style={{ backgroundImage: `url(${backgroundImg})` }}
             >
                 {/* Dark overlay */}
                 <div className="absolute inset-0 z-0 bg-black bg-opacity-50"></div>
 
                 {/* Image on the right side */}
-                <div className="w-full md:w-1/2 h-[250px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-32">
+                <div className="w-full md:w-1/2 md:h-[450px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-32">
                     <img className="object-cover rounded-lg shadow-md" src={img1} alt="Placeholder" />
                 </div>
 
                 {/* Text content on the left side */}
                 <div className="z-10 w-full px-4 py-8 text-center md:w-1/2 md:pr-8 md:text-left md:px-52 md:py-0">
-                    <h2 className="text-4xl font-bold text-white">Empowering Lives</h2>
-                    <h2 className="text-4xl font-bold text-white">Globally</h2>
-                    <h2 className="text-4xl font-bold text-white">With Trusted Microfinance</h2>
-                    <h2 className="mb-4 text-4xl font-bold text-white">Solutions.</h2>
+                    <h2 className="text-5xl font-bold text-white">Empowering Lives</h2>
+                    <h2 className="text-5xl font-bold text-white">Globally</h2>
+                    <h2 className="text-5xl font-bold text-white">With Trusted Microfinance</h2>
+                    <h2 className="mb-4 text-5xl font-bold text-white">Solutions.</h2>
                     <p className="mb-8 text-base text-white">
                         Empowering Businesses with Scalable and Flexible Microfinance Solutions.
                     </p>
@@ -153,7 +155,7 @@ function Home() {
         </div>
 
         {/* Latest Project Section*/}
-        <div>
+        {/* <div>
             <h2 className="mb-8 text-2xl font-bold text-center text-gray-800 sm:text-3xl md:text-4xl">
                 Our Latest Project
             </h2>
@@ -183,7 +185,8 @@ function Home() {
                     </div>
                 ))}
             </div>
-        </div>
+        </div> */}
+          <WhyChooseUs/>
 
 
 
@@ -253,10 +256,6 @@ function Home() {
                     Let's Talk
                 </Link>
             </div>
-
-
-
-
 
             <Footer />
         </>

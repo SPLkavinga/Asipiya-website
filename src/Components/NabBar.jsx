@@ -17,7 +17,7 @@ function NavBar() {
           <a href="/home" className="hover:text-[#9733D1]">Home</a>
         </li>
         <li>
-          <a href="/AboutUs" className="hover:text-[#9733D1]">About us</a>
+          <a href="/about" className="hover:text-[#9733D1]">About us</a>
         </li>
         <li>
           <a href="/Services" className="hover:text-[#9733D1]">Services</a>
@@ -34,7 +34,7 @@ function NavBar() {
       </ul>
 
       {/* Right Section: Buttons */}
-      <div className="hidden md:flex space-x-4 mr-4">
+      <div className="hidden mr-4 space-x-4 md:flex">
         <button className="bg-[#7D00C5] rounded-full w-[147px] h-[44px] text-white font-semibold">
           Our Product
         </button>
@@ -65,7 +65,7 @@ function NavBar() {
 
       {/* Drawer Overlay */}
       {isDrawerOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsDrawerOpen(false)}></div>
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={() => setIsDrawerOpen(false)}></div>
       )}
 
       {/* Drawer */}
@@ -99,7 +99,7 @@ function NavBar() {
             <a href="/home" className="hover:text-[#9733D1]">Home</a>
           </li>
           <li>
-            <a href="/AboutUs" className="hover:text-[#9733D1]">About us</a>
+            <a href="/about" className="hover:text-[#9733D1]">About us</a>
           </li>
           <li>
             <a href="/Services" className="hover:text-[#9733D1]">Services</a>
