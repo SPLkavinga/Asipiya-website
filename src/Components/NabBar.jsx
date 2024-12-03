@@ -20,7 +20,7 @@ function NavBar() {
           <a href="/about" className="hover:text-[#9733D1]">About us</a>
         </li>
         <li>
-          <a href="/Services" className="hover:text-[#9733D1]">Services</a>
+          <a href="/Microfinance" className="hover:text-[#9733D1]">Services</a>
         </li>
         <li>
           <a href="/Blogs" className="hover:text-[#9733D1]">Blogs</a>
@@ -102,7 +102,7 @@ function NavBar() {
             <a href="/about" className="hover:text-[#9733D1]">About us</a>
           </li>
           <li>
-            <a href="/Services" className="hover:text-[#9733D1]">Services</a>
+            <a href="/Microfinance" className="hover:text-[#9733D1]">Services</a>
           </li>
           <li>
             <a href="/Blogs" className="hover:text-[#9733D1]">Blogs</a>

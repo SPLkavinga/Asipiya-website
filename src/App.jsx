@@ -4,6 +4,7 @@ import AboutUs from './Pages/AboutUs';
 import Contact from './Pages/Contact';
 import Vacancie from './Pages/Vacancie';
 import Intern from './Pages/Intern';
+import Microfinance from './Pages/MicroFinance';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/vacancie' element={<Vacancie/>}/>
       <Route path='/intern' element={<Intern/>}/>
+      <Route path='/Microfinance' element={<Microfinance/>}/>
     </Routes>
     </BrowserRouter>
   );
