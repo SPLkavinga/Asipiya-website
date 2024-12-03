@@ -6,9 +6,6 @@ import img2 from '../assets/img1.png';
 import img3 from "../assets/rafiki.png"
 import img4 from "../assets/Group 201.png"
 import img5 from "../assets/amico.png"
-import Project1 from "../assets/project 1.jpg"
-import Project2 from "../assets/project 2.jpg"
-import Project3 from "../assets/project 3.jpg"
 import backgroundImg from '../assets/background.png';
 import frame from '../assets/Frame 4.png'
 import WhyChooseUs from './../Components/WhyChooseUs';

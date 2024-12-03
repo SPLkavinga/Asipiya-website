@@ -29,7 +29,7 @@ function NavBar() {
           <a href="/Careers" className="hover:text-[#9733D1]">Careers</a>
         </li>
         <li>
-          <a href="/ContactUs" className="hover:text-[#9733D1]">Contact Us</a>
+          <a href="/contact" className="hover:text-[#9733D1]">Contact Us</a>
         </li>
       </ul>
 
@@ -111,7 +111,7 @@ function NavBar() {
             <a href="/Careers" className="hover:text-[#9733D1]">Careers</a>
           </li>
           <li>
-            <a href="/ContactUs" className="hover:text-[#9733D1]">Contact Us</a>
+            <a href="/contact" className="hover:text-[#9733D1]">Contact Us</a>
           </li>
         </ul>
       </div>
