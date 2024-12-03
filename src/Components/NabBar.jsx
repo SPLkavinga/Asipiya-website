@@ -14,7 +14,7 @@ function NavBar() {
       {/* Middle Section: Desktop Navigation */}
       <ul className="hidden md:flex space-x-8 text-[16px] font-medium">
         <li>
-          <a href="/home" className="hover:text-[#9733D1]">Home</a>
+          <a href="/" className="hover:text-[#9733D1]">Home</a>
         </li>
         <li>
           <a href="/about" className="hover:text-[#9733D1]">About us</a>
@@ -38,7 +38,7 @@ function NavBar() {
         <button className="bg-[#7D00C5] rounded-full w-[147px] h-[44px] text-white font-semibold">
           Our Product
         </button>
-        <button className="bg-white border-black border rounded-full w-[147px] h-[44px] text-black font-semibold">
+        <button className="bg-white border-[#333333] border-opacity-70 border-2 rounded-full w-[147px] h-[44px] text-[#333333] text-opacity-70 font-semibold">
           Let's Talk
         </button>
       </div>
