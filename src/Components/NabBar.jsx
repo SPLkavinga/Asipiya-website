@@ -96,7 +96,7 @@ function NavBar() {
 
         <ul className="space-y-6 p-4 text-[16px] font-medium">
           <li>
-            <a href="/home" className="hover:text-[#9733D1]">Home</a>
+            <a href="/" className="hover:text-[#9733D1]">Home</a>
           </li>
           <li>
             <a href="/about" className="hover:text-[#9733D1]">About us</a>

@@ -3,6 +3,9 @@ import Home from './Pages/Home';
 import AboutUs from './Pages/AboutUs';
 import Contact from './Pages/Contact';
 import Vacancie from './Pages/Vacancie';
+import Intern from './Pages/Intern';
+import Microfinance from './Pages/MicroFinance';
+import Services from './Pages/Services';
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Route path='/about' element={<AboutUs/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/vacancie' element={<Vacancie/>}/>
+      <Route path='/intern' element={<Intern/>}/>
+      <Route path='/Services' element={<Services/>}/>
+      <Route path='/Microfinance' element={<Microfinance/>}/>
     </Routes>
     </BrowserRouter>
   );
