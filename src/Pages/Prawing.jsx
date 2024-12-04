@@ -14,44 +14,44 @@ import BusinessForward from './../Components/BusinessForward';
 
 const features = [
   {
-    title: "Branch-wise Group/Loan Creation",
+    title: "Enhanced Efficiency",
     description:
-      "With Asipiya Finance, create and manage groups and loans seamlessly across different branches.",
+      "Streamline your prawning operations with automated tools and real-time tracking.",
     icon: "🏢", // Replace with SVG or actual icon
   },
   {
-    title: "Digital Application",
+    title: "User-Friendly Interface",
     description:
-      "Improve loan officer efficiency and extend outreach with the Asipiya Finance Mobile Application for your field officers!",
+      "Enjoy a simple, intuitive design that makes prawning easier for all user",
     icon: "📱", // Replace with SVG or actual icon
   },
   {
-    title: "Management Dashboard",
+    title: "Data-Driven Insights",
     description:
-      "Asipiya Finance enables management to make faster and more informed decisions through real-time data insights.",
+      "Leverage powerful analytics to optimize your prawning strategies and performance.",
     icon: "📊", // Replace with SVG or actual icon
   },
   {
-    title: "Integrated Accounting",
+    title: "Seamless Integration ",
     description:
-      "With Asipiya Finance, you gain access to fully automated financial reports and manual journal entry options, ensuring reduced paperwork and efficient management.",
+      " Integrate Asipiya Prawing effortlessly with your existing workflows and technology.",
     icon: "📋", // Replace with SVG or actual icon
   },
   {
-    title: "Individual & Group Management",
+    title: "Real-Time Updates",
     description:
-      "The Asipiya Finance Microfinance System fully supports methodologies for both individual and group clients.",
+      "Get instant notifications and live monitoring for better decision-making",
     icon: "👥", // Replace with SVG or actual icon
   },
   {
-    title: "Loan Management",
+    title: "Customizable Features",
     description:
-      "Easily launch loan products and generate loan-related documents instantly with the Asipiya Finance Microfinance Management System.",
+      "Adapt Asipiya Prawing to suit your unique prawning needs with flexible options.",
     icon: "💼", // Replace with SVG or actual icon
   },
 ];
 
-const Microfinance = () => {
+const Prawing = () => {
   return (
     <>
         <NavBar />
@@ -67,13 +67,11 @@ const Microfinance = () => {
 
                 {/* Text content on the left side */}
                 <div className="z-10 w-full px-4 py-8 text-center md:w-1/2 md:pr-2 md:text-left md:px-52 md:py-0">
-                    <h2 className="text-5xl font-bold text-white">Empowering Lives</h2>
-                    <h2 className="text-5xl font-bold text-white">Globally with Asipiya </h2>
-                    <h2 className="text-5xl font-bold text-white">Finance </h2>
-                    <h2 className="text-5xl font-bold text-white">With Trusted Microfinance</h2>
-                    <h2 className="mb-4 text-5xl font-bold text-white">Solutions.</h2>
+                    <h2 className="text-5xl font-bold text-white">Discover smarter </h2>
+                    <h2 className="text-5xl font-bold text-white">prawning with</h2>
+                    <h2 className="text-5xl font-bold text-white">Asipiya Prawing.</h2>
                     <p className="mb-8 text-base text-white">
-                        Achieve complete control and visibility of your microfinance operations with the Asipiya Finance .
+                        Get total control of your prawning operations with the Asipiya Prawing
                     </p>
                     {/* Button below the text content */}
                     <Link
@@ -93,7 +91,7 @@ const Microfinance = () => {
         <div className="min-h-screen px-4 py-12 bg-purple-50 sm:px-8 lg:px-16">
         <div className="mb-12 text-center">
             <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
-            Why Choose Microfinance Solution?
+            Why Choose the Asipiya Prawing System?
             </h2>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -117,9 +115,9 @@ const Microfinance = () => {
         </div>
         </div>
 
-        <p className="mt-10 text-4xl font-bold text-center">How Can Microfinance Help You?</p>
-        <p className="mt-3 text-center text-gray-500">Transform your business with Asipiya Finance, a cloud-based Microfinance System designed to improve efficiency, reduce costs</p>
-        <p className="mb-10 text-center text-gray-500">and enable effortless product launches.</p>
+        <p className="mt-10 text-4xl font-bold text-center">How Can Asipiya Prawing System Help You?</p>
+        <p className="mt-3 text-center text-gray-500">Transform your business using Microfinance which will improve efficiency, reduce costs and give your business the ability to launch new</p>
+        <p className="mb-10 text-center text-gray-500">products effortlessly with our cloud based Microfinance System. A proud Sri Lankan Product!</p>
         {/* information about micro finance section */}
         <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
                 <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
@@ -130,12 +128,11 @@ const Microfinance = () => {
 
                 
                 <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Cash Flow Accumulated</h2>
+                    <h2 className="text-2xl font-bold ">Gold Valuation and Collateral Management</h2>
                     <p className="mt-4 text-sm text-gray-500">
-                      With Asipiya Finance, the Cash Flow Accumulated feature offers a clear view of your company’s financial 
-                      health by tracking cash inflows and outflows. This tool enables you to monitor liquidity, assess cash
-                       generation, and stay on top of financial obligations, ultimately supporting long-term trend analysis, 
-                       future cash planning, and informed strategic decisions.
+                        The Asipiya Pawning Web App streamlines the assessment and valuation of gold items, ensuring accurate tracking of collateral and efficient 
+                        loan issuance. With its intuitive interface, users can record gold item details, calculate their value, and maintain precise records for 
+                        every transaction, enhancing both accuracy and accountability.
                     </p>
                 </div>
             </div>
@@ -151,12 +148,11 @@ const Microfinance = () => {
             </div>
 
             <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
+                <h2 className="text-2xl font-bold ">Pawning Ticket Issuance</h2>
                 <p className="mt-4 text-base text-gray-500">
-                  The Cash Flow Monthly feature in Asipiya Finance offers detailed insights into monthly cash inflows and 
-                  outflows, helping your organization identify patterns, manage short-term liquidity, and ensure sufficient 
-                  cash to meet operational needs. This feature supports budgeting and forecasting, enabling better 
-                  financial planning and control.
+                    The Asipiya Pawning Web App automatically generates comprehensive pawning tickets, including detailed item descriptions, gold weight, 
+                    assessed value, loan amount, interest rate, and maturity date. This ensures a seamless and professional process, reducing manual effort 
+                    while maintaining accurate and standardized documentation for every transaction.
                 </p>
             </div>
         </div>
@@ -171,12 +167,11 @@ const Microfinance = () => {
 
                 
                 <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Profit/Loss:</h2>
+                    <h2 className="text-2xl font-bold ">Loan Issuance Based on Gold Value</h2>
                     <p className="mt-4 text-sm text-gray-500">
-                    The Profit/Loss feature calculates the net profit or loss by comparing the company’s total revenues with 
-                    its total expenses over a specific period. This is crucial for assessing the company's financial 
-                    performance, understanding its profitability, and making informed business decisions. 
-                    It helps in identifying areas of improvement, cost management, and revenue enhancement.
+                        The Asipiya Pawning Web App facilitates loan issuance based on the appraised value of gold collateral. It offers customizable 
+                        loan-to-value (LTV) ratios, allowing flexibility to align with business policies and customer needs while ensuring accurate and efficient 
+                        loan processing.
                     </p>
                 </div>
             </div>
@@ -192,12 +187,11 @@ const Microfinance = () => {
             </div>
 
             <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Balance Sheet</h2>
+                <h2 className="text-2xl font-bold ">Interest and Penalty Calculation</h2>
                 <p className="mt-4 text-base text-gray-500">
-                  The Profit/Loss feature in Asipiya Finance calculates net profit or loss by comparing your company’s total 
-                  revenues with total expenses over a specific period. This is essential for assessing financial performance, 
-                  understanding profitability, and making informed business decisions. It also helps identify areas for 
-                  improvement, cost management, and revenue enhancement
+                    The Asipiya Pawning Web App automatically calculates loan interest and overdue payment penalties, incorporating customizable parameters. 
+                    Additionally, it can factor in gold market fluctuations, ensuring precise and dynamic financial management aligned with market trends and 
+                    customer agreements.
                 </p>
             </div>
         </div>
@@ -213,12 +207,11 @@ const Microfinance = () => {
 
                 
                 <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Trial Balance</h2>
+                    <h2 className="text-2xl font-bold ">Renewal and Redemption Options</h2>
                     <p className="mt-4 text-sm text-gray-500">
-                      The Trial Balance feature prepares a summary of all ledger accounts with their respective debit and 
-                      credit balances. This serves as a preliminary check before preparing financial statements, 
-                      ensuring that total debits equal total credits. It helps in identifying any discrepancies or 
-                      errors in the accounting records, providing a basis for further adjustments and corrections.
+                        The Asipiya Pawning Web App streamlines the management of loan renewals and gold item redemptions. It allows customers to renew pawning loans 
+                        with ease, updating terms and conditions as needed. Upon loan repayment, the app facilitates the secure and efficient redemption of gold items, 
+                        ensuring a seamless and customer-friendly experience.
                     </p>
                 </div>
             </div>
@@ -235,12 +228,11 @@ const Microfinance = () => {
             </div>
 
             <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
+                <h2 className="text-2xl font-bold ">Gold Auction Management</h2>
                 <p className="mt-4 text-base text-gray-500">
-                  Asipiya Finance’s Trial Balance feature summarizes all ledger accounts with debit and credit balances, 
-                  ensuring that debits and credits match before preparing financial statements. This tool is key for 
-                  detecting errors or discrepancies in accounting records, making it easier to identify areas that require 
-                  adjustments or corrections.
+                    The Asipiya Pawning Web App manages the auction process for unredeemed gold efficiently. It tracks inventory, schedules auctions, and records 
+                    detailed bidding information, ensuring transparency and accuracy. The app streamlines the process from item listing to final sale, 
+                    helping businesses maximize value while maintaining compliance with regulatory requirements.
                 </p>
             </div>
         </div>
@@ -255,11 +247,11 @@ const Microfinance = () => {
 
                 
                 <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">	Branch Equity</h2>
+                    <h2 className="text-2xl font-bold ">Document and Asset Management</h2>
                     <p className="mt-4 text-sm text-gray-500">
-                      With Asipiya Finance, the Branch Equity feature allows you to monitor and manage the equity of each 
-                      branch individually. By evaluating financial performance, asset management, and profitability, 
-                      this tool supports better decision-making and efficient resource allocation across your branches.
+                        The Asipiya Pawning Web App allows users to upload and securely store gold appraisals, pawn tickets, and customer documents. It ensures 
+                        easy access to records through an organized and searchable system, enhancing efficiency while maintaining data confidentiality 
+                        and compliance with record-keeping regulations.
                     </p>
                 </div>
             </div>
@@ -275,11 +267,11 @@ const Microfinance = () => {
             </div>
 
             <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Interbank Transfers</h2>
+                <h2 className="text-2xl font-bold ">Bulk Payment and Invoice Processing</h2>
                 <p className="mt-4 text-base text-gray-500">
-                  Asipiya Finance’s Interbank Transfers feature enables smooth and accurate recording of fund transfers 
-                  between your company’s bank accounts. This feature supports efficient cash management, 
-                  optimizes liquidity, and ensures that financial obligations are met promptly.
+                    The Asipiya Pawning Web App streamlines the repayment process by enabling the bulk updating of multiple payments and generating invoices in batches. 
+                    This feature enhances efficiency in loan management, reduces manual effort, and ensures accurate financial records for both customers and the 
+                    business.
                 </p>
             </div>
         </div>
@@ -295,57 +287,10 @@ const Microfinance = () => {
 
                 
                 <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
+                    <h2 className="text-2xl font-bold ">Service Benefits</h2>
                     <p className="mt-4 text-sm text-gray-500">
-                      The General Ledger Summary feature in Asipiya Finance consolidates and summarizes all financial 
-                      transactions recorded in the general ledger. It provides a comprehensive overview of your company’s 
-                      financial activities, supporting detailed financial analysis and reporting. This feature is essential 
-                      for tracking financial performance, managing accounts, and preparing accurate financial statements
-                    </p>
-                </div>
-            </div>
-
-
-            {/* Reconcile Entries section */}
-            <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10">
-            <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-                <img
-                    className="object-cover rounded-lg shadow-md md:mr-52"
-                    src={img4}
-                    alt="Placeholder"
-                />
-            </div>
-
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Reconcile Entries</h2>
-                <p className="mt-4 text-base text-gray-500">
-                Asipiya Finance’s Reconcile Entries feature ensures financial accuracy by matching and verifying records with bank statements or external documents. This includes managing discrepancies, such as when cash collectors have deposited customer amounts but haven’t updated the company’s system. The process covers: <br />
-                • Identifying missing or mismatched entries by comparing bank deposits with system records. <br />
-                • Updating the system to reflect accurate balances, ensuring all transactions are accounted for. <br />
-                • Maintaining the integrity of financial data with up-to-date records. <br />
-                • Generating reconciliation reports to aid financial auditing and compliance. <br />
-                This feature is essential for ensuring the accuracy of financial statements and preventing fraud.
-                </p>
-            </div>
-        </div>
-
-
-        {/* Manual Journal: section */}
-        <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img5}
-                    alt="Placeholder"/>
-                </div>
-
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Manual Journal:</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                      Asipiya Finance’s Manual Journal feature gives you the ability to record and manage journal entries 
-                      manually for transactions that aren’t automatically processed. This feature handles adjustments, 
-                      corrections, and complex entries, ensuring that every financial activity is accurately documented, 
-                      while offering flexibility and control over your accounting workflow.
+                    .Service Assistance: The supplier agreed to provide service assistance for any software-related issues. <br />
+                    .Lifetime Software Updates: The supplier agreed to provide software updates whenever necessary
                     </p>
                 </div>
             </div>
@@ -357,4 +302,4 @@ const Microfinance = () => {
   );
 };
 
-export default Microfinance;
+export default Prawing;

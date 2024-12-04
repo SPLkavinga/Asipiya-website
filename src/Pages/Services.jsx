@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from './../Components/NabBar';
-import backgroundImg from '../assets/bg2.png';
+import backgroundImg from '../assets/serviceback.png';
 import Cooperate from './../Components/Cooperate';
 import Footer from './../Components/Footer';
 
@@ -11,63 +11,58 @@ const services = [
     title: "ERP Systems",
     icon: "📋",
     link: "/service/erp",
-    description: "Streamline your business operations with our comprehensive ERP solutions.",
+    description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
     id: "pos",
-    title: "POS Systems",
+    title: "Prawing Systems",
     icon: "💳",
-    link: "/service/pos",
-    description: "Enhance your retail operations with cutting-edge POS technology.",
+    link: "/Prawing",
+    description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
     id: "micro-finance",
     title: "Micro Finance",
     icon: "🚀",
     link: "/Microfinance",
-    description: "Empower communities with reliable microfinance solutions.",
+    description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
     id: "gold-loan",
     title: "Gold Loan System",
     icon: "💰",
     link: "/service/gold-loan",
-    description: "Simplify gold loan management with our efficient systems.",
+    description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
     id: "leasing",
     title: "Leasing System",
     icon: "🏠",
-    link: "/service/leasing",
-    description: "Optimize your leasing operations with our robust tools.",
+    link: "/Leasing",
+    description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
-    id: "insurance",
-    title: "Insurance Management",
+    id: "Estate",
+    title: "Real Estate",
     icon: "🛡️",
     link: "/service/insurance",
-    description: "Streamline insurance processes with innovative management software.",
+    description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
-    id: "payroll",
-    title: "Payroll Systems",
-    icon: "💼",
-    link: "/service/payroll",
-    description: "Efficiently handle payroll operations with our tailored solutions.",
-  },
-  {
-    id: "crm",
-    title: "CRM Systems",
-    icon: "📈",
+    id: "social-media",
+    title: "Social Media Marketing",
+    icon: "📢",
     link: "/service/crm",
-    description: "Boost customer relationships with our powerful CRM tools.",
+    description:
+      "Enhance your brand's visibility with our comprehensive social media marketing strategies, tailored to engage and grow your audience effectively.",
   },
   {
-    id: "inventory",
-    title: "Inventory Management",
-    icon: "📦",
+    id: "printing",
+    title: "Aipiya Printing",
+    icon: "🖨️",
     link: "/service/inventory",
-    description: "Keep track of inventory effortlessly with our smart systems.",
+    description:
+      "Deliver exceptional quality with our state-of-the-art printing solutions, perfect for all your personal and professional needs.",
   },
 ];
 
@@ -88,14 +83,11 @@ function Services() {
 
                 {/* Text content aligned to the left */}
                 <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px]">
-                    <p className="mb-3 text-sm font-bold text-white md:text-lg">About US</p>
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Design & Develop For</h2>
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Better Solution</h2>
-                    <p className="mb-8 text-sm text-white md:text-lg">
-                        Welcome to Asipiya Soft Solutions PVT Ltd, your gateway to comprehensive and cutting-edge software solutions
-                        tailored for businesses of all sizes. At Asipiya Soft Solutions, we pride ourselves on being your
-                        trusted partner in navigating the digital landscape, offering a range of services designed to
-                        enhance and streamline your business operations.
+                    <h2 className="text-4xl font-bold text-white md:text-5xl">Our Services</h2>
+                    <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">and Expertise</h2>
+                    <p className="mt-6 mb-8 text-sm text-white md:text-lg">
+                        At Asipiya Soft Solutions, we empower your business for success in the digital age. Join us on an 
+                        innovative journey towards efficiency and thrive together in shaping your future.
                     </p>
                 </div>
             </div>
@@ -109,9 +101,9 @@ function Services() {
             <Link
                 key={service.id}
                 to={service.link}
-                className="block p-6 text-center transition-transform transform bg-white rounded-lg shadow-md h-72 hover:scale-105 w-72"
+                className="block h-auto p-6 text-center transition-transform transform bg-white rounded-lg shadow-md hover:scale-105 w-72"
             >
-                <div className="mb-4 text-5xl">{service.icon}</div>
+                <div className="mb-4 text-5xl ">{service.icon}</div>
                 <h2 className="mb-2 text-xl font-semibold">{service.title}</h2>
                 <p className="text-gray-600">{service.description}</p>
             </Link>
