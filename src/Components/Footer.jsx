@@ -5,7 +5,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';  // Import Font Awesome 
 
 const Footer = () => {
   return (
-    <footer className="py-3 text-white bg-purple-900">
+    <footer className="py-3 text-white bg-purple-900 mt-[120px]">
       <div className="container mx-auto text-center md:text-left ">
         {/* Top Section - Logo, Tagline, Email, and Phone in one line */}
         <div className="flex flex-col items-center gap-2 px-24 pb-4 mb-4 border-b border-white md:flex-row md:gap-14">

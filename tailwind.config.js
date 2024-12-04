@@ -16,8 +16,10 @@ module.exports = {
           
         },
       },
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'], // Add Poppins as the default sans-serif font
+      },
     },
   },
   plugins: [],
-}
-
+};
