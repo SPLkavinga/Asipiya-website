@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Footer from './../Components/Footer';
 import NavBar from './../Components/NabBar';
 import Cooperate from './../Components/Cooperate';
+import backgroundImg from '../assets/bg12.jpg';
 import img1 from '../assets/image 27.png';
 import img2 from '../assets/Cash1.png';
 import img3 from "../assets/Cash2.png"
@@ -56,9 +57,11 @@ const Microfinance = () => {
     <>
         <NavBar />
          {/* Full-screen background section */}
-         <div className="relative flex flex-col items-center justify-center w-full h-auto bg-purple-900 bg-center bg-cover md:flex-row-reverse md:h-screen">
-                {/* Dark overlay */}
-                <div className="absolute inset-0 z-0 bg-black bg-opacity-50"></div>
+         <div
+                className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row-reverse md:h-screen"
+                style={{ backgroundImage: `url(${backgroundImg})` }}
+            >
+
 
                 {/* Image on the right side */}
                 <div className="w-full md:w-1/2 md:h-[450px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-20">
@@ -67,12 +70,12 @@ const Microfinance = () => {
 
                 {/* Text content on the left side */}
                 <div className="z-10 w-full px-4 py-8 text-center md:w-1/2 md:pr-2 md:text-left md:px-52 md:py-0">
-                    <h2 className="text-5xl font-bold text-white">Empowering Lives</h2>
-                    <h2 className="text-5xl font-bold text-white">Globally with Asipiya </h2>
-                    <h2 className="text-5xl font-bold text-white">Finance </h2>
-                    <h2 className="text-5xl font-bold text-white">With Trusted Microfinance</h2>
-                    <h2 className="mb-4 text-5xl font-bold text-white">Solutions.</h2>
-                    <p className="mb-8 text-base text-white">
+                    <h2 className="text-5xl font-bold text-black">Empowering Lives</h2>
+                    <h2 className="mt-3 text-5xl font-bold text-black">Globally with Asipiya </h2>
+                    <h2 className="mt-3 text-5xl font-bold text-black">Finance </h2>
+                    <h2 className="mt-3 text-5xl font-bold text-black">With Trusted Microfinance</h2>
+                    <h2 className="mt-3 mb-4 text-5xl font-bold text-black">Solutions.</h2>
+                    <p className="mt-3 mb-8 text-base text-black">
                         Achieve complete control and visibility of your microfinance operations with the Asipiya Finance .
                     </p>
                     {/* Button below the text content */}

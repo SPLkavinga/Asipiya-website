@@ -8,6 +8,7 @@ import Microfinance from './Pages/MicroFinance';
 import Services from './Pages/Services';
 import Prawing from './Pages/Prawing';
 import Leasing from './Pages/Leasing';
+import ERP from './Pages/ERP';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path='/Microfinance' element={<Microfinance/>}/>
       <Route path='/Prawing' element={<Prawing/>}/>
       <Route path='/Leasing' element={<Leasing/>}/>
+      <Route path='/ERP' element={<ERP/>}/>
     </Routes>
     </BrowserRouter>
   );

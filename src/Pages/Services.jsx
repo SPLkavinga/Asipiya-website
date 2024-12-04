@@ -10,7 +10,7 @@ const services = [
     id: "erp",
     title: "ERP Systems",
     icon: "📋",
-    link: "/service/erp",
+    link: "/ERP",
     description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
@@ -31,7 +31,7 @@ const services = [
     id: "gold-loan",
     title: "Gold Loan System",
     icon: "💰",
-    link: "/service/gold-loan",
+    link: "/Prawing",
     description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
