@@ -171,9 +171,9 @@ function Home() {
       <ClientCarousel/>
 
       {/* Clients Review Section*/}
-      <div className="flex flex-col items-center justify-between p-6 bg-white md:flex-row md:p-12 ">
+      <div className="flex flex-col items-center justify-between p-6 bg-white md:flex-row md:p-14 ">
         {/* Left: Review Card */}
-        <div className="flex justify-center w-full md:w-1/2 md:justify-start md:ml-36">
+        <div className="flex justify-center w-full md:w-1/2 md:justify-start md:ml-[120px]">
           <div className="p-6 bg-white shadow-lg rounded-lg w-[90%] md:w-[75%]">
             <h3 className="text-lg font-semibold">Samantha Payne</h3>
             <p className="text-sm text-gray-500">Graphic Designer</p>
@@ -191,10 +191,10 @@ function Home() {
 
         {/* Right: Title and Description */}
         <div className="w-full mt-8 text-center md:w-1/2 md:text-left md:mt-0 md:m-20">
-          <h2 className="text-3xl font-bold">
-            <span className="text-purple-600">Client’s</span> Reviews
+          <h2 className="text-[39.81px] font-semibold">
+            <span className="text-purple-600 ">Client’s</span> Reviews
           </h2>
-          <p className="mt-4 text-sm text-gray-600">
+          <p className="mt-[4px] text-[16px] text-[#525252]">
             Our clients trust us for delivering reliable, innovative
             microfinance solutions that drive growth and success across
             industries worldwide.
@@ -203,10 +203,10 @@ function Home() {
       </div>
 
       {/* Countries serve section */}
-      <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-        <div className="w-[350px] h-[350px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
+      <div className="flex flex-col items-center justify-center p-4 md:flex-row  mt-[120px] ">
+        <div className="w-[350px] h-[350px] md:w-[590px] mb-4 md:mb-0 flex justify-center md:justify-start">
           <img
-            className="object-cover rounded-lg shadow-md md:ml-40"
+            className=" md:ml-[120px] ml-0"
             src={img3}
             alt="Placeholder"
           />
@@ -226,15 +226,15 @@ function Home() {
       </div>
 
       {/* Cooperate section */}
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-        <p className="text-4xl font-bold text-center text-black">
+      <div className="flex flex-col items-center justify-center mt-[200px]">
+        <p className="text-[39.81px] font-bold text-center text-black">
           LET'S DEVELOP,{" "}
-          <span className="font-bold text-purple-600">LETS COOPERATE!</span>
+          <span className="font-bold text-[#7D00C5]">LETS COOPERATE!</span>
         </p>
-        <img className="mt-5 mb-5" src={img5} alt="Centered_Image" />
+        <img className="mt-16 mb-5" src={img5} alt="Centered_Image" />
         <Link
           to="/your-target-path"
-          className="px-8 py-2 font-bold text-black transition bg-white border border-black rounded-full"
+          className="w-[483px] h-[72px] font-bold text-[#333333] text-center transition bg-white border-2  border-[#333333] rounded-full text-[39.81px] pt-1"
         >
           Let's Talk
         </Link>

@@ -22,10 +22,10 @@ function ClientCarousel() {
   ];
 
   return (
-    <div className="py-12 bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4]">
+    <div className="h-[206px] bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF]  to-[#CFB1D4] mt-[120px]">
       {/* Heading */}
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-        Our <span className="text-purple-600">Clients</span>
+      <h2 className="text-[33.18px] font-medium text-center text-gray-800 mb-[16px]">
+        Our Clients
       </h2>
 
       {/* Carousel Section */}
@@ -50,13 +50,13 @@ function ClientCarousel() {
               key={client.id}
               className="flex justify-center items-center"
             >
-              <div className="p-4 bg-white rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            
                 <img
                   src={client.logo}
                   alt={client.alt}
                   className="w-24 h-24 mx-auto" // Ensure image size is 100x100
                 />
-              </div>
+          
             </SwiperSlide>
           ))}
         </Swiper>
