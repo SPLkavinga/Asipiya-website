@@ -35,15 +35,15 @@ function AboutUs() {
                 <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
                 {/* Text content aligned to the left */}
-                <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px]">
-                    <p className="mb-3 text-sm font-bold text-white md:text-lg">About US</p>
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Design & Develop For</h2>
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Better Solution</h2>
-                    <p className="mb-8 text-sm text-white md:text-lg">
-                        Welcome to Asipiya Soft Solutions PVT Ltd, your gateway to comprehensive and cutting-edge software solutions
-                        tailored for businesses of all sizes. At Asipiya Soft Solutions, we pride ourselves on being your
-                        trusted partner in navigating the digital landscape, offering a range of services designed to
-                        enhance and streamline your business operations.
+                <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px] ml-[120px] ">
+                    <p className="mb-3 text-sm  text-white md:text-[19.2px]">About US</p>
+                    <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2">Design & Develop For</h2>
+                    <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[8px]">Better Solution</h2>
+                    <p className="mb-8 text-sm text-white md:text-[19.2px] font-normal leading-normal tracking-wide ">
+                        Welcome to Asipiya Soft Solutions PVT Ltd, your gateway to <br/> comprehensive and cutting-edge software solutions
+                        tailored for <br/> businesses of all sizes. At Asipiya Soft Solutions, we pride ourselves on <br/> being your
+                        trusted partner in navigating the digital landscape, offering <br/> a range of services designed to
+                        enhance and streamline your business <br/> operations.
                     </p>
                 </div>
             </div>
@@ -54,25 +54,25 @@ function AboutUs() {
                 <Slide direction="up" triggerOnce>
                     <div className="grid grid-cols-1 gap-6 text-center md:grid-cols-4 md:gap-8 md:px-40">
                         <div className="p-2">
-                            <p className="text-3xl font-bold">
+                            <p className="text-[60px] text-[#7D00C5] font-bold">
                                 <CountUp end={15} duration={2} />+
                             </p>
                             <p className="text-sm">Years of Experience</p>
                         </div>
                         <div className="p-2">
-                            <p className="text-3xl font-bold">
+                            <p className="text-[60px] text-[#7D00C5] font-bold">
                                 <CountUp end={99} duration={2} />%
                             </p>
                             <p className="text-sm">Satisfied Clients</p>
                         </div>
                         <div className="p-2">
-                            <p className="text-3xl font-bold">
+                            <p className="text-[60px] text-[#7D00C5] font-bold">
                                 <CountUp end={7} duration={2} />+
                             </p>
                             <p className="text-sm">Expert Team Member</p>
                         </div>
                         <div className="p-2">
-                            <p className="text-3xl font-bold">
+                            <p className="text-[60px] text-[#7D00C5] font-bold">
                                 <CountUp end={7} duration={2} />K+
                             </p>
                             <p className="text-sm">Projects Completed</p>
@@ -84,17 +84,17 @@ function AboutUs() {
             {/* Mission Vision Section */}
 
             <section className="container px-6 py-10 mx-auto mt-5 md:mt-20">
-                <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-8">
+                <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-8 ml-[120px]">
                     
                     {/* Vision */}
                     <div className="w-[350px] text-center">
                         <div className="flex items-center justify-center">
-                            <img className="w-[178px] h-[180px]" src={vission} alt="Vision" />
+                            <img className="w-[183px] h-[177px]" src={vission} alt="Vision" />
                             {/* Vertical line shown only on large screens */}
                             <div className="hidden lg:block w-[1px] h-[180px] bg-gray-300 mx-4"></div>
                         </div>
-                        <p className="mt-4 text-lg font-semibold">Our Vision</p>
-                        <p className="mt-2 text-sm text-gray-600">
+                        <p className="mt-4 text-[39.81px] text-[#333333] font-semibold">Our Vision</p>
+                        <p className="mt-2 text-[16px] text-[#525252] text-opacity-80">
                             Pioneering transformative software solutions for business success in a tech-driven future.
                         </p>
                     </div>
@@ -105,12 +105,12 @@ function AboutUs() {
                     {/* Mission */}
                     <div className="w-[350px] text-center">
                         <div className="flex items-center justify-center">
-                            <img className="w-[178px] h-[180px]" src={mission} alt="Mission" />
+                            <img className="w-[183px] h-[177px]" src={mission} alt="Mission" />
                             {/* Vertical line shown only on large screens */}
                         
                         </div>
-                        <p className="mt-4 text-lg font-semibold">Our Mission</p>
-                        <p className="mt-2 text-sm text-gray-600">
+                        <p className="mt-4 text-[39.81px] text-[#333333] font-semibold">Our Mission</p>
+                        <p className="mt-2 text-[16px] text-[#525252] text-opacity-80">
                             Empowering businesses through innovative software solutions, seamlessly integrating technology for
                             operational efficiency and sustainable success.
                         </p>
@@ -121,10 +121,10 @@ function AboutUs() {
                     {/* Values */}
                     <div className="w-[350px] text-center">
                         <div className="flex items-center justify-center">
-                            <img className="w-[178px] h-[180px]" src={value} alt="Values" />
+                            <img className="w-[183px] h-[177px]" src={value} alt="Values" />
                         </div>
-                        <p className="mt-4 text-lg font-semibold">Our Values</p>
-                        <p className="mt-2 text-sm text-gray-600">
+                        <p className="mt-4 text-[39.81px] text-[#333333]  font-semibold">Our Values</p>
+                        <p className="mt-2 text-[16px] text-[#525252] text-opacity-80">
                             Empowering businesses through innovative software solutions, seamlessly integrating technology for
                             operational efficiency and sustainable success.
                         </p>

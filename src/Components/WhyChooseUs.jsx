@@ -57,7 +57,7 @@ function WhyChooseUs() {
             onClick={() => handleFeatureClick(index)}
             className={
               "flex items-center w-full text-left " +
-              (isActive ? "font-bold text-blue-600" : "")
+              (isActive ? "font-bold text-[#7D00C5]" : "")
             }
           >
             <span className="flex items-center justify-center inline-block w-5 h-5 mr-3 border-2 border-black rounded-full">
@@ -84,11 +84,6 @@ function WhyChooseUs() {
 
   return (
     <div className="flex flex-col items-center justify-between max-w-6xl p-4 mx-auto mb-10 space-y-8 md:space-y-12">
-      {/* Section Heading */}
-      <h2 className="text-2xl font-bold text-center text-gray-800 sm:text-3xl">
-        Why <span className="text-purple-600">Choose Us?</span>
-      </h2>
-
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center w-full space-y-8 md:flex-row md:space-y-0 md:space-x-8">
         {/* Image Section */}
@@ -96,11 +91,18 @@ function WhyChooseUs() {
           <img
             src={choose}
             alt="Person working"
-            className="w-full max-w-md rounded-lg"
+            className="w-[590px] rounded-lg"
           />
         </div>
-        {/* Feature List */}
-        <div className="flex items-center w-full md:w-1/2">
+
+        {/* Feature List with Heading */}
+        <div className="flex flex-col items-start w-full md:w-1/2">
+          {/* Section Heading */}
+          <h2 className="mb-8 text-[39.81px] font-semibold text-gray-800 sm:text-3xl">
+            Why <span className="text-[#7D00C5]">Choose Us?</span>
+          </h2>
+
+          {/* Feature List */}
           <ul className="space-y-4">{renderFeatures()}</ul>
         </div>
       </div>
