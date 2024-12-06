@@ -1,20 +1,24 @@
-import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import member12 from '../assets/member1.jpg'
 import member22 from '../assets/member2.jpg'
 import member32 from '../assets/member3.jpg'
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+
 
 const Leadership = ({ member1, member2, member3 }) => {
   return (
-    <div className="w-full px-6 py-8 bg-gray-100">
-      <p className="text-2xl font-bold text-center text-gray-800">
-        Meet Our <span className="font-bold text-purple-600">Leadership</span>
+    <div className="w-full py-8 mt-[120px] px-[120px]">
+      <p className="text-[39.81px] font-semibold text-center text-gray-800">
+        Meet Our <span className="font-bold text-[#7D00C5]">Leadership</span>
+      </p>
+      <p className="text-[17px] font-normal text-center text-[#525252] mt-[8px]">
+      Our customers, our societies and our business are linked. It's different <br/> for us. It improves us.
       </p>
 
-      <div className="flex flex-wrap justify-center gap-24 mt-8 md:mt-16">
+      <div className="flex flex-wrap justify-center gap-[16px] mt-8 md:mt-[32px] ">
         {/* Member 1 */}
-        <div className="relative group w-[300px]">
+        <div className="relative group ">
           <img
-            className="w-full h-[260px] rounded-lg object-cover"
+            className="w-[387px] h-[360px] rounded-lg object-cover"
             src={member12}
             alt="Member 1"
           />
@@ -52,9 +56,9 @@ const Leadership = ({ member1, member2, member3 }) => {
         </div>
 
         {/* Member 2 */}
-        <div className="relative group w-[300px]">
+        <div className="relative group">
           <img
-            className="w-full h-[260px] rounded-lg object-cover"
+            className="w-[387px] h-[360px] rounded-lg object-cover"
             src={member22}
             alt="Member 2"
           />
@@ -90,9 +94,9 @@ const Leadership = ({ member1, member2, member3 }) => {
         </div>
 
         {/* Member 3 */}
-        <div className="relative group w-[300px]">
+        <div className="relative group">
           <img
-            className="w-full h-[260px] rounded-lg object-cover"
+            className="w-[387px] h-[360px] rounded-lg object-cover"
             src={member32}
             alt="Member 3"
           />

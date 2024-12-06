@@ -65,53 +65,61 @@ const services = [
       "Deliver exceptional quality with our state-of-the-art printing solutions, perfect for all your personal and professional needs.",
   },
 ];
-
 function Services() {
   return (
     <>
-        <NavBar/>
+      <NavBar />
 
-        <div
-                className="relative flex items-center justify-start w-full h-auto bg-center bg-cover md:h-screen"
-                style={{
-                    backgroundImage: `url(${backgroundImg})`,
-                    backgroundSize: 'cover',
-                }}
-            >
-                {/* Darker overlay */}
-                <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
+      {/* Background Section */}
+      <div
+        className="relative flex items-center justify-start w-full h-auto bg-center bg-cover md:h-screen"
+        style={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: "cover",
+        }}
+      >
+        {/* Darker Overlay */}
+        <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
-                {/* Text content aligned to the left */}
-                <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px]">
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Our Services</h2>
-                    <h2 className="mt-4 text-4xl font-bold text-white md:text-5xl">and Expertise</h2>
-                    <p className="mt-6 mb-8 text-sm text-white md:text-lg">
-                        At Asipiya Soft Solutions, we empower your business for success in the digital age. Join us on an 
-                        innovative journey towards efficiency and thrive together in shaping your future.
-                    </p>
-                </div>
-            </div>
+        <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px] ml-[120px]">
+          <p className="mb-3 text-sm text-white md:text-[19.2px]">Services</p>
+          <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2">
+            Our Services
+          </h2>
+          <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[8px]">
+            and Expertise
+          </h2>
+          <p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-[488px]">
+            At Asipiya Soft Solutions, we empower your business for success in
+            the digital age. Join us on an innovative journey towards efficiency
+            and thrive together in shaping your future.
+          </p>
+        </div>
+      </div>
 
-        <div className="container px-6 mx-auto">
-        <h1 className="mt-10 mb-8 text-3xl font-bold text-center text-black">
-            Services We're <span className="text-purple-800">Offer</span>
+      {/* Services Grid */}
+      <div className="container px-16 mx-auto ">
+        <h1 className="mt-10 mb-[8px] text-[39.81px] font-medium text-center text-black">
+          Services We're <span className="text-purple-800">Offer</span>
         </h1>
         <div className="grid justify-center grid-cols-1 gap-4 mb-4 md:ml-20 p-14 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+          {services.map((service) => (
             <Link
-                key={service.id}
-                to={service.link}
-                className="block h-auto p-6 text-center transition-transform transform bg-white rounded-lg shadow-md hover:scale-105 w-72"
+              key={service.id}
+              to={service.link}
+              className="block w-[387px] h-[387px] p-6  bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
             >
-                <div className="mb-4 text-5xl ">{service.icon}</div>
-                <h2 className="mb-2 text-xl font-semibold">{service.title}</h2>
-                <p className="text-gray-600">{service.description}</p>
+              <div className="mb-4 text-[100px] text-center ">{service.icon}</div>
+              <h2 className="mb-2 text-[23.04px] font-semibold">{service.title}</h2>
+              <p className="text-gray-600 text-[16px] line-clamp-4">{service.description}</p>
             </Link>
-            ))}
+          ))}
         </div>
-        </div>
-        <Cooperate/>
-        <Footer/>
+      </div>
+
+      {/* Footer Components */}
+      <Cooperate />
+      <Footer />
     </>
   );
 }

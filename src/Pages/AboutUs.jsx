@@ -18,6 +18,7 @@ import Footer from './../Components/Footer';
 import NavBar from './../Components/NabBar';
 import WhyChooseUs from './../Components/WhyChooseUs';
 import Leadership from './../Components/Leadership';
+import Cooperate from '../Components/Cooperate';
 
 function AboutUs() {
     return ( 
@@ -39,7 +40,7 @@ function AboutUs() {
                     <p className="mb-3 text-sm  text-white md:text-[19.2px]">About US</p>
                     <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2">Design & Develop For</h2>
                     <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[8px]">Better Solution</h2>
-                    <p className="mb-8 text-sm text-white md:text-[19.2px] font-normal leading-normal tracking-wide ">
+                    <p className="mb-8 text-white md:text-[16px] font-normal leading-normal tracking-wide ">
                         Welcome to Asipiya Soft Solutions PVT Ltd, your gateway to <br/> comprehensive and cutting-edge software solutions
                         tailored for <br/> businesses of all sizes. At Asipiya Soft Solutions, we pride ourselves on <br/> being your
                         trusted partner in navigating the digital landscape, offering <br/> a range of services designed to
@@ -139,20 +140,20 @@ function AboutUs() {
              
 
             {/* Design, Development, testing Section */}
-            <div className="w-full bg-white">
-                <div className="w-full space-y-8">
+            <div className="w-full bg-white mt-[120px]">
+                <div className="w-full ">
                     {/* Design Section */}
-                    <div className="flex items-center justify-center w-full px-6 py-4 space-x-6 bg-gradient-to-r from-pink-200 via-purple-100 to-pink-200">
+                    <div className="flex items-center justify-center w-full px-6 py-4 h-[163px] space-x-6 bg-gradient-to-r from-pink-200 via-purple-100 to-pink-200">
                         <div className="flex-shrink-0">
                             <img
                             src={designImage}
                             alt="Design"
-                            className="object-cover w-16 h-16 rounded-lg sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-20 lg:h-20"
+                            className="object-cover w-16 h-16 rounded-lg sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-[81px] lg:h-[81px]"
                             />
                         </div>
                         <div className="text-center sm:text-left">
-                            <h2 className="text-2xl font-bold text-black">Design</h2>
-                            <p className="mt-2 text-black">
+                            <h2 className="text-[23.04px] font-medium text-black">Design</h2>
+                            <p className="mt-[8px] w-[385px] text-[13.33px]  text-[#525252]">
                             Fuse creativity and function to shape ideas into captivating, user-centric design blueprints, laying the
                             groundwork for an exciting development journey.
                             </p>
@@ -160,17 +161,17 @@ function AboutUs() {
                     </div>
 
                     {/* Development Section */}
-                    <div className="flex items-center justify-center w-full px-6 py-4 space-x-6 bg-white">
+                    <div className="flex items-center justify-center w-full  h-[163px] space-x-6 bg-white">
                         <div className="flex-shrink-0">
                             <img
                             src={developmentImage}
                             alt="Development"
-                            className="object-cover w-16 h-16 rounded-lg sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-20 lg:h-20"
+                            className="object-cover w-16 h-16 rounded-lg sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-[81px] lg:h-[81px]"
                             />
                         </div>
                         <div className="text-center sm:text-left">
-                            <h2 className="text-2xl font-bold text-black">Development</h2>
-                            <p className="mt-2 text-black">
+                            <h2 className="text-[23.04px] font-medium text-black">Development</h2>
+                            <p className="mt-[8px]  w-[385px] text-[13.33px]  text-[#525252]">
                             Our skilled developers bring designs to life with cutting-edge tech, crafting scalable, robust products using
                             agile methods and rigorous testing.
                             </p>
@@ -183,12 +184,12 @@ function AboutUs() {
                             <img
                             src={testingImage}
                             alt="Testing & QA"
-                            className="object-cover w-16 h-16 rounded-lg sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-20 lg:h-20"
+                            className="object-cover w-16 h-16 rounded-lg sm:w-24 sm:h-24 md:w-32 md:h-32 lg:w-[81px] lg:h-[81px]"
                             />
                         </div>
                         <div className="text-center sm:text-left">
-                            <h2 className="text-2xl font-bold text-black">Testing & QA</h2>
-                            <p className="mt-2 text-center text-black">
+                            <h2 className="text-[23.04px] font-medium text-black">Testing & QA</h2>
+                            <p className="mt-[8px]   w-[385px] text-[13.33px]  text-[#525252]">
                             We meticulously test every aspect, from unit tests to user acceptance, ensuring flawless functionality and
                             delivering a product that exceeds expectations.
                             </p>
@@ -204,20 +205,8 @@ function AboutUs() {
 
 
             {/* Cooperate section */}
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                <p className="text-2xl font-bold text-center text-gray-800k">
-                    LET'S DEVELOP, <span className="font-bold text-purple-600">LETS COOPERATE!</span>
-                </p>
-                <img className="mt-10 mb-5" src={img5} alt="Centered_Image" />
-                <Link
-                    to="/your-target-path"
-                    className="px-8 py-2 font-bold text-black transition bg-white border border-black rounded-full"
-                >
-                    Let's Talk
-                </Link>
-            </div>
-            <br />
-
+            <Cooperate/>
+          
             <Footer/>
         </>
      );
