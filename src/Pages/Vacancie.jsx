@@ -48,17 +48,18 @@ function Vacancie() {
 
             {/* Vacancies Section */}
             <div className="flex items-center justify-center min-h-screen px-4 py-10 md:p-20">
-                <div className="w-full max-w-4xl">
+                <div className="w-full max-w-[1200px]">
                     <h1 className="mb-8 text-3xl font-bold text-center text-purple-600 ">Open Vacancies</h1>
                     <div className="h-1 max-w-screen-xl mt-1 bg-gray-600"></div>
                     <div className="p-6 ">
                         {vacancies.map((vacancy, index) => (
                             <Link to={vacancy.link} key={index} className="block mb-4">
-                                <div className="flex items-center justify-between p-4 transition-colors shadow-md rounded-2xl bg-purple-50 hover:bg-purple-100">
+                                <div className="flex items-center justify-between p-4 h-[84px] transition-colors shadow-md rounded-[30px] bg-purple-50 hover:bg-purple-100">
                                     <span className="text-lg font-medium text-gray-700">{vacancy.title}</span>
                                     <div className="flex items-center gap-2">
-                                        <span className="px-3 py-1 text-sm font-bold text-gray-600 bg-gray-200 rounded-full">Full Time</span>
-                                        <FaArrowRight className="text-gray-500" />
+                                        <span className="px-5 py-3 text-sm font-bold text-gray-600 bg-gray-200 rounded-full">Full Time</span>
+                                        <span className="px-8 py-4 text-sm font-bold text-gray-600 bg-gray-200 rounded-full"><FaArrowRight className="text-gray-500" /></span>
+                                        
                                     </div>
                                 </div>
                             </Link>
