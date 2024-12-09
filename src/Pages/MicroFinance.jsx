@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Footer from './../Components/Footer';
 import NavBar from './../Components/NabBar';
@@ -11,6 +11,8 @@ import img4 from "../assets/cost3.png"
 import img5 from "../assets/cash3.png"
 import img6 from "../assets/cash4.png"
 import BusinessForward from './../Components/BusinessForward';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 
 const features = [
@@ -52,7 +54,12 @@ const features = [
   },
 ];
 
+
+
 const Microfinance = () => {
+  useEffect(() =>{
+    Aos.init();
+ },[])
   return (
     <>
         <NavBar />
@@ -65,7 +72,7 @@ const Microfinance = () => {
 
                 {/* Image on the right side */}
                 <div className="w-full md:w-1/2 md:h-[450px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-20">
-                    <img className="object-cover rounded-lg shadow-md" src={img1} alt="Placeholder" />
+                    <img className="object-cover rounded-lg shadow-md"  src={img1} alt="Placeholder"  />
                 </div>
 
                 {/* Text content on the left side */}
@@ -128,11 +135,11 @@ const Microfinance = () => {
                 <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
                     <img className="object-cover rounded-lg shadow-md md:ml-32"
                     src={img2}
-                    alt="Placeholder"/>
+                    alt="Placeholder" data-aos="fade-right"/>
                 </div>
 
                 
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
+                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 " data-aos="fade-left">
                     <h2 className="text-2xl font-bold ">Cash Flow Accumulated</h2>
                     <p className="mt-4 text-sm text-gray-500">
                       With Asipiya Finance, the Cash Flow Accumulated feature offers a clear view of your company’s financial 
@@ -149,11 +156,11 @@ const Microfinance = () => {
                 <img
                     className="object-cover rounded-lg shadow-md md:mr-52"
                     src={img3}
-                    alt="Placeholder"
+                    alt="Placeholder" data-aos="fade-left"
                 />
             </div>
 
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
+            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left" data-aos="fade-right">
                 <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
                 <p className="mt-4 text-base text-gray-500">
                   The Cash Flow Monthly feature in Asipiya Finance offers detailed insights into monthly cash inflows and 
