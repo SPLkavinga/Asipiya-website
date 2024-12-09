@@ -82,7 +82,7 @@ function Vacancie() {
                         <input
                         type="text"
                         id="name"
-                        className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                        className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="Name"
                         />
                     </div>
@@ -94,7 +94,7 @@ function Vacancie() {
                         <input
                         type="email"
                         id="email"
-                        className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                        className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="Email"
                         />
                     </div>
@@ -106,7 +106,7 @@ function Vacancie() {
                         <input
                         type="tel"
                         id="contactNumber"
-                         className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                         className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="Contact Number"
                         />
                     </div>
@@ -118,7 +118,7 @@ function Vacancie() {
                         <input
                         type="text"
                         id="nicNumber"
-                         className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                         className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="NIC Number"
                         />
                     </div>
@@ -130,7 +130,7 @@ function Vacancie() {
                         <input
                         type="url"
                         id="linkedinProfile"
-                         className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                         className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="LinkedIn Profile"
                         />
                     </div>
@@ -142,7 +142,7 @@ function Vacancie() {
                         <input
                         type="file"
                         id="image"
-                        className="block w-full py-4 mt-1 text-gray-500 border border-gray-300 "
+                        className="block w-full p-4 py-4 mt-1 text-gray-500 border border-gray-300 "
                         />
                     </div>
 
@@ -153,7 +153,7 @@ function Vacancie() {
                         <input
                         type="text"
                         id="position"
-                         className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                         className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="Position looking for"
                         />
                     </div>
@@ -165,15 +165,15 @@ function Vacancie() {
                         <textarea
                         id="message"
                         rows="3"
-                         className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                         className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                         placeholder="Your Message"
                         ></textarea>
                     </div>
 
-                    <div className="text-center">
+                    <div className="text-end">
                         <button
                         type="submit"
-                        className="px-6 py-2 font-medium text-white bg-purple-600 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                        className="px-6 py-2 w-[222px] font-medium text-white bg-purple-600 rounded-full shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                         >
                         Submit
                         </button>

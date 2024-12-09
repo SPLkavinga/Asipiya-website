@@ -10,7 +10,7 @@ function Contact() {
         <NavBar/>
       {/* Full-screen background section */}
       <div
-        className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row md:h-screen"
+        className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row md:h-screen px-[120px]"
         style={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: 'cover',
@@ -27,13 +27,13 @@ function Contact() {
           <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             Business Together
           </h2>
-          <p className="mt-4 text-sm md:mt-6 md:text-lg">
+          <p className="mt-4 text-sm md:mt-6 md:text-lg w-[404px]">
             Welcome to Asipiya! For inquiries, reach out to us at <strong>info@asipiya.lk</strong>.
           </p>
         </div>
 
         {/* Right Side: Contact Form */}
-        <div className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-1/2 lg:w-1/3">
+        <div className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-1/2 lg:w-[692px]">
           <form>
             {/* First Row: First Name, Last Name, and Phone Number */}
             <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -107,7 +107,7 @@ function Contact() {
                 </button>
                 <button
                   type="button"
-                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
+                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none "
                 >
                   Software Solutions
                 </button>
@@ -148,12 +148,12 @@ function Contact() {
       <br />
       <br />
 
-      <div className="container px-6 mx-auto ">
+      <div className="container px-[120px] mx-auto ">
         <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-4 md:mt-0">
             {/* Section 1 */}
             <div>
             <p className="mb-3 text-sm font-semibold">Chat with Us</p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 w-[284px]">
                 Reach out to us for inquiries, support, or collaborations. We’re here to assist you!
             </p>
             <p className="flex items-center mt-3 space-x-2 text-sm font-semibold">
@@ -172,7 +172,7 @@ function Contact() {
             {/* Section 2 */}
             <div>
             <p className="mb-3 text-sm font-semibold">Call Us</p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 w-[284px]">
                 Call us for personalized assistance, inquiries, or support. We're just a phone call away!
             </p>
             <p className="flex items-center mt-3 space-x-2 text-sm font-semibold">
@@ -185,7 +185,7 @@ function Contact() {
             {/* Section 3 */}
             <div>
             <p className="mb-3 text-sm font-semibold">Visit Us</p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 w-[284px]">
                 Visit us at our office for in-person consultations, services, or inquiries. We’d love to meet you!
             </p>
             <p className="flex items-center mt-3 space-x-2 text-sm font-semibold">
@@ -200,7 +200,7 @@ function Contact() {
             {/* Section 4 */}
             <div>
       <p className="mb-3 text-sm font-semibold">Follow our social</p>
-      <p className="mb-3 text-sm text-gray-500">
+      <p className="mb-3 text-sm text-gray-500 w-[284px]">
         Follow us on social media for updates, news, and insights. Stay connected with our latest!
       </p>
 
