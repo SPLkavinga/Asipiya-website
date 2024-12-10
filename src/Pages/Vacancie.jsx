@@ -4,6 +4,7 @@ import backgroundImg from '../assets/Vacancy.png';
 import Footer from './../Components/Footer';
 import NavBar from './../Components/NabBar';
 import ApplyForm from './../Components/ApplyForm';
+import { motion } from "framer-motion";
 
 function Vacancie() {
     const vacancies = [
@@ -18,6 +19,12 @@ function Vacancie() {
         { title: "Associate Software Engineer", link: "/associate-software-engineer" },
         { title: "Intern Business Analyst", link: "/intern-business-analyst" },
     ];
+
+    const textVariants = {
+        hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
+        visible: { opacity: 1, y: 0 }, // Move to its final position (up)
+      };
+    
 
     return ( 
         <>
@@ -36,13 +43,30 @@ function Vacancie() {
 
                 {/* Text content centered */}
                 <div className="z-10 w-full px-6 py-8 text-center md:w-2/3 md:px-20">
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Come and Innovate</h2>
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">with Us</h2>
-                    <p className="mt-4 text-sm text-white md:text-lg">
+                    <motion.h2 className="text-4xl font-bold text-white md:text-5xl"
+                     initial="hidden"
+                     animate="visible"
+                     transition={{ duration: 0.5, delay: 0.2 }}
+                     variants={textVariants}
+                     >Come and Innovate</motion.h2>
+
+                    <motion.h2 className="text-4xl font-bold text-white md:text-5xl"
+                     initial="hidden"
+                     animate="visible"
+                     transition={{ duration: 0.5, delay: 0.2 }}
+                     variants={textVariants}
+                     >with Us</motion.h2>
+                    
+                    <motion.p className="mt-4 text-sm text-white md:text-lg"
+                     initial="hidden"
+                     animate="visible"
+                     transition={{ duration: 0.5, delay: 0.2 }}
+                     variants={textVariants}
+                     >
                         Be a part of our mission to revolutionize the future through the implementation of innovative and 
                         intelligent technological solutions. Join us on our quest to create products that have a meaningful 
                         impact, shaping a safer and more inclusive tomorrow.
-                    </p>
+                    </motion.p>
                 </div>
             </div>
 

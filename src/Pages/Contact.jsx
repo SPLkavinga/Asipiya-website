@@ -1,10 +1,17 @@
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import { AiOutlineMessage, AiOutlineMail, AiOutlinePhone, AiOutlineHome, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin } from 'react-icons/ai';
 import backgroundImg from '../assets/Contact.png';
 import NavBar from './../Components/NabBar';
 import Footer from './../Components/Footer';
 
 function Contact() {
+  
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
+    visible: { opacity: 1, y: 0 }, // Move to its final position (up)
+  };
+
   return (
     <>
         <NavBar/>
@@ -20,7 +27,12 @@ function Contact() {
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
         {/* Left Side: Text Content */}
-        <div className="z-10 w-full px-6 py-8 text-center text-white md:w-1/2 md:px-12 md:text-left">
+        <motion.div className="z-10 w-full px-6 py-8 text-center text-white md:w-1/2 md:px-12 md:text-left"
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.5, delay: 0.2 }}
+        variants={textVariants}
+        >
           <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
             Let’s Level Up Your
           </h2>
@@ -30,10 +42,15 @@ function Contact() {
           <p className="mt-4 text-sm md:mt-6 md:text-lg w-[404px]">
             Welcome to Asipiya! For inquiries, reach out to us at <strong>info@asipiya.lk</strong>.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right Side: Contact Form */}
-        <div className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-1/2 lg:w-[692px]">
+        <motion.div className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-1/2 lg:w-[692px]"
+        initial={{ x: 100 }} // Start position off-screen to the right
+        whileInView={{ x: 0 }} // Move to its final position
+        transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+        viewport={{ once: true }} // Trigger animation only once
+        >
           <form>
             {/* First Row: First Name, Last Name, and Phone Number */}
             <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -42,7 +59,7 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="First Name"
-                  className="w-full p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
@@ -50,7 +67,7 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="Last Name"
-                  className="w-full p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
@@ -58,7 +75,7 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="+94 70 2882 222"
-                  className="w-full p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
             </div>
@@ -69,7 +86,7 @@ function Contact() {
               <input
                 type="email"
                 placeholder="Enter Email Address"
-                className="w-full p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
 
@@ -78,7 +95,7 @@ function Contact() {
               <label className="block mb-2 text-gray-700">Message</label>
               <textarea
                 placeholder="Leave a Message here ....."
-                className="w-full p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 rows="3"
               ></textarea>
             </div>
@@ -143,12 +160,17 @@ function Contact() {
               Send message
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
       <br />
       <br />
 
-      <div className="container px-[120px] mx-auto ">
+      <motion.div className="container px-[120px] mx-auto "
+      initial={{ x: 100 }} // Start position off-screen to the right
+      whileInView={{ x: 0 }} // Move to its final position
+      transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+      viewport={{ once: true }} // Trigger animation only once
+      >
         <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-4 md:mt-0">
             {/* Section 1 */}
             <div>
@@ -231,7 +253,7 @@ function Contact() {
       </div>
     </div>
         </div>
-        </div>
+        </motion.div>
         <br />
       <br />
 

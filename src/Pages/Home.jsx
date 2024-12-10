@@ -12,6 +12,7 @@ import frame from "../assets/Frame 4.png";
 import WhyChooseUs from "./../Components/WhyChooseUs";
 import LogoRow from "../Components/LogoRow";
 import ClientCarousel from "../Components/ClientCarousel";
+import Cooperate from "../Components/Cooperate";
 
 function Home() {
   const textVariants = {
@@ -312,27 +313,9 @@ function Home() {
         </motion.div>
       </motion.div>
 
-      {/* Cooperate section */}
-      <motion.div
-        className="flex flex-col items-center justify-center mt-[200px]"
-        initial={{ opacity: 0 }} // Start with opacity 0
-        whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
-        viewport={{ once: true }} // Ensure animation triggers only once
-        transition={{ duration: 2 }} // Smooth transition
-      >
-        <p className="text-[39.81px] font-bold text-center text-black">
-          LET'S DEVELOP,{" "}
-          <span className="font-bold text-[#7D00C5]">LETS COOPERATE!</span>
-        </p>
-        <img className="mt-16 mb-5" src={img5} alt="Centered_Image" />
-        <Link
-          to="/your-target-path"
-          className="w-[483px] h-[72px] font-bold text-[#333333] text-center transition bg-white border-2  border-[#333333] rounded-full text-[39.81px] pt-1"
-        >
-          Let's Talk
-        </Link>
-      </motion.div>
+      <Cooperate/>
 
+      
       <Footer />
     </>
   );
