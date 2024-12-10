@@ -1,5 +1,6 @@
 import NavBar from "./../Components/NabBar";
 import Footer from "./../Components/Footer";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/bro.png";
@@ -13,6 +14,11 @@ import LogoRow from "../Components/LogoRow";
 import ClientCarousel from "../Components/ClientCarousel";
 
 function Home() {
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
+    visible: { opacity: 1, y: 0 }, // Move to its final position (up)
+  };
+
   const features = [
     {
       title: "Micro Finance",
@@ -60,32 +66,77 @@ function Home() {
 
         {/* Image on the right side */}
         <div className="w-full md:w-[639px] md:h-[404px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-4">
-          <img src={img1} alt="Placeholder" />
+          <motion.div
+            initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
+            animate={{ opacity: 1, x: 0 }} // Slide to its final position
+            transition={{ duration: 0.7, ease: "easeOut" }} // Define timing and easing
+          >
+            <img src={img1} alt="Placeholder" />
+          </motion.div>
         </div>
 
         {/* Text content on the left side */}
-        <div className="z-10 w-full px-4  text-center md:w-1/2 md:pr-8 md:text-left md:px-[120px] ">
-          <h2 className="text-[47.78px] font-semibold text-white ">
+        <div className="z-10 w-full px-4 text-center md:w-1/2 md:pr-8 md:text-left md:px-[120px]">
+          {/* Add Framer Motion animations to each line of text */}
+          <motion.h2
+            className="text-[47.78px] font-semibold text-white"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            variants={textVariants}
+          >
             Empowering Lives
-          </h2>
-          <h2 className="text-[47.78px] font-semibold text-white ">Globally</h2>
-          <h2 className="text-[47.78px] font-semibold text-white ">
+          </motion.h2>
+          <motion.h2
+            className="text-[47.78px] font-semibold text-white"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            variants={textVariants}
+          >
+            Globally
+          </motion.h2>
+          <motion.h2
+            className="text-[47.78px] font-semibold text-white"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            variants={textVariants}
+          >
             With Trusted Microfinance
-          </h2>
-          <h2 className="mb-[8px] text-[47.78px] font-semibold text-white">
+          </motion.h2>
+          <motion.h2
+            className="mb-[8px] text-[47.78px] font-semibold text-white"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            variants={textVariants}
+          >
             Solutions.
-          </h2>
-          <p className="mb-[32px] text-[19.2px] font-normal text-white">
+          </motion.h2>
+          <motion.p
+            className="mb-[32px] text-[19.2px] font-normal text-white"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.5 }}
+            variants={textVariants}
+          >
             Empowering Businesses with Scalable and Flexible Microfinance
             Solutions.
-          </p>
-
-          <Link
-            className="w-[250px] h-[50px] py-2 text-[19.2px] font-semibold text-white bg-[#7D00C5]  rounded-full flex items-center justify-center"
-            to="/About"
+          </motion.p>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.6 }}
+            variants={textVariants}
           >
-            Let's get started
-          </Link>
+            <Link
+              className="w-[250px] h-[50px] py-2 text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
+              to="/About"
+            >
+              Let's get started
+            </Link>
+          </motion.div>
         </div>
       </div>
       <br />
@@ -109,14 +160,26 @@ function Home() {
       </div>
 
       {/*Service section */}
-      <div className="py-12 bg-[#CFB1D4] bg-opacity-30">
+      <motion.div
+        className="py-12 bg-[#CFB1D4] bg-opacity-30"
+        initial={{ opacity: 0 }} // Start with opacity 0
+        whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
+        viewport={{ once: true }} // Ensure animation triggers only once
+        transition={{ duration: 2 }} // Smooth transition
+      >
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           {/* Features Grid */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <motion.div
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
+            whileInView={{ opacity: 1, x: 0 }} // Slide to its final position when in view
+            viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of the element is in view
+            transition={{ duration: 0.7, ease: "easeOut" }} // Smooth transition
+          >
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 flex items-center transition rounded-lg  hover:bg-purple-50 hover:shadow-sm"
+                className="p-6 flex items-center transition rounded-lg hover:bg-purple-50 hover:shadow-sm"
               >
                 {/* Icon on the left */}
                 <div className="mr-4 text-5xl">{feature.icon}</div>
@@ -130,7 +193,7 @@ function Home() {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
 
           {/* Button */}
           <div className="mt-12 text-center">
@@ -139,36 +202,50 @@ function Home() {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Micro Finance section */}
       <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10 mt-[80px]">
-        <div className="w-[350px] h-[350px] md:w-[590px] md:h-[366.59px] mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-          <img
-            className="md:mr-52"
-            src={img2}
-            alt="Placeholder"
-          />
-        </div>
+        {/* Image Section */}
+        <motion.div
+          className="w-[350px] h-[350px] md:w-[590px] md:h-[366.59px] mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32"
+          initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
+          whileInView={{ opacity: 1, x: 0 }} // Slide in from right when in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth transition
+        >
+          <img className="md:mr-52" src={img2} alt="Placeholder" />
+        </motion.div>
 
-        <div className="w-full ml-[120px] text-center md:w-1/2  md:text-left">
+        {/* Text Section */}
+        <motion.div
+          className="w-full ml-[120px] text-center md:w-1/2 md:text-left"
+          initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
+          whileInView={{ opacity: 1, x: 0 }} // Slide in from left when in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // Smooth transition with a slight delay
+        >
           <h2 className="text-[39.81px] font-semibold text-purple-600 md:mb-0">
-            Revolutionary{" "}
+            Revolutionary
           </h2>
-          <h2 className="text-[39.81px] font-semibold md:mb-2">Microfinance Solutions</h2>
+          <h2 className="text-[39.81px] font-semibold md:mb-2">
+            Microfinance Solutions
+          </h2>
           <h2 className="mb-4 text-4xl font-bold">Development</h2>
           <p className="text-[16px] text-[#525252]">
-            Building scalable microfinance solutions, ready-to-launch tools, and <br/>
-            applications powered by cutting-edge technologies for financial <br/>
+            Building scalable microfinance solutions, ready-to-launch tools, and{" "}
+            <br />
+            applications powered by cutting-edge technologies for financial{" "}
+            <br />
             empowerment.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       {/* Language icon section */}
-      <LogoRow/>
+      <LogoRow />
 
-      <ClientCarousel/>
+      <ClientCarousel />
 
       {/* Clients Review Section*/}
       <div className="flex flex-col items-center justify-between p-6 bg-white md:flex-row md:p-14 ">
@@ -203,30 +280,46 @@ function Home() {
       </div>
 
       {/* Countries serve section */}
-      <div className="flex flex-col items-center justify-center p-4 md:flex-row  mt-[120px] ">
-        <div className="w-[350px] h-[350px] md:w-[590px] mb-4 md:mb-0 flex justify-center md:justify-start">
-          <img
-            className=" md:ml-[120px] ml-0"
-            src={img3}
-            alt="Placeholder"
-          />
-        </div>
+      <motion.div className="flex flex-col items-center justify-center p-4 md:flex-row mt-[120px]">
+        {/* Image Section */}
+        <motion.div
+          className="w-[350px] h-[350px] md:w-[590px] mb-4 md:mb-0 flex justify-center md:justify-start"
+          initial={{ x: -100 }} // Start position off-screen to the left
+          whileInView={{ x: 0 }} // Move to its final position (normal flow)
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          viewport={{ once: true }} // Trigger animation only once
+        >
+          <img className="md:ml-[120px] ml-0" src={img3} alt="Placeholder" />
+        </motion.div>
 
-        <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-14 md:m-10">
-          <h2 className="text-4xl font-bold ">
+        {/* Text Section */}
+        <motion.div
+          className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-14 md:m-10"
+          initial={{ x: 100 }} // Start position off-screen to the right
+          whileInView={{ x: 0 }} // Move to its final position (normal flow)
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          viewport={{ once: true }} // Trigger animation only once
+        >
+          <h2 className="text-4xl font-bold">
             <span className="text-purple-600">Countries </span>We Serve
           </h2>
           <p className="mt-4 text-base">
             We offer innovative microfinance solutions in Dubai, the United
-            States, Canada, Singapore, Sri lanka and Australia, empowering
+            States, Canada, Singapore, Sri Lanka, and Australia, empowering
             businesses and communities with reliable financial support.
           </p>
-          <img className="h-10 mt-6" src={img4} alt="" />
-        </div>
-      </div>
+          <img className="h-10 mt-6" src={img4} alt="Countries we serve" />
+        </motion.div>
+      </motion.div>
 
       {/* Cooperate section */}
-      <div className="flex flex-col items-center justify-center mt-[200px]">
+      <motion.div
+        className="flex flex-col items-center justify-center mt-[200px]"
+        initial={{ opacity: 0 }} // Start with opacity 0
+        whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
+        viewport={{ once: true }} // Ensure animation triggers only once
+        transition={{ duration: 2 }} // Smooth transition
+      >
         <p className="text-[39.81px] font-bold text-center text-black">
           LET'S DEVELOP,{" "}
           <span className="font-bold text-[#7D00C5]">LETS COOPERATE!</span>
@@ -238,7 +331,7 @@ function Home() {
         >
           Let's Talk
         </Link>
-      </div>
+      </motion.div>
 
       <Footer />
     </>

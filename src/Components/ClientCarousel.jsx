@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 
 import logo1 from "../assets/bg2.png"; // Replace with actual paths
 import logo2 from "../assets/bg2.png";
@@ -22,7 +23,13 @@ function ClientCarousel() {
   ];
 
   return (
-    <div className="h-[206px] bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF]  to-[#CFB1D4] mt-[120px]">
+    <motion.div
+      className="h-[206px] bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] mt-[120px]"
+      initial={{ opacity: 0 }} // Start hidden
+      whileInView={{ opacity: 1 }} // Animate to visible when in view
+      viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% of section is visible
+      transition={{ duration: 0.7, ease: "easeOut" }} // Smooth fade-in transition
+    >
       {/* Heading */}
       <h2 className="text-[33.18px] font-medium text-center text-gray-800 mb-[16px]">
         Our Clients
@@ -45,18 +52,20 @@ function ClientCarousel() {
             1024: { slidesPerView: 5 }, // 5 slides on large screens
           }}
         >
-          {clients.map((client) => (
-            <SwiperSlide
-              key={client.id}
-              className="flex justify-center items-center"
-            >
-            
+          {clients.map((client, index) => (
+            <SwiperSlide key={client.id} className="flex justify-center items-center">
+              <motion.div
+                initial={{ opacity: 0 }} // Start with opacity 0
+                whileInView={{ opacity: 1 }} // Fade in when slide is in view
+                viewport={{ once: true, amount: 0.5 }} // Trigger once when 50% of the slide is visible
+                transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered animation
+              >
                 <img
                   src={client.logo}
                   alt={client.alt}
-                  className="w-24 h-24 mx-auto" // Ensure image size is 100x100
+                  className="w-24 h-24 mx-auto"
                 />
-          
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -64,7 +73,7 @@ function ClientCarousel() {
 
       {/* Pagination */}
       <div className="mt-6 swiper-pagination text-center"></div>
-    </div>
+    </motion.div>
   );
 }
 
