@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import img5 from "../assets/choose2.png";
+import { motion } from "framer-motion";
 
 function Cooperate() {
   return (
     <>
       {/* Cooperate section */}
-      <div className="flex flex-col items-center justify-center mt-[200px]">
+      <motion.div
+        className="flex flex-col items-center justify-center mt-[200px]"
+        initial={{ opacity: 0 }} // Start with opacity 0
+        whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
+        viewport={{ once: true }} // Ensure animation triggers only once
+        transition={{ duration: 2 }} // Smooth transition
+      >
         <p className="text-[39.81px] font-bold text-center text-black">
           LET'S DEVELOP,{" "}
           <span className="font-bold text-[#7D00C5]">LETS COOPERATE!</span>
@@ -17,7 +24,8 @@ function Cooperate() {
         >
           Let's Talk
         </Link>
-      </div>
+      </motion.div>
+
     </>
   );
 }

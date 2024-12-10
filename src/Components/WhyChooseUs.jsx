@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"; 
 import choose from "../assets/choose.png";
 
 function WhyChooseUs() {
@@ -86,17 +87,29 @@ function WhyChooseUs() {
     <div className="flex flex-col items-center justify-between max-w-6xl p-4 mx-auto mb-10 space-y-8 md:space-y-12">
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center w-full space-y-8 md:flex-row md:space-y-0 md:space-x-8">
-        {/* Image Section */}
-        <div className="flex justify-center w-full md:w-1/2">
+        {/* Image Section with animation */}
+        <motion.div
+          className="flex justify-center w-full md:w-1/2"
+          initial={{ x: -100 }} // Start position off-screen to the left
+          whileInView={{ x: 0 }} // Move to its final position
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          viewport={{ once: true }} // Trigger animation only once
+        >
           <img
             src={choose}
             alt="Person working"
             className="w-[590px] rounded-lg"
           />
-        </div>
+        </motion.div>
 
-        {/* Feature List with Heading */}
-        <div className="flex flex-col items-start w-full md:w-1/2">
+        {/* Feature List with Heading and animation */}
+        <motion.div
+          className="flex flex-col items-start w-full md:w-1/2"
+          initial={{ x: 100 }} // Start position off-screen to the right
+          whileInView={{ x: 0 }} // Move to its final position
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          viewport={{ once: true }} // Trigger animation only once
+        >
           {/* Section Heading */}
           <h2 className="mb-8 text-[39.81px] font-semibold text-gray-800 sm:text-3xl">
             Why <span className="text-[#7D00C5]">Choose Us?</span>
@@ -104,7 +117,7 @@ function WhyChooseUs() {
 
           {/* Feature List */}
           <ul className="space-y-4">{renderFeatures()}</ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

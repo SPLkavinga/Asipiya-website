@@ -2,11 +2,17 @@ import member12 from '../assets/member1.jpg'
 import member22 from '../assets/member2.jpg'
 import member32 from '../assets/member3.jpg'
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { motion } from "framer-motion"; 
 
 
 const Leadership = ({ member1, member2, member3 }) => {
   return (
-    <div className="w-full py-8 mt-[120px] px-[120px]">
+    <motion.div className="w-full py-8 mt-[120px] px-[120px]"
+    initial={{ opacity: 0 }} // Start with opacity 0
+        whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
+        viewport={{ once: true }} // Ensure animation triggers only once
+        transition={{ duration: 1 }} // Smooth transition
+        >
       <p className="text-[39.81px] font-semibold text-center text-gray-800">
         Meet Our <span className="font-bold text-[#7D00C5]">Leadership</span>
       </p>
@@ -131,7 +137,7 @@ const Leadership = ({ member1, member2, member3 }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
