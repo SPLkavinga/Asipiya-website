@@ -11,7 +11,7 @@ import backgroundImg from "../assets/background.png";
 import frame from "../assets/Frame 4.png";
 import WhyChooseUs from "./../Components/WhyChooseUs";
 import LogoRow from "../Components/LogoRow";
-import ClientCarousel from "../Components/ClientCarousel";
+//import ClientCarousel from "../Components/ClientCarousel";
 import Cooperate from "../Components/Cooperate";
 
 function Home() {
@@ -59,14 +59,14 @@ function Home() {
 
       {/* Full-screen background section */}
       <div
-        className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row-reverse md:h-screen"
+        className="relative flex flex-col items-center justify-center w-full h-[600px] md:h-screen bg-center bg-cover md:flex-row-reverse overflow-hidden "
         style={{ backgroundImage: `url(${backgroundImg})` }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-50"></div>
 
         {/* Image on the right side */}
-        <div className="w-full md:w-[639px] md:h-[404px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-4">
+        <div className="w-[350px] h-[250px] md:w-[639px] md:h-[404px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-4">
           <motion.div
             initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
             animate={{ opacity: 1, x: 0 }} // Slide to its final position
@@ -80,7 +80,7 @@ function Home() {
         <div className="z-10 w-full px-4 text-center md:w-1/2 md:pr-8 md:text-left md:px-[120px]">
           {/* Add Framer Motion animations to each line of text */}
           <motion.h2
-            className="text-[47.78px] font-semibold text-white"
+            className="text-[30px] md:text-[47.78px] font-semibold text-white"
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -89,7 +89,7 @@ function Home() {
             Empowering Lives
           </motion.h2>
           <motion.h2
-            className="text-[47.78px] font-semibold text-white"
+            className="text-[30px] md:text-[47.78px] font-semibold text-white"
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -98,7 +98,7 @@ function Home() {
             Globally
           </motion.h2>
           <motion.h2
-            className="text-[47.78px] font-semibold text-white"
+            className="text-[30px] md:text-[47.78px] font-semibold text-white"
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -107,7 +107,7 @@ function Home() {
             With Trusted Microfinance
           </motion.h2>
           <motion.h2
-            className="mb-[8px] text-[47.78px] font-semibold text-white"
+            className="mb-[8px] text-[30px] md:text-[47.78px] font-semibold text-white"
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -116,7 +116,7 @@ function Home() {
             Solutions.
           </motion.h2>
           <motion.p
-            className="mb-[32px] text-[19.2px] font-normal text-white"
+            className="md:mb-[32px]  mb-[16px]  text-[14px] md:text-[19.2px] font-normal text-white"
             initial="hidden"
             animate="visible"
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -130,9 +130,10 @@ function Home() {
             animate="visible"
             transition={{ duration: 0.5, delay: 0.6 }}
             variants={textVariants}
+            className="w-full flex justify-center md:justify-start"
           >
             <Link
-              className="w-[250px] h-[50px] py-2 text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
+              className="w-[150px] h-[45px] md:w-[250px] md:h-[50px] py-2 mb-4 text-[16px] md:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
               to="/About"
             >
               Let's get started
@@ -142,20 +143,20 @@ function Home() {
       </div>
       <br />
 
-      <div>
-        <p className="text-[39.81px] font-medium text-center mt-[78px]">
+      <div className="px-[20px] md:px-[120px] ">
+        <p className="text-[30px] md:text-[39.81px] font-medium text-center mt-[30px] md:mt-[78px]">
           Our <span className="text-purple-600"> Services</span>{" "}
         </p>
-        <p className="mt-[4px] text-center text-slate-500 text-[16px]">
+        <p className="mt-[4px] text-center text-slate-500 text-[15px] md:text-[16px]">
           At Asipiya Soft Solutions, we specialize in designing scalable
           microfinance solutions that drive your business forward in the digital
           era.
         </p>
-        <p className="text-center text-slate-500 text-[16px]">
+        <p className="text-center text-slate-500  text-[15px] md:text-[16px]">
           Partner with us to unlock innovation, boost efficiency, and achieve
           sustainable growth.
         </p>
-        <p className="text-center text-slate-500 mb-[16px] text-[16px]">
+        <p className="text-center text-slate-500 mb-[16px]  text-[15px] md:text-[16px]">
           Let’s shape the future of your enterprise together.
         </p>
       </div>
@@ -168,7 +169,7 @@ function Home() {
         viewport={{ once: true }} // Ensure animation triggers only once
         transition={{ duration: 2 }} // Smooth transition
       >
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-[20px] mx-auto max-w-7xl sm:px-6 lg:px-8 ">
           {/* Features Grid */}
           <motion.div
             className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
@@ -206,34 +207,34 @@ function Home() {
       </motion.div>
 
       {/* Micro Finance section */}
-      <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10 mt-[80px]">
+      <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10 mt-[40px] md:mt-[80px]">
         {/* Image Section */}
         <motion.div
-          className="w-[350px] h-[350px] md:w-[590px] md:h-[366.59px] mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32"
+          className="w-[250px] h-[150px] md:w-[900px] md:h-[366.59px]  lg:w-[900px] lg:h-[366.59px] mb-4 md:mb-0 flex justify-center md:justify-start px-[20px] md:px-[20px] lg:px-[120px]"
           initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
           whileInView={{ opacity: 1, x: 0 }} // Slide in from right when in view
           viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
           transition={{ duration: 0.7, ease: "easeOut" }} // Smooth transition
         >
-          <img className="md:mr-52" src={img2} alt="Placeholder" />
+          <img  src={img2} alt="Placeholder" />
         </motion.div>
 
         {/* Text Section */}
         <motion.div
-          className="w-full ml-[120px] text-center md:w-1/2 md:text-left"
+          className="w-full md:mx-[20px] lg:mx-[130px] mx-[20px]  text-center md:w-1/2 md:text-left"
           initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
           whileInView={{ opacity: 1, x: 0 }} // Slide in from left when in view
           viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
           transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // Smooth transition with a slight delay
         >
-          <h2 className="text-[39.81px] font-semibold text-purple-600 md:mb-0">
+          <h2 className="text-[30px] md:text-[39.81px] font-semibold text-purple-600 md:mb-0">
             Revolutionary
           </h2>
-          <h2 className="text-[39.81px] font-semibold md:mb-2">
+          <h2 className="text-[30px] md:text-[39.81px] font-semibold md:mb-2">
             Microfinance Solutions
           </h2>
-          <h2 className="mb-4 text-4xl font-bold">Development</h2>
-          <p className="text-[16px] text-[#525252]">
+          <h2 className="mb-4 text-[30px] md:text-[39.81px] font-bold">Development</h2>
+          <p className="text-[15px] md:text-[16px] text-[#525252]">
             Building scalable microfinance solutions, ready-to-launch tools, and{" "}
             <br />
             applications powered by cutting-edge technologies for financial{" "}
@@ -246,10 +247,10 @@ function Home() {
       {/* Language icon section */}
       <LogoRow />
 
-      <ClientCarousel />
+     { /*<ClientCarousel />*/}
 
       {/* Clients Review Section*/}
-      <div className="flex flex-col items-center justify-between p-6 bg-white md:flex-row md:p-14 ">
+      <div className="flex flex-col-reverse items-center justify-between  ml-[20px] md:ml-[120px] mr-[20px] md:mr-[120px] bg-white md:flex-row md:p-14 ">
         {/* Left: Review Card */}
         <div className="flex justify-center w-full md:w-1/2 md:justify-start md:ml-[120px]">
           <div className="p-6 bg-white shadow-lg rounded-lg w-[90%] md:w-[75%]">
@@ -269,10 +270,10 @@ function Home() {
 
         {/* Right: Title and Description */}
         <div className="w-full mt-8 text-center md:w-1/2 md:text-left md:mt-0 md:m-20">
-          <h2 className="text-[39.81px] font-semibold">
+          <h2 className="text-[30px] md:text-[39.81px] font-semibold">
             <span className="text-purple-600 ">Client’s</span> Reviews
           </h2>
-          <p className="mt-[4px] text-[16px] text-[#525252]">
+          <p className="mt-[4px] text-[15px] md:text-[16px] text-[#525252]">
             Our clients trust us for delivering reliable, innovative
             microfinance solutions that drive growth and success across
             industries worldwide.
@@ -280,38 +281,41 @@ function Home() {
         </div>
       </div>
 
-      {/* Countries serve section */}
-      <motion.div className="flex flex-col items-center justify-center p-4 md:flex-row mt-[120px]">
-        {/* Image Section */}
-        <motion.div
-          className="w-[350px] h-[350px] md:w-[590px] mb-4 md:mb-0 flex justify-center md:justify-start"
-          initial={{ x: -100 }} // Start position off-screen to the left
-          whileInView={{ x: 0 }} // Move to its final position (normal flow)
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-          viewport={{ once: true }} // Trigger animation only once
-        >
-          <img className="md:ml-[120px] ml-0" src={img3} alt="Placeholder" />
-        </motion.div>
+      {/* Countries Serve Section */}
+<motion.div className="flex flex-col items-center justify-center ml-[20px] md:ml-[120px] mr-[20px] md:mr-[120px] md:flex-row mt-[120px]">
+  {/* Image Section */}
+  <motion.div
+    className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] mb-4 md:mb-0 flex justify-center md:justify-start"
+    initial={{ x: -100 }} // Start position off-screen to the left
+    whileInView={{ x: 0 }} // Move to its final position (normal flow)
+    transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+    viewport={{ once: true }} // Trigger animation only once
+  >
+    <img className="" src={img3} alt="Placeholder" />
+  </motion.div>
 
-        {/* Text Section */}
-        <motion.div
-          className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-14 md:m-10"
-          initial={{ x: 100 }} // Start position off-screen to the right
-          whileInView={{ x: 0 }} // Move to its final position (normal flow)
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-          viewport={{ once: true }} // Trigger animation only once
-        >
-          <h2 className="text-4xl font-bold">
-            <span className="text-purple-600">Countries </span>We Serve
-          </h2>
-          <p className="mt-4 text-base">
-            We offer innovative microfinance solutions in Dubai, the United
-            States, Canada, Singapore, Sri Lanka, and Australia, empowering
-            businesses and communities with reliable financial support.
-          </p>
-          <img className="h-10 mt-6" src={img4} alt="Countries we serve" />
-        </motion.div>
-      </motion.div>
+  {/* Text Section */}
+  <motion.div
+    className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-14 md:m-10"
+    initial={{ x: 100 }} // Start position off-screen to the right
+    whileInView={{ x: 0 }} // Move to its final position (normal flow)
+    transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+    viewport={{ once: true }} // Trigger animation only once
+  >
+    <h2 className="text-[30px] md:text-[39.81px] font-bold">
+      <span className="text-purple-600">Countries </span>We Serve
+    </h2>
+    <p className="mt-4 text-base">
+      We offer innovative microfinance solutions in Dubai, the United States,
+      Canada, Singapore, Sri Lanka, and Australia, empowering businesses and
+      communities with reliable financial support.
+    </p>
+    <div className="flex justify-center md:justify-start">
+      <img className="h-10 mt-6" src={img4} alt="Countries we serve" />
+    </div>
+  </motion.div>
+</motion.div>
+
 
       <Cooperate/>
 

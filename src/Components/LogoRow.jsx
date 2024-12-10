@@ -23,7 +23,7 @@ function LogoRow() {
             key={index}
             src={logo}
             alt={`Logo ${index}`}
-            className="w-auto h-[114px]" // Adjust height as needed
+            className="w-[1000px] md:w-auto h-[60px] md:h-[114px] " // Adjust height as needed
           />
         ))}
       </motion.div>

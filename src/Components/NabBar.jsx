@@ -12,7 +12,7 @@ function NavBar() {
       </div>
 
       {/* Middle Section: Desktop Navigation */}
-      <ul className="hidden md:flex space-x-8 text-[16px] font-medium">
+      <ul className="hidden xl:flex space-x-8 text-[16px] font-medium">
         <li>
           <a href="/" className="hover:text-[#9733D1]">Home</a>
         </li>
@@ -44,7 +44,7 @@ function NavBar() {
       </div>
 
       {/* Hamburger Menu for Mobile */}
-      <div className="md:hidden">
+      <div className="xl:hidden">
         <button onClick={() => setIsDrawerOpen(true)} className="text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
