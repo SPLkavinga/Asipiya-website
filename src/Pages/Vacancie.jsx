@@ -8,8 +8,8 @@ import ApplyForm from './../Components/ApplyForm';
 function Vacancie() {
     const vacancies = [
         { title: "Intern Software Engineer", link: "/intern" },
-        { title: "Intern UI-UX Engineer", link: "/intern-ui-ux-engineer" },
-        { title: "Digital Marketing Specialist Intern", link: "/digital-marketing-intern" },
+        { title: "Intern UI-UX Engineer", link: "/UiUxIntern" },
+        { title: "Digital Marketing Specialist Intern", link: "/DigitalMarketingIntern" },
         { title: "Quality Assurance Engineer", link: "/quality-assurance-engineer" },
         { title: "Search Engine Optimization Specialist", link: "/seo-specialist" },
         { title: "Customer Care Executive", link: "/customer-care-executive" },
@@ -71,12 +71,12 @@ function Vacancie() {
             <div className="flex items-center justify-center min-h-screen bg-white">
                 <div className="w-full max-w-[1200px] p-[102px] mb-5 bg-white border border-gray-300 rounded-md shadow-md ">
                     <h1 className="w-full mb-2 text-[38.81px] font-medium text-center ">Position Not Available?</h1>
-                    <p className="mb-6 text-center font-normal text-gray-500 border-b-2 border-gray-400">
+                    <p className="mb-6 font-normal text-center text-gray-500 border-b-2 border-gray-400">
                     Just Apply And we’ll Get back To You!
                     </p>
                     <form className="space-y-4">
                     <div>
-                        <label className="block text-sm font-medium pl-2 text-gray-700" htmlFor="name">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="name">
                         Name
                         </label>
                         <input
@@ -88,7 +88,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="email">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="email">
                         Email
                         </label>
                         <input
@@ -100,7 +100,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="contactNumber">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="contactNumber">
                         Contact Number
                         </label>
                         <input
@@ -112,7 +112,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="nicNumber">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="nicNumber">
                         NIC Number
                         </label>
                         <input
@@ -124,7 +124,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="linkedinProfile">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="linkedinProfile">
                         LinkedIn Profile
                         </label>
                         <input
@@ -136,7 +136,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="image">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="image">
                         Image
                         </label>
                         <input
@@ -147,7 +147,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="position">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="position">
                         Position
                         </label>
                         <input
@@ -159,7 +159,7 @@ function Vacancie() {
                     </div>
 
                     <div>
-                        <label className="block text-sm font-medium text-gray-700 pl-2" htmlFor="message">
+                        <label className="block pl-2 text-sm font-medium text-gray-700" htmlFor="message">
                         Message
                         </label>
                         <textarea

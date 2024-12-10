@@ -9,6 +9,9 @@ import Services from './Pages/Services';
 import Prawing from './Pages/Prawing';
 import Leasing from './Pages/Leasing';
 import ERP from './Pages/ERP';
+import UiUxIntern from './Pages/UiUxIntern';
+import DigitalMarketingIntern from './Pages/DigitalMarketingIntern';
+import QAEngineer from './Pages/QAEngineer';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/vacancie' element={<Vacancie/>}/>
       <Route path='/intern' element={<Intern/>}/>
+      <Route path='/UiUxIntern' element={<UiUxIntern/>}/>
+      <Route path='/DigitalMarketingIntern' element={<DigitalMarketingIntern/>}/>
+      <Route path='/QAEngineer' element={<QAEngineer/>}/>
       <Route path='/Services' element={<Services/>}/>
       <Route path='/Microfinance' element={<Microfinance/>}/>
       <Route path='/Prawing' element={<Prawing/>}/>
