@@ -152,7 +152,7 @@ function Contact() {
         <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-4 md:mt-0">
             {/* Section 1 */}
             <div>
-            <p className="mb-3 text-sm font-semibold">Chat with Us</p>
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Chat with Us</p>
             <p className="text-sm text-gray-500 w-[284px]">
                 Reach out to us for inquiries, support, or collaborations. We’re here to assist you!
             </p>
@@ -171,7 +171,7 @@ function Contact() {
 
             {/* Section 2 */}
             <div>
-            <p className="mb-3 text-sm font-semibold">Call Us</p>
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Call Us</p>
             <p className="text-sm text-gray-500 w-[284px]">
                 Call us for personalized assistance, inquiries, or support. We're just a phone call away!
             </p>
@@ -184,7 +184,7 @@ function Contact() {
 
             {/* Section 3 */}
             <div>
-            <p className="mb-3 text-sm font-semibold">Visit Us</p>
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Visit Us</p>
             <p className="text-sm text-gray-500 w-[284px]">
                 Visit us at our office for in-person consultations, services, or inquiries. We’d love to meet you!
             </p>
@@ -199,7 +199,7 @@ function Contact() {
 
             {/* Section 4 */}
             <div>
-      <p className="mb-3 text-sm font-semibold">Follow our social</p>
+      <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Follow our social</p>
       <p className="mb-3 text-sm text-gray-500 w-[284px]">
         Follow us on social media for updates, news, and insights. Stay connected with our latest!
       </p>
