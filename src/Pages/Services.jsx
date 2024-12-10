@@ -4,6 +4,7 @@ import NavBar from './../Components/NabBar';
 import backgroundImg from '../assets/serviceback.png';
 import Cooperate from './../Components/Cooperate';
 import Footer from './../Components/Footer';
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -65,6 +66,12 @@ const services = [
       "Deliver exceptional quality with our state-of-the-art printing solutions, perfect for all your personal and professional needs.",
   },
 ];
+
+const textVariants = {
+  hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
+  visible: { opacity: 1, y: 0 }, // Move to its final position (up)
+};
+
 function Services() {
   return (
     <>
@@ -82,40 +89,72 @@ function Services() {
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
         <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px] ml-[120px]">
-          <p className="mb-3 text-sm text-white md:text-[19.2px]">Services</p>
-          <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2">
+          <motion.p className="mb-3 text-sm text-white md:text-[19.2px]"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={textVariants}
+          >Services</motion.p>
+
+          <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={textVariants}
+          >
             Our Services
-          </h2>
-          <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[8px]">
+          </motion.h2>
+
+          <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[16px]"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={textVariants}
+          >
             and Expertise
-          </h2>
-          <p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-[488px]">
+          </motion.h2>
+          
+          <motion.p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-[488px]"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={textVariants}
+          >
             At Asipiya Soft Solutions, we empower your business for success in
             the digital age. Join us on an innovative journey towards efficiency
             and thrive together in shaping your future.
-          </p>
+          </motion.p>
         </div>
       </div>
 
       {/* Services Grid */}
-      <div className="container px-16 mx-auto ">
-        <h1 className="mt-10 mb-[8px] text-[39.81px] font-medium text-center text-black">
-          Services We're <span className="text-purple-800">Offer</span>
-        </h1>
-        <div className="grid justify-center grid-cols-1 gap-4 mb-4 md:ml-20 p-14 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+      <div className="container px-16 mx-auto">
+      <h1 className="mt-10 mb-[8px] text-[39.81px] font-medium text-center text-black">
+        Services We're <span className="text-purple-800">Offer</span>
+      </h1>
+      
+      {/* Services Grid */}
+      <div className="grid justify-center grid-cols-1 gap-4 mb-4 md:ml-20 p-14 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service) => (
+          <motion.div
+            key={service.id}
+            initial={{ opacity: 0, y: 100 }} // Start position off-screen with opacity 0
+            whileInView={{ opacity: 1, y: 0 }} // Move to final position with full opacity
+            transition={{ duration: 0.5, ease: "easeOut" }} // Smooth movement
+            viewport={{ once: true }} // Trigger animation once when the element comes into view
+          >
             <Link
-              key={service.id}
               to={service.link}
-              className="block w-[387px] h-[387px] p-6  bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
+              className="block w-[387px] h-[387px] p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
             >
-              <div className="mb-4 text-[100px] text-center ">{service.icon}</div>
+              <div className="mb-4 text-[100px] text-center">{service.icon}</div>
               <h2 className="mb-2 text-[23.04px] font-semibold">{service.title}</h2>
               <p className="text-gray-600 text-[16px] line-clamp-4">{service.description}</p>
             </Link>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </div>
+    </div>
 
       {/* Footer Components */}
       <Cooperate />
