@@ -11,7 +11,7 @@ import backgroundImg from "../assets/background.png";
 import frame from "../assets/Frame 4.png";
 import WhyChooseUs from "./../Components/WhyChooseUs";
 import LogoRow from "../Components/LogoRow";
-//import ClientCarousel from "../Components/ClientCarousel";
+import ClientCarousel from "../Components/ClientCarousel";
 import Cooperate from "../Components/Cooperate";
 
 function Home() {
@@ -254,6 +254,7 @@ function Home() {
       <LogoRow />
 
       {/*<ClientCarousel />*/}
+      <ClientCarousel />
 
       {/* Clients Review Section */}
       <div className="mx-[20px] xl:mx-[120px]">
@@ -310,15 +311,15 @@ function Home() {
         {/* Text Section */}
         <motion.div
           className="w-full text-center md:w-full lg:w-1/2 lg:pl-8 xl:text-left"
-          initial={{ x: 100 }} // Start position off-screen to the right
-          whileInView={{ x: 0 }} // Move to its final position (normal flow)
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-          viewport={{ once: true }} // Trigger animation only once
+          initial={{ x: 100 }} 
+          whileInView={{ x: 0 }} 
+          transition={{ duration: 0.7, ease: "easeOut" }} 
+          viewport={{ once: true }} 
         >
-          <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold">
+          <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
             <span className="text-purple-600">Countries </span>We Serve
           </h2>
-          <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] ">
+          <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252]">
             We offer innovative microfinance solutions in Dubai, the United
             States, Canada, Singapore, Sri Lanka, and Australia, empowering
             businesses and communities with reliable financial support.
