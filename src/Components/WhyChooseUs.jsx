@@ -84,7 +84,7 @@ function WhyChooseUs() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between max-w-6xl p-4 mx-auto mb-10 space-y-8 md:space-y-12">
+    <div className="flex flex-col items-center justify-between max-w-7xl p-4 mx-[20px] xl:mx-[120px] mb-10 space-y-8 md:space-y-12 ">
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center w-full space-y-8 md:flex-row md:space-y-0 md:space-x-8">
         {/* Image Section with animation */}
@@ -98,7 +98,7 @@ function WhyChooseUs() {
           <img
             src={choose}
             alt="Person working"
-            className="w-[590px] rounded-lg"
+            className="w-full md:w-[590px] rounded-lg" // Ensure full width on smaller screens
           />
         </motion.div>
 
@@ -111,7 +111,7 @@ function WhyChooseUs() {
           viewport={{ once: true }} // Trigger animation only once
         >
           {/* Section Heading */}
-          <h2 className="mb-8 text-[39.81px] font-semibold text-gray-800 sm:text-3xl">
+          <h2 className="mb-8 text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-800">
             Why <span className="text-[#7D00C5]">Choose Us?</span>
           </h2>
 

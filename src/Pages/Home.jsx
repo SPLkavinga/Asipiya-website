@@ -146,7 +146,7 @@ function Home() {
       </div>
       <br />
 
-      <div className="px-[20px] xl:px-[120px] ">
+      <div className="mx-[20px] xl:mx-[120px] ">
         <p className="text-[30px] md:text-[39.81px] font-medium text-center mt-[30px] md:mt-[78px]">
           Our <span className="text-purple-600"> Services</span>{" "}
         </p>
