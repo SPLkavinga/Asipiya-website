@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Leadership = ({ member1, member2, member3 }) => {
   return (
-    <motion.div className="w-full py-8 mt-[120px] px-[120px]"
+    <motion.div className="w-full py-8 mt-[60px] xl:mt-[120px] "
     initial={{ opacity: 0 }} // Start with opacity 0
         whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
         viewport={{ once: true }} // Ensure animation triggers only once
@@ -16,15 +16,15 @@ const Leadership = ({ member1, member2, member3 }) => {
       <p className="text-[39.81px] font-semibold text-center text-gray-800">
         Meet Our <span className="font-bold text-[#7D00C5]">Leadership</span>
       </p>
-      <p className="text-[17px] font-normal text-center text-[#525252] mt-[8px]">
-      Our customers, our societies and our business are linked. It's different <br/> for us. It improves us.
+      <p className="text-[17px] font-normal text-center text-[#525252] mt-[8px] w-full ">
+      Our customers, our societies and our business are linked. It's different  for us. It improves us.
       </p>
 
       <div className="flex flex-wrap justify-center gap-[16px] mt-8 md:mt-[32px] ">
         {/* Member 1 */}
         <div className="relative group ">
           <img
-            className="w-[387px] h-[360px] rounded-lg object-cover"
+            className="w-[300px] h-[300px] xl:w-[387px] xl:h-[360px] rounded-lg object-cover"
             src={member12}
             alt="Member 1"
           />
@@ -64,7 +64,7 @@ const Leadership = ({ member1, member2, member3 }) => {
         {/* Member 2 */}
         <div className="relative group">
           <img
-            className="w-[387px] h-[360px] rounded-lg object-cover"
+            className="w-[300px] h-[300px] xl:w-[387px] xl:h-[360px] rounded-lg object-cover"
             src={member22}
             alt="Member 2"
           />
@@ -102,7 +102,7 @@ const Leadership = ({ member1, member2, member3 }) => {
         {/* Member 3 */}
         <div className="relative group">
           <img
-            className="w-[387px] h-[360px] rounded-lg object-cover"
+            className="w-[300px] h-[300px] xl:w-[387px] xl:h-[360px] rounded-lg object-cover"
             src={member32}
             alt="Member 3"
           />
