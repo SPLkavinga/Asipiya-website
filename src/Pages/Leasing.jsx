@@ -67,7 +67,7 @@ const Leasing = () => {
         style={{ backgroundImage: `url(${backgroundImg})` }}
       >
         {/* Image on the right side */}
-        <div className="w-[350px] h-[250px] xl:w-[639px] xl:h-[404px] flex justify-center xl:justify-start mb-4 md:mb-0 z-10 mr-[20px] xl:mr-[120px] mt-10 ">
+        <div className="w-[350px] h-[250px] xl:w-[639px] xl:h-[404px] flex justify-center xl:justify-start mb-4 md:mb-0 z-10 mr-[20px] xl:mr-[120px] mt-10 xl:mt-0">
           <img src={img1} alt="Placeholder" />
         </div>
 
