@@ -12,6 +12,10 @@ import ERP from './Pages/ERP';
 import UiUxIntern from './Pages/UiUxIntern';
 import DigitalMarketingIntern from './Pages/DigitalMarketingIntern';
 import QAEngineer from './Pages/QAEngineer';
+import SearchEngineOptimizationSpecialist from './Pages/SearchEngineOptimizationSpecialist';
+import CustomerCareExecutive from './Pages/CustomerCareExecutive';
+import BusinessAnalyst from './Pages/BusinessAnalyst';
+import GraphicDesigner from './Pages/Graphic Designer';
 
 function App() {
   return (
@@ -25,6 +29,10 @@ function App() {
       <Route path='/UiUxIntern' element={<UiUxIntern/>}/>
       <Route path='/DigitalMarketingIntern' element={<DigitalMarketingIntern/>}/>
       <Route path='/QAEngineer' element={<QAEngineer/>}/>
+      <Route path='/SearchEngineOptimizationSpecialist' element={<SearchEngineOptimizationSpecialist/>}/>
+      <Route path='/CustomerCareExecutive' element={<CustomerCareExecutive/>}/>
+      <Route path='/BusinessAnalyst' element={<BusinessAnalyst/>}/>
+      <Route path='/GraphicDesigner' element={<GraphicDesigner/>}/>
       <Route path='/Services' element={<Services/>}/>
       <Route path='/Microfinance' element={<Microfinance/>}/>
       <Route path='/Prawing' element={<Prawing/>}/>
