@@ -7,7 +7,7 @@ function Cooperate() {
     <>
       {/* Cooperate section */}
       <motion.div
-        className="flex flex-col items-center justify-center mt-[200px]"
+        className="flex flex-col items-center justify-center mt-[120px]"
         initial={{ opacity: 0 }} // Start with opacity 0
         whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
         viewport={{ once: true }} // Ensure animation triggers only once

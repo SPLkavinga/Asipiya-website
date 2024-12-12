@@ -79,7 +79,7 @@ function Services() {
 
       {/* Background Section */}
       <div
-        className="relative flex items-center justify-start w-full h-auto bg-center bg-cover md:h-screen"
+        className="relative flex items-center justify-start w-full h-[650px]  bg-center bg-cover md:h-screen"
         style={{
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: "cover",
@@ -88,8 +88,8 @@ function Services() {
         {/* Darker Overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
-        <div className="z-10 w-full px-6 py-8 text-left md:w-2/3 md:px-20 md:mt-[-50px] ml-[120px]">
-          <motion.p className="mb-3 text-sm text-white md:text-[19.2px]"
+        <div className="z-10 w-full mx-[20px] xl:mx-[120px] py-8  md:w-2/3 p-4 md:mt-[-50px] text-center xl:text-start">
+          <motion.p className="mb-3 text-sm text-white md:text-[19.2px] "
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -114,7 +114,7 @@ function Services() {
             and Expertise
           </motion.h2>
           
-          <motion.p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-[488px]"
+          <motion.p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-full xl:w-[488px]"
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5, delay: 0.1 }}
@@ -128,13 +128,13 @@ function Services() {
       </div>
 
       {/* Services Grid */}
-      <div className="container px-16 mx-auto">
-      <h1 className="mt-10 mb-[8px] text-[39.81px] font-medium text-center text-black">
+      <div className="container ">
+      <h1 className="mt-10 mb-[8px] text-[30px] xl:text-[39.81px] font-medium text-center text-black">
         Services We're <span className="text-purple-800">Offer</span>
       </h1>
       
       {/* Services Grid */}
-      <div className="grid justify-center grid-cols-1 gap-4 mb-4 md:ml-20 p-14 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid justify-center grid-cols-1 gap-4 mb-4 mx-[20px] xl:mx-[120px] p-4 xl:p-14 md:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <motion.div
             key={service.id}
@@ -145,7 +145,7 @@ function Services() {
           >
             <Link
               to={service.link}
-              className="block w-[387px] h-[387px] p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
+              className="block w-[300px] h-full xl:w-[350px] xl:h-[387px] p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
             >
               <div className="mb-4 text-[100px] text-center">{service.icon}</div>
               <h2 className="mb-2 text-[23.04px] font-semibold">{service.title}</h2>
