@@ -1,12 +1,19 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { AiOutlineMessage, AiOutlineMail, AiOutlinePhone, AiOutlineHome, AiOutlineFacebook, AiOutlineInstagram, AiOutlineLinkedin } from 'react-icons/ai';
-import backgroundImg from '../assets/Contact.png';
-import NavBar from './../Components/NabBar';
-import Footer from './../Components/Footer';
+import {
+  AiOutlineMessage,
+  AiOutlineMail,
+  AiOutlinePhone,
+  AiOutlineHome,
+  AiOutlineFacebook,
+  AiOutlineInstagram,
+  AiOutlineLinkedin,
+} from "react-icons/ai";
+import backgroundImg from "../assets/Contact.png";
+import NavBar from "./../Components/NabBar";
+import Footer from "./../Components/Footer";
 
 function Contact() {
-  
   const textVariants = {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
@@ -14,42 +21,47 @@ function Contact() {
 
   return (
     <>
-        <NavBar/>
+      <NavBar />
       {/* Full-screen background section */}
       <div
-        className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row md:h-screen px-[120px]"
+        className="relative flex flex-col items-center justify-center w-full h-[650px] xl:h-screen bg-center bg-cover xl:flex-row px-[20px] xl:px-[120px]"
         style={{
           backgroundImage: `url(${backgroundImg})`,
-          backgroundSize: 'cover',
+          backgroundSize: "cover",
         }}
       >
         {/* Darker overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
         {/* Left Side: Text Content */}
-        <motion.div className="z-10 w-full px-6 py-8 text-center text-white md:w-1/2 md:px-12 md:text-left"
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.5, delay: 0.2 }}
-        variants={textVariants}
+        <motion.div
+          className="z-10 mt-[500px] xl:mt-0 w-full px-6 py-8 text-center text-white xl:w-1/2 xl:px-12 xl:text-left"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          variants={textVariants}
         >
-          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
-            Let’s Level Up Your
-          </h2>
-          <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
-            Business Together
-          </h2>
-          <p className="mt-4 text-sm md:mt-6 md:text-lg w-[404px]">
-            Welcome to Asipiya! For inquiries, reach out to us at <strong>info@asipiya.lk</strong>.
-          </p>
+          <div className="text-center xl:text-start max-w-[487px] w-full">
+            <h2 className="text-3xl font-bold md:text-[20px] xl:text-5xl">
+              Let’s Level Up Your
+            </h2>
+            <h2 className="text-3xl font-bold md:text-4xl lg:text-5xl">
+              Business Together
+            </h2>
+            <p className="mt-4 text-sm md:mt-6 xl:text-lg">
+              Welcome to Asipiya! For inquiries, reach out to us at{" "}
+              <strong>info@asipiya.lk</strong>.
+            </p>
+          </div>
         </motion.div>
 
         {/* Right Side: Contact Form */}
-        <motion.div className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-1/2 lg:w-[692px]"
-        initial={{ x: 100 }} // Start position off-screen to the right
-        whileInView={{ x: 0 }} // Move to its final position
-        transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-        viewport={{ once: true }} // Trigger animation only once
+        <motion.div
+          className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-[700px] xl:w-[692px]"
+          initial={{ x: 100 }} // Start position off-screen to the right
+          whileInView={{ x: 0 }} // Move to its final position
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          viewport={{ once: true }} // Trigger animation only once
         >
           <form>
             {/* First Row: First Name, Last Name, and Phone Number */}
@@ -71,7 +83,9 @@ function Contact() {
                 />
               </div>
               <div>
-                <label className="block mb-2 text-gray-700">Mobile Number</label>
+                <label className="block mb-2 text-gray-700">
+                  Mobile Number
+                </label>
                 <input
                   type="text"
                   placeholder="+94 70 2882 222"
@@ -102,7 +116,9 @@ function Contact() {
 
             {/* Interested Options */}
             <div className="mb-6">
-              <label className="block mb-2 text-gray-700">I'm interested in...</label>
+              <label className="block mb-2 text-gray-700 ">
+                I'm interested in...
+              </label>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                 <button
                   type="button"
@@ -145,7 +161,7 @@ function Contact() {
                 className="w-4 h-4 text-purple-600 border-gray-300 rounded focus:ring-purple-500"
               />
               <label htmlFor="agree" className="ml-2 text-sm text-gray-600">
-                You agree to our friendly{' '}
+                You agree to our friendly{" "}
                 <a href="#" className="text-purple-500 underline">
                   privacy policy.
                 </a>
@@ -165,99 +181,111 @@ function Contact() {
       <br />
       <br />
 
-      <motion.div className="container px-[120px] mx-auto "
-      initial={{ x: 100 }} // Start position off-screen to the right
-      whileInView={{ x: 0 }} // Move to its final position
-      transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-      viewport={{ once: true }} // Trigger animation only once
-      >
-        <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-4 md:mt-0">
-            {/* Section 1 */}
-            <div>
-            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Chat with Us</p>
+      <div className="container px-[40px] xl:px-[120px] xl:mt-[0px] mt-[500px] ">
+        <motion.div
+          className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 md:mt-0"
+          initial={{ x: 100 }} // Start position off-screen to the right
+          whileInView={{ x: 0 }} // Move to its final position
+          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          viewport={{ once: true }} // Trigger animation only once
+        >
+          {/* Section 1 */}
+          <div className="mb-2">
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">
+              Chat with Us
+            </p>
             <p className="text-sm text-gray-500 w-[284px]">
-                Reach out to us for inquiries, support, or collaborations. We’re here to assist you!
+              Reach out to us for inquiries, support, or collaborations. We’re
+              here to assist you!
             </p>
             <p className="flex items-center mt-3 space-x-2 text-sm font-semibold">
-                <AiOutlineMessage className="w-5 h-5 text-purple-600" />
-                <span>Start Live Chat</span>
+              <AiOutlineMessage className="w-5 h-5 text-purple-600" />
+              <span>Start Live Chat</span>
             </p>
             <Link
-                to="/contact"
-                className="flex items-center mt-3 space-x-2 text-sm text-purple-600"
-                >
-                <AiOutlineMail className="w-5 h-5" />
-                <span className='font-semibold text-black'>Email Us</span>
+              to="/contact"
+              className="flex items-center mt-3 space-x-2 text-sm text-purple-600"
+            >
+              <AiOutlineMail className="w-5 h-5" />
+              <span className="font-semibold text-black">Email Us</span>
             </Link>
-            </div>
+          </div>
 
-            {/* Section 2 */}
-            <div>
-            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Call Us</p>
+          {/* Section 2 */}
+          <div className="mb-2">
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">
+              Call Us
+            </p>
             <p className="text-sm text-gray-500 w-[284px]">
-                Call us for personalized assistance, inquiries, or support. We're just a phone call away!
+              Call us for personalized assistance, inquiries, or support. We're
+              just a phone call away!
             </p>
             <p className="flex items-center mt-3 space-x-2 text-sm font-semibold">
-                <AiOutlinePhone className="w-5 h-5 text-purple-600" />
-                <span>071 3324845</span>
+              <AiOutlinePhone className="w-5 h-5 text-purple-600" />
+              <span>071 3324845</span>
             </p>
-           
-            </div>
+          </div>
 
-            {/* Section 3 */}
-            <div>
-            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Visit Us</p>
+          {/* Section 3 */}
+          <div className="mb-2">
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">
+              Visit Us
+            </p>
             <p className="text-sm text-gray-500 w-[284px]">
-                Visit us at our office for in-person consultations, services, or inquiries. We’d love to meet you!
+              Visit us at our office for in-person consultations, services, or
+              inquiries. We’d love to meet you!
             </p>
             <p className="flex items-center mt-3 space-x-2 text-sm font-semibold">
-                <AiOutlineHome className="w-5 h-5 text-purple-600" />
-                <span>Visit Us</span>
+              <AiOutlineHome className="w-5 h-5 text-purple-600" />
+              <span>Visit Us</span>
             </p>
             <p className="text-sm text-gray-500">
-                123, kelaniya, Colombo, Sri Lanka
+              123, kelaniya, Colombo, Sri Lanka
             </p>
+          </div>
+
+          {/* Section 4 */}
+          <div className="mb-2">
+            <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">
+              Follow our social
+            </p>
+            <p className="mb-3 text-sm text-gray-500 w-[284px]">
+              Follow us on social media for updates, news, and insights. Stay
+              connected with our latest!
+            </p>
+
+            <div className="flex flex-col space-y-2">
+              <Link
+                to="/facebook"
+                className="flex items-center space-x-2 text-sm text-purple-600"
+              >
+                <AiOutlineFacebook className="w-5 h-5" />
+                <span>Facebook</span>
+              </Link>
+
+              <Link
+                to="/instagram"
+                className="flex items-center space-x-2 text-sm text-purple-600"
+              >
+                <AiOutlineInstagram className="w-5 h-5" />
+                <span>Instagram</span>
+              </Link>
+
+              <Link
+                to="/linkedin"
+                className="flex items-center space-x-2 text-sm text-purple-600"
+              >
+                <AiOutlineLinkedin className="w-5 h-5" />
+                <span>LinkedIn</span>
+              </Link>
             </div>
-
-            {/* Section 4 */}
-            <div>
-      <p className="mb-3 text-sm font-semibold text-[#333333] text-opacity-80">Follow our social</p>
-      <p className="mb-3 text-sm text-gray-500 w-[284px]">
-        Follow us on social media for updates, news, and insights. Stay connected with our latest!
-      </p>
-
-      <div className="flex flex-col space-y-2">
-        <Link
-          to="/facebook"
-          className="flex items-center space-x-2 text-sm text-purple-600"
-        >
-          <AiOutlineFacebook className="w-5 h-5" />
-          <span>Facebook</span>
-        </Link>
-
-        <Link
-          to="/instagram"
-          className="flex items-center space-x-2 text-sm text-purple-600"
-        >
-          <AiOutlineInstagram className="w-5 h-5" />
-          <span>Instagram</span>
-        </Link>
-
-        <Link
-          to="/linkedin"
-          className="flex items-center space-x-2 text-sm text-purple-600"
-        >
-          <AiOutlineLinkedin className="w-5 h-5" />
-          <span>LinkedIn</span>
-        </Link>
-      </div>
-    </div>
-        </div>
+          </div>
         </motion.div>
-        <br />
+      </div>
+      <br />
       <br />
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
