@@ -144,8 +144,8 @@ const Microfinance = () => {
         effortless product launches.
       </p>
       {/* information about micro finance section */}
-      <div className="flex flex-col items-center justify-center p-6 xl:flex-row mx-[20px] xl:mx-[120px]">
-        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2  mb-4 md:mb-0 flex justify-center md:justify-start">
+      <div className="flex flex-col items-center justify-center p-6 md:flex-row mx-[20px] xl:mx-[120px] ">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img2} alt="Placeholder" />
         </div>
 
@@ -168,7 +168,7 @@ const Microfinance = () => {
           <img src={img3} alt="Placeholder" />
         </div>
 
-        <div className="w-fulltext-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
           <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
           <p className="mt-4 text-base text-gray-500">
             The Cash Flow Monthly feature in Asipiya Finance offers detailed
