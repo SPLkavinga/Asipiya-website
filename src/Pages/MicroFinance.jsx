@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
-import Footer from './../Components/Footer';
-import NavBar from './../Components/NabBar';
-import Cooperate from './../Components/Cooperate';
-import backgroundImg from '../assets/bg12.jpg';
-import img1 from '../assets/image 27.png';
-import img2 from '../assets/Cash1.png';
-import img3 from "../assets/Cash2.png"
-import img4 from "../assets/cost3.png"
-import img5 from "../assets/cash3.png"
-import img6 from "../assets/cash4.png"
-import BusinessForward from './../Components/BusinessForward';
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-
+import { Link } from "react-router-dom";
+import Footer from "./../Components/Footer";
+import NavBar from "./../Components/NabBar";
+import Cooperate from "./../Components/Cooperate";
+import backgroundImg from "../assets/bg12.jpg";
+import img1 from "../assets/img1.png";
+import img2 from "../assets/Cash1.png";
+import img3 from "../assets/Cash2.png";
+import img4 from "../assets/cost3.png";
+import img5 from "../assets/cash3.png";
+import img6 from "../assets/cash4.png";
+import BusinessForward from "./../Components/BusinessForward";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -54,315 +54,313 @@ const features = [
   },
 ];
 
-
-
 const Microfinance = () => {
-  useEffect(() =>{
+  useEffect(() => {
     Aos.init();
- },[])
+  }, []);
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
+    visible: { opacity: 1, y: 0 }, // Move to its final position (up)
+  };
+
   return (
     <>
-        <NavBar />
-         {/* Full-screen background section */}
-         <div
-                className="relative flex flex-col items-center justify-center w-full h-auto bg-center bg-cover md:flex-row-reverse md:h-screen"
-                style={{ backgroundImage: `url(${backgroundImg})` }}
+      <NavBar />
+      {/* Full-screen background section */}
+      <div
+        className="relative flex flex-col items-center justify-center w-full  h-[650px] xl:h-screen  bg-center bg-cover xl:flex-row-reverse "
+        style={{ backgroundImage: `url(${backgroundImg})` }}
+      >
+        {/* Image on the right side */}
+        <div className="w-[350px] h-[250px] xl:w-[639px] xl:h-[404px] flex justify-center xl:justify-start mb-4 md:mb-0 z-10 mr-[20px] xl:mr-[120px] mt-10 ">
+          <img src={img1} alt="Placeholder" />
+        </div>
+
+        {/* Text content on the left side */}
+        <div className="z-10 w-full py-8 text-center xl:w-1/2  md:text-left p-4 ml-[0px] xl:ml-[120px] md:py-0   ">
+          <h2 className="text-[30px] xl:text-[47.78px] font-semibold text-black text-opacity-70 text-center xl:text-start">
+            Empowering Lives Globally with Asipiya Finance With Trusted
+            Microfinance Solutions.
+          </h2>
+          <p className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start">
+            Achieve complete control and visibility of your microfinance
+            operations with the Asipiya Finance .
+          </p>
+          {/* Button below the text content */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.6 }}
+            variants={textVariants}
+            className="w-full flex justify-center xl:justify-start"
+          >
+            <Link
+              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
+              to="/About"
             >
+              Let's get started
+            </Link>
+          </motion.div>
+        </div>
+      </div>
 
-
-                {/* Image on the right side */}
-                <div className="w-full md:w-1/2 md:h-[450px] flex justify-center md:justify-start mb-4 md:mb-0 z-10 mt-5 md:ml-20">
-                    <img className="object-cover rounded-lg shadow-md"  src={img1} alt="Placeholder"  />
-                </div>
-
-                {/* Text content on the left side */}
-                <div className="z-10 w-full px-4 py-8 text-center md:w-1/2 md:pr-2 md:text-left md:px-52 md:py-0">
-                    <h2 className="text-5xl font-bold text-black">Empowering Lives</h2>
-                    <h2 className="mt-3 text-5xl font-bold text-black">Globally with Asipiya </h2>
-                    <h2 className="mt-3 text-5xl font-bold text-black">Finance </h2>
-                    <h2 className="mt-3 text-5xl font-bold text-black">With Trusted Microfinance</h2>
-                    <h2 className="mt-3 mb-4 text-5xl font-bold text-black">Solutions.</h2>
-                    <p className="mt-3 mb-8 text-base text-black">
-                        Achieve complete control and visibility of your microfinance operations with the Asipiya Finance .
-                    </p>
-                    {/* Button below the text content */}
-                    <Link
-                        className="py-2 font-bold text-white bg-purple-800 border-0 rounded-full px-7"
-                        to="/About"
-                    >
-                        Let's get started
-                    </Link>
-
-                    
-                </div>
-            </div>
-
-           
-
-         {/* Why Choose Microfinance Solution section */}
-        <div className="min-h-screen px-4 py-12 bg-purple-50 sm:px-8 lg:px-16">
-        <div className="mb-12 text-center">
-            <h2 className="text-3xl font-extrabold text-gray-800 sm:text-4xl">
-            Why Choose Microfinance Solution?
+      {/* Why Choose Microfinance Solution section */}
+      <div className="min-h-screen  py-[16px] bg-purple-50 mt-16">
+        <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
+          <div className="mb-12 text-center">
+            <h2 className="text-[30px] xl:text-[32px] font-semibold text-[#333333] sm:text-4xl mt-[16px]">
+              Why Choose Microfinance Solution?
             </h2>
-        </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
             {features.map((feature, index) => (
-            <div
-                key={index}
-                className="flex flex-col p-6 text-left bg-purple-50"
-            >
+              <div key={index} className="flex flex-col text-left bg-purple-50">
                 <div className="mb-4 text-5xl text-black">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-left text-gray-800">
-                {feature.title}
+                <h3 className="text-lg font-semibold text-left text-gray-800 ">
+                  {feature.title}
                 </h3>
-                <p className="mt-2 text-gray-600">{feature.description}</p>
-            </div>
+                <p className="mt-2 text-gray-600 w-[350px] xl:w-[375px]">
+                  {feature.description}
+                </p>
+              </div>
             ))}
-        </div>
-        <div className="mt-12 text-center">
-            <button className="py-2 font-semibold text-white transition duration-300 bg-purple-700 rounded-lg shadow-lg px-14 hover:bg-purple-600">
-            Explore
+          </div>
+          <div className="mt-[32px] text-center">
+            <button className="w-[183px] h-[48px] px-6  text-[16px] font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
+              Explore
             </button>
+          </div>
         </div>
-        </div>
+      </div>
 
-        <p className="mt-10 text-4xl font-bold text-center">How Can Microfinance Help You?</p>
-        <p className="mt-3 text-center text-gray-500">Transform your business with Asipiya Finance, a cloud-based Microfinance System designed to improve efficiency, reduce costs</p>
-        <p className="mb-10 text-center text-gray-500">and enable effortless product launches.</p>
-        {/* information about micro finance section */}
-        <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img2}
-                    alt="Placeholder" data-aos="fade-right"/>
-                </div>
-
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 " data-aos="fade-left">
-                    <h2 className="text-2xl font-bold ">Cash Flow Accumulated</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                      With Asipiya Finance, the Cash Flow Accumulated feature offers a clear view of your company’s financial 
-                      health by tracking cash inflows and outflows. This tool enables you to monitor liquidity, assess cash
-                       generation, and stay on top of financial obligations, ultimately supporting long-term trend analysis, 
-                       future cash planning, and informed strategic decisions.
-                    </p>
-                </div>
-            </div>
-
-             {/* Cash Flow Monthly section */}
-            <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10">
-            <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-                <img
-                    className="object-cover rounded-lg shadow-md md:mr-52"
-                    src={img3}
-                    alt="Placeholder" data-aos="fade-left"
-                />
-            </div>
-
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left" data-aos="fade-right">
-                <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
-                <p className="mt-4 text-base text-gray-500">
-                  The Cash Flow Monthly feature in Asipiya Finance offers detailed insights into monthly cash inflows and 
-                  outflows, helping your organization identify patterns, manage short-term liquidity, and ensure sufficient 
-                  cash to meet operational needs. This feature supports budgeting and forecasting, enabling better 
-                  financial planning and control.
-                </p>
-            </div>
+      <p className="mt-10 text-[32px] font-semibold text-[#333333] text-center">
+        How Can Microfinance Help You?
+      </p>
+      <p className="mt-3 text-center text-[#666666] ">
+        Transform your business with Asipiya Finance, a cloud-based Microfinance
+        System designed to improve efficiency, reduce costs <br /> and enable
+        effortless product launches.
+      </p>
+      {/* information about micro finance section */}
+      <div className="flex flex-col items-center justify-center p-6 xl:flex-row mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2  mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img2} alt="Placeholder" />
         </div>
 
-          {/* Profit/Loss section */}
-        <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img4}
-                    alt="Placeholder"/>
-                </div>
+        <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
+          <h2 className="text-2xl font-bold ">Cash Flow Accumulated</h2>
+          <p className="mt-4 text-sm text-gray-500">
+            With Asipiya Finance, the Cash Flow Accumulated feature offers a
+            clear view of your company’s financial health by tracking cash
+            inflows and outflows. This tool enables you to monitor liquidity,
+            assess cash generation, and stay on top of financial obligations,
+            ultimately supporting long-term trend analysis, future cash
+            planning, and informed strategic decisions.
+          </p>
+        </div>
+      </div>
 
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Profit/Loss:</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                    The Profit/Loss feature calculates the net profit or loss by comparing the company’s total revenues with 
-                    its total expenses over a specific period. This is crucial for assessing the company's financial 
-                    performance, understanding its profitability, and making informed business decisions. 
-                    It helps in identifying areas of improvement, cost management, and revenue enhancement.
-                    </p>
-                </div>
-            </div>
-
-            {/* Balance Sheet section */}
-            <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10">
-            <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-                <img
-                    className="object-cover rounded-lg shadow-md md:mr-52"
-                    src={img4}
-                    alt="Placeholder"
-                />
-            </div>
-
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Balance Sheet</h2>
-                <p className="mt-4 text-base text-gray-500">
-                  The Profit/Loss feature in Asipiya Finance calculates net profit or loss by comparing your company’s total 
-                  revenues with total expenses over a specific period. This is essential for assessing financial performance, 
-                  understanding profitability, and making informed business decisions. It also helps identify areas for 
-                  improvement, cost management, and revenue enhancement
-                </p>
-            </div>
+      {/* Cash Flow Monthly section */}
+      <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
+          <img src={img3} alt="Placeholder" />
         </div>
 
+        <div className="w-fulltext-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
+          <p className="mt-4 text-base text-gray-500">
+            The Cash Flow Monthly feature in Asipiya Finance offers detailed
+            insights into monthly cash inflows and outflows, helping your
+            organization identify patterns, manage short-term liquidity, and
+            ensure sufficient cash to meet operational needs. This feature
+            supports budgeting and forecasting, enabling better financial
+            planning and control.
+          </p>
+        </div>
+      </div>
 
-        {/* Trial Balancet section */}
-        <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img4}
-                    alt="Placeholder"/>
-                </div>
-
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Trial Balance</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                      The Trial Balance feature prepares a summary of all ledger accounts with their respective debit and 
-                      credit balances. This serves as a preliminary check before preparing financial statements, 
-                      ensuring that total debits equal total credits. It helps in identifying any discrepancies or 
-                      errors in the accounting records, providing a basis for further adjustments and corrections.
-                    </p>
-                </div>
-            </div>
-
-
-            {/* General Ledger Summary section */}
-            <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10">
-            <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-                <img
-                    className="object-cover rounded-lg shadow-md md:mr-52"
-                    src={img5}
-                    alt="Placeholder"
-                />
-            </div>
-
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
-                <p className="mt-4 text-base text-gray-500">
-                  Asipiya Finance’s Trial Balance feature summarizes all ledger accounts with debit and credit balances, 
-                  ensuring that debits and credits match before preparing financial statements. This tool is key for 
-                  detecting errors or discrepancies in accounting records, making it easier to identify areas that require 
-                  adjustments or corrections.
-                </p>
-            </div>
+      {/* Profit/Loss section */}
+      <div className="flex flex-col items-center justify-center p-6 md:flex-row mx-[20px] xl:mx-[120px] ">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img4} alt="Placeholder" />
         </div>
 
-        {/* 	Branch Equity section */}
-        <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img4}
-                    alt="Placeholder"/>
-                </div>
+        <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
+          <h2 className="text-2xl font-bold ">Profit/Loss:</h2>
+          <p className="mt-4 text-sm text-gray-500">
+            The Profit/Loss feature calculates the net profit or loss by
+            comparing the company’s total revenues with its total expenses over
+            a specific period. This is crucial for assessing the company's
+            financial performance, understanding its profitability, and making
+            informed business decisions. It helps in identifying areas of
+            improvement, cost management, and revenue enhancement.
+          </p>
+        </div>
+      </div>
 
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">	Branch Equity</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                      With Asipiya Finance, the Branch Equity feature allows you to monitor and manage the equity of each 
-                      branch individually. By evaluating financial performance, asset management, and profitability, 
-                      this tool supports better decision-making and efficient resource allocation across your branches.
-                    </p>
-                </div>
-            </div>
-
-             {/* Interbank Transfers section */}
-             <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10">
-            <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-                <img
-                    className="object-cover rounded-lg shadow-md md:mr-52"
-                    src={img6}
-                    alt="Placeholder"
-                />
-            </div>
-
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Interbank Transfers</h2>
-                <p className="mt-4 text-base text-gray-500">
-                  Asipiya Finance’s Interbank Transfers feature enables smooth and accurate recording of fund transfers 
-                  between your company’s bank accounts. This feature supports efficient cash management, 
-                  optimizes liquidity, and ensures that financial obligations are met promptly.
-                </p>
-            </div>
+      {/* Balance Sheet section */}
+      <div className="flex flex-col items-center justify-center md:flex-row-reverse p-4 mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img4} alt="Placeholder" />
         </div>
 
+        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <h2 className="text-2xl font-bold ">Balance Sheet</h2>
+          <p className="mt-4 text-base text-gray-500">
+            The Profit/Loss feature in Asipiya Finance calculates net profit or
+            loss by comparing your company’s total revenues with total expenses
+            over a specific period. This is essential for assessing financial
+            performance, understanding profitability, and making informed
+            business decisions. It also helps identify areas for improvement,
+            cost management, and revenue enhancement
+          </p>
+        </div>
+      </div>
 
-         {/* General Ledger Summary: section */}
-         <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img6}
-                    alt="Placeholder"/>
-                </div>
-
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                      The General Ledger Summary feature in Asipiya Finance consolidates and summarizes all financial 
-                      transactions recorded in the general ledger. It provides a comprehensive overview of your company’s 
-                      financial activities, supporting detailed financial analysis and reporting. This feature is essential 
-                      for tracking financial performance, managing accounts, and preparing accurate financial statements
-                    </p>
-                </div>
-            </div>
-
-
-            {/* Reconcile Entries section */}
-            <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse md:p-10">
-            <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start md:mr-32">
-                <img
-                    className="object-cover rounded-lg shadow-md md:mr-52"
-                    src={img4}
-                    alt="Placeholder"
-                />
-            </div>
-
-            <div className="w-full mx-32 text-center md:w-1/2 md:pr-8 md:text-left">
-                <h2 className="text-2xl font-bold ">Reconcile Entries</h2>
-                <p className="mt-4 text-base text-gray-500">
-                Asipiya Finance’s Reconcile Entries feature ensures financial accuracy by matching and verifying records with bank statements or external documents. This includes managing discrepancies, such as when cash collectors have deposited customer amounts but haven’t updated the company’s system. The process covers: <br />
-                • Identifying missing or mismatched entries by comparing bank deposits with system records. <br />
-                • Updating the system to reflect accurate balances, ensuring all transactions are accounted for. <br />
-                • Maintaining the integrity of financial data with up-to-date records. <br />
-                • Generating reconciliation reports to aid financial auditing and compliance. <br />
-                This feature is essential for ensuring the accuracy of financial statements and preventing fraud.
-                </p>
-            </div>
+      {/* Trial Balancet section */}
+      <div className="flex flex-col items-center justify-center  md:flex-row p-6 mx-[20px] xl:mx-[120px] ">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img4} alt="Placeholder" />
         </div>
 
+        <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
+          <h2 className="text-2xl font-bold ">Trial Balance</h2>
+          <p className="mt-4 text-sm text-gray-500">
+            The Trial Balance feature prepares a summary of all ledger accounts
+            with their respective debit and credit balances. This serves as a
+            preliminary check before preparing financial statements, ensuring
+            that total debits equal total credits. It helps in identifying any
+            discrepancies or errors in the accounting records, providing a basis
+            for further adjustments and corrections.
+          </p>
+        </div>
+      </div>
 
-        {/* Manual Journal: section */}
-        <div className="flex flex-col items-center justify-center p-4 md:flex-row md:p-10 ">
-                <div className="w-[300px] h-[300px] md:w-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
-                    <img className="object-cover rounded-lg shadow-md md:ml-32"
-                    src={img5}
-                    alt="Placeholder"/>
-                </div>
+      {/* General Ledger Summary section */}
+      <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse  mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
+          <img src={img5} alt="Placeholder" />
+        </div>
 
-                
-                <div className="w-full text-center md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
-                    <h2 className="text-2xl font-bold ">Manual Journal:</h2>
-                    <p className="mt-4 text-sm text-gray-500">
-                      Asipiya Finance’s Manual Journal feature gives you the ability to record and manage journal entries 
-                      manually for transactions that aren’t automatically processed. This feature handles adjustments, 
-                      corrections, and complex entries, ensuring that every financial activity is accurately documented, 
-                      while offering flexibility and control over your accounting workflow.
-                    </p>
-                </div>
-            </div>
-          <BusinessForward/>
-          <Cooperate/>
-          <Footer/>
+        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
+          <p className="mt-4 text-base text-gray-500">
+            Asipiya Finance’s Trial Balance feature summarizes all ledger
+            accounts with debit and credit balances, ensuring that debits and
+            credits match before preparing financial statements. This tool is
+            key for detecting errors or discrepancies in accounting records,
+            making it easier to identify areas that require adjustments or
+            corrections.
+          </p>
+        </div>
+      </div>
 
+      {/* 	Branch Equity section */}
+      <div className="flex flex-col items-center justify-center p-6 md:flex-row  mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img4} alt="Placeholder" />
+        </div>
+
+        <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
+          <h2 className="text-2xl font-bold "> Branch Equity</h2>
+          <p className="mt-4 text-sm text-gray-500">
+            With Asipiya Finance, the Branch Equity feature allows you to
+            monitor and manage the equity of each branch individually. By
+            evaluating financial performance, asset management, and
+            profitability, this tool supports better decision-making and
+            efficient resource allocation across your branches.
+          </p>
+        </div>
+      </div>
+
+      {/* Interbank Transfers section */}
+      <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
+          <img src={img6} alt="Placeholder" />
+        </div>
+
+        <div className="w-fulltext-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <h2 className="text-2xl font-bold ">Interbank Transfers</h2>
+          <p className="mt-4 text-base text-gray-500">
+            Asipiya Finance’s Interbank Transfers feature enables smooth and
+            accurate recording of fund transfers between your company’s bank
+            accounts. This feature supports efficient cash management, optimizes
+            liquidity, and ensures that financial obligations are met promptly.
+          </p>
+        </div>
+      </div>
+
+      {/* General Ledger Summary: section */}
+      <div className="flex flex-col items-center justify-center p-6 md:flex-row  mx-[20px] xl:mx-[120px] ">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img6} alt="Placeholder" />
+        </div>
+
+        <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 mx-[20px] xl:mx-[120px]">
+          <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
+          <p className="mt-4 text-sm text-gray-500">
+            The General Ledger Summary feature in Asipiya Finance consolidates
+            and summarizes all financial transactions recorded in the general
+            ledger. It provides a comprehensive overview of your company’s
+            financial activities, supporting detailed financial analysis and
+            reporting. This feature is essential for tracking financial
+            performance, managing accounts, and preparing accurate financial
+            statements
+          </p>
+        </div>
+      </div>
+
+      {/* Reconcile Entries section */}
+      <div className="flex flex-col items-left justify-center p-4 md:flex-row-reverse mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
+          <img src={img4} alt="Placeholder" />
+        </div>
+
+        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <h2 className="text-2xl font-bold ">Reconcile Entries</h2>
+          <p className="mt-4 text-base text-gray-500">
+            Asipiya Finance’s Reconcile Entries feature ensures financial
+            accuracy by matching and verifying records with bank statements or
+            external documents. This includes managing discrepancies, such as
+            when cash collectors have deposited customer amounts but haven’t
+            updated the company’s system. The process covers: <br />
+            • Identifying missing or mismatched entries by comparing bank
+            deposits with system records. <br />
+            • Updating the system to reflect accurate balances, ensuring all
+            transactions are accounted for. <br />
+            • Maintaining the integrity of financial data with up-to-date
+            records. <br />
+            • Generating reconciliation reports to aid financial auditing and
+            compliance. <br />
+            This feature is essential for ensuring the accuracy of financial
+            statements and preventing fraud.
+          </p>
+        </div>
+      </div>
+
+      {/* Manual Journal: section */}
+      <div className="flex flex-col items-center justify-center p-6 md:flex-row  mx-[20px] xl:mx-[120px]">
+        <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2  mb-4 md:mb-0 flex justify-center md:justify-start">
+          <img src={img5} alt="Placeholder" />
+        </div>
+
+        <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
+          <h2 className="text-2xl font-bold ">Manual Journal:</h2>
+          <p className="mt-4 text-sm text-gray-500">
+            Asipiya Finance’s Manual Journal feature gives you the ability to
+            record and manage journal entries manually for transactions that
+            aren’t automatically processed. This feature handles adjustments,
+            corrections, and complex entries, ensuring that every financial
+            activity is accurately documented, while offering flexibility and
+            control over your accounting workflow.
+          </p>
+        </div>
+      </div>
+      <BusinessForward />
+      <Cooperate />
+      <Footer />
     </>
   );
 };
