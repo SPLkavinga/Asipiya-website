@@ -34,7 +34,7 @@ function Intern() {
             <p className="mt-3 text-sm font-semibold text-gray-600">
                 Ready to make an impact? We are looking for Software Engineer to join our dynamic team.
             </p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Requirements:</p>
+            <p className="mt-5 text-lg font-bold text-black">Requirements:</p>
 
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">

@@ -37,7 +37,7 @@ function SearchEngineOptimizationSpecialist() {
                 on-page SEO. The SEO Specialist will also work closely with content creators to identify areas of 
                 improvement for new and existing content.
             </p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Qualifications:</p>
+            <p className="mt-3 text-lg font-bold text-black">Qualifications:</p>
 
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
@@ -110,10 +110,6 @@ function SearchEngineOptimizationSpecialist() {
                     and a devil's advocate mentality.
                 </p>
             </div>
-
-            
-            
-            
             </div>
             <ApplyForm/> 
             <Footer />

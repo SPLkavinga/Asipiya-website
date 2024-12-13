@@ -21,8 +21,8 @@ function QAEngineer() {
 
                 {/* Text content centered */}
                 <div className="z-10 w-full px-6 py-8 text-center md:w-2/3 md:px-20">
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Intern</h2>
-                    <h2 className="text-4xl font-bold text-white md:text-5xl">Quality Assurance Engineer</h2>
+                    <h2 className="text-4xl font-bold text-white md:text-5xl">Quality </h2>
+                    <h2 className="text-4xl font-bold text-white md:text-5xl">Assurance Engineer</h2>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@ function QAEngineer() {
                 cases to ensure that software applications are performing as expected. This is a hybrid role, 
                 located in Colombo with some flexibility to work from home.
             </p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Qualifications:</p>
+            <p className="mt-3 text-lg font-bold text-black">Qualifications:</p>
 
              {/* Sub-point with dot icon and tab space */}
              <div className="flex items-start pl-6 mt-1 space-x-2">
@@ -64,13 +64,8 @@ function QAEngineer() {
                 </p>
             </div>
 
-
-            {/* Web Markup Proficiency with a diamond bullet */}
-            <div className="flex items-center mt-3 space-x-2">
-                <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Relevant qualifications and skills that would be beneficial include:</p>
-            </div>
-
+            <p className="mt-10 text-lg font-bold text-black">Relevant qualifications and skills that would be beneficial include:</p>
+            
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}

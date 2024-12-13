@@ -16,6 +16,8 @@ import SearchEngineOptimizationSpecialist from './Pages/SearchEngineOptimization
 import CustomerCareExecutive from './Pages/CustomerCareExecutive';
 import BusinessAnalyst from './Pages/BusinessAnalyst';
 import GraphicDesigner from './Pages/Graphic Designer';
+import AssociateSoftwareEngineer from './Pages/AssociateSoftwareEngineer';
+import InternBusinessAnalyst from './Pages/InternBusinessAnalyst';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
       <Route path='/CustomerCareExecutive' element={<CustomerCareExecutive/>}/>
       <Route path='/BusinessAnalyst' element={<BusinessAnalyst/>}/>
       <Route path='/GraphicDesigner' element={<GraphicDesigner/>}/>
+      <Route path='/AssociateSoftwareEngineer' element={<AssociateSoftwareEngineer/>}/>
+      <Route path='/InternBusinessAnalyst' element={<InternBusinessAnalyst/>}/>
       <Route path='/Services' element={<Services/>}/>
       <Route path='/Microfinance' element={<Microfinance/>}/>
       <Route path='/Prawing' element={<Prawing/>}/>

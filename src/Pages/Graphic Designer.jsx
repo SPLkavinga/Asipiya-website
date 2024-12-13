@@ -35,7 +35,7 @@ function GraphicDesigner() {
                 Craft visually compelling designs from home, balancing professional and personal commitments. 
                 Work on diverse projects, contributing to our brand's visual excellence.
             </p>
-            <p className="mt-8 text-sm font-semibold text-gray-600">Responsibilities:</p>
+            <p className="mt-8 text-lg font-bold text-black">Responsibilities:</p>
 
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
@@ -63,7 +63,7 @@ function GraphicDesigner() {
                 </p>
             </div>
 
-            <p className="mt-8 text-sm font-semibold text-gray-600"> Requirements:</p>
+            <p className="mt-8 text-lg font-bold text-black">Requirements:</p>
 
             
             {/* Web Markup Proficiency with a diamond bullet */}

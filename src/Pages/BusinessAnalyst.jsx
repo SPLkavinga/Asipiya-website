@@ -31,7 +31,7 @@ function BusinessAnalyst() {
             <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
             <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
     
-            <p className="mt-3 text-sm font-semibold text-gray-600">Key Responsibilities:</p>
+            <p className="mt-3 text-lg font-bold text-black">Key Responsibilities:</p>
 
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">

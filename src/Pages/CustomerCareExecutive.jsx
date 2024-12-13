@@ -37,7 +37,7 @@ function CustomerCareExecutive() {
 
 
             </p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Qualifications:</p>
+            <p className="mt-3 text-lg font-bold text-black">Qualifications:</p>
 
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
