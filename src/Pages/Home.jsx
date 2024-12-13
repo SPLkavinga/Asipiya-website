@@ -167,19 +167,19 @@ function Home() {
       {/*Service section */}
       <motion.div
         className="py-12 bg-[#CFB1D4] bg-opacity-30"
-        initial={{ opacity: 0 }} // Start with opacity 0
-        whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
-        viewport={{ once: true }} // Ensure animation triggers only once
-        transition={{ duration: 2 }} // Smooth transition
+        initial={{ opacity: 0 }} 
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }} 
       >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8 ">
           {/* Features Grid */}
           <motion.div
             className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
-            whileInView={{ opacity: 1, x: 0 }} // Slide to its final position when in view
-            viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of the element is in view
-            transition={{ duration: 0.7, ease: "easeOut" }} // Smooth transition
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true, amount: 0.2 }} 
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
             {features.map((feature, index) => (
               <div

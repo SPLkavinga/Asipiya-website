@@ -14,6 +14,7 @@ import BusinessForward from "./../Components/BusinessForward";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
+import AnimatedSection from "../Components/AnimatedSection";
 
 const features = [
   {
@@ -74,24 +75,42 @@ const Microfinance = () => {
       >
         {/* Image on the right side */}
         <div className="w-[350px] h-[250px] xl:w-[639px] xl:h-[404px] flex justify-center xl:justify-start mb-4 md:mb-0 z-10 mr-[20px] xl:mr-[120px] mt-10 xl:mt-0">
-          <img src={img1} alt="Placeholder" />
+          <motion.img
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            src={img1}
+            alt="Placeholder"
+          />
         </div>
 
         {/* Text content on the left side */}
-        <div className="z-10 w-full py-8 text-center xl:w-1/2  md:text-left p-4 ml-[0px] xl:ml-[120px] md:py-0   ">
-          <h2 className="text-[30px] xl:text-[47.78px] font-semibold text-black text-opacity-70 text-center xl:text-start">
+        <div className="z-10 w-full py-8 text-center xl:w-1/2  md:text-left p-4 ml-[0px] xl:ml-[120px] md:py-0 ">
+          <motion.h2
+            className="text-[30px] xl:text-[47.78px] font-semibold text-black text-opacity-70 text-center xl:text-start"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            variants={textVariants}
+          >
             Empowering Lives Globally with Asipiya Finance With Trusted
             Microfinance Solutions.
-          </h2>
-          <p className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start">
+          </motion.h2>
+          <motion.p
+            className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start"
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.3 }}
+            variants={textVariants}
+          >
             Achieve complete control and visibility of your microfinance
             operations with the Asipiya Finance .
-          </p>
+          </motion.p>
           {/* Button below the text content */}
           <motion.div
             initial="hidden"
             animate="visible"
-            transition={{ duration: 0.5, delay: 0.6 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             variants={textVariants}
             className="w-full flex justify-center xl:justify-start"
           >
@@ -106,7 +125,12 @@ const Microfinance = () => {
       </div>
 
       {/* Why Choose Microfinance Solution section */}
-      <div className="min-h-screen  py-[16px] bg-purple-50 mt-16">
+      <motion.div className="h-full   py-[16px] bg-purple-50 mt-32"
+      initial={{ opacity: 0 }} 
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }} 
+      >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="text-[30px] xl:text-[32px] font-semibold text-[#333333] sm:text-4xl mt-[16px]">
@@ -114,7 +138,12 @@ const Microfinance = () => {
             </h2>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
+          <motion.div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 "
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }} 
+          viewport={{ once: true, amount: 0.2 }} 
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col text-left bg-purple-50">
                 <div className="mb-4 text-5xl text-black">{feature.icon}</div>
@@ -126,14 +155,14 @@ const Microfinance = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </motion.div>
           <div className="mt-[32px] text-center">
             <button className="w-[183px] h-[48px] px-6  text-[16px] font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
               Explore
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <p className="mt-10 text-[32px] font-semibold text-[#333333] text-center">
         How Can Microfinance Help You?
@@ -143,6 +172,8 @@ const Microfinance = () => {
         System designed to improve efficiency, reduce costs <br /> and enable
         effortless product launches.
       </p>
+
+      <AnimatedSection>
       {/* information about micro finance section */}
       <div className="flex flex-col items-center justify-center p-6 md:flex-row mx-[20px] xl:mx-[120px] ">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
@@ -161,8 +192,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Cash Flow Monthly section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
           <img src={img3} alt="Placeholder" />
@@ -180,8 +213,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Profit/Loss section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-6 md:flex-row mx-[20px] xl:mx-[120px] ">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img4} alt="Placeholder" />
@@ -199,8 +234,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Balance Sheet section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center md:flex-row-reverse p-4 mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img4} alt="Placeholder" />
@@ -218,8 +255,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Trial Balancet section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center  md:flex-row p-6 mx-[20px] xl:mx-[120px] ">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img4} alt="Placeholder" />
@@ -237,8 +276,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* General Ledger Summary section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse  mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
           <img src={img5} alt="Placeholder" />
@@ -256,8 +297,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* 	Branch Equity section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-6 md:flex-row  mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img4} alt="Placeholder" />
@@ -274,8 +317,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Interbank Transfers section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-4 md:flex-row-reverse mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
           <img src={img6} alt="Placeholder" />
@@ -291,8 +336,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* General Ledger Summary: section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-6 md:flex-row  mx-[20px] xl:mx-[120px] ">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img6} alt="Placeholder" />
@@ -311,8 +358,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Reconcile Entries section */}
+      <AnimatedSection>
       <div className="flex flex-col items-left justify-center p-4 md:flex-row-reverse mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
           <img src={img4} alt="Placeholder" />
@@ -339,8 +388,10 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
 
       {/* Manual Journal: section */}
+      <AnimatedSection>
       <div className="flex flex-col items-center justify-center p-6 md:flex-row  mx-[20px] xl:mx-[120px]">
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2  mb-4 md:mb-0 flex justify-center md:justify-start">
           <img src={img5} alt="Placeholder" />
@@ -358,6 +409,8 @@ const Microfinance = () => {
           </p>
         </div>
       </div>
+      </AnimatedSection>
+
       <BusinessForward />
       <Cooperate />
       <Footer />
