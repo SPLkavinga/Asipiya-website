@@ -1,6 +1,7 @@
 import NavBar from "./../Components/NabBar";
 import Footer from "./../Components/Footer";
 import { motion } from "framer-motion";
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/bro.png";
@@ -52,6 +53,36 @@ function Home() {
       icon: "📄", // Replace this with an actual image if necessary
     },
   ];
+
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+
+  const reviews = [
+    {
+      name: 'Samantha Payne',
+      role: 'Graphic Designer',
+      rating: '★★★★★',
+      text: 'Your company has been great at keeping me in work, they always line something else up.',
+      date: '23 Nov 2021',
+    },
+    {
+      name: 'John Doe',
+      role: 'Web Developer',
+      rating: '★★★★★',
+      text: 'This team helped me build a new platform, and the results were outstanding. I can’t recommend them enough!',
+      date: '10 Feb 2023',
+    },
+    {
+      name: 'Emily Clark',
+      role: 'Marketing Specialist',
+      rating: '★★★★★',
+      text: 'A great experience overall. They’ve consistently exceeded my expectations on every project!',
+      date: '5 Mar 2023',
+    },
+  ];
+
+  const handleDotClick = (index) => {
+    setCurrentReviewIndex(index);
+  };
 
   return (
     <>
@@ -256,27 +287,29 @@ function Home() {
       {/*<ClientCarousel />*/}
       <ClientCarousel />
 
-      {/* Clients Review Section */}
-      <div className="mx-[20px] xl:mx-[120px]">
+      <div className="mx-[20px] xl:mx-[120px] mt-20">
       <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
         {/* Left: Review Card */}
         <div className="flex justify-center w-full lg:w-[500px]">
-          <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%]">
-            <h3 className="text-base font-semibold sm:text-lg">
-              Samantha Payne
-            </h3>
-            <p className="text-sm text-gray-500">Graphic Designer</p>
+          <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%] transition-transform duration-300 ease-in-out transform">
+            <h3 className="text-base font-semibold sm:text-lg">{reviews[currentReviewIndex].name}</h3>
+            <p className="text-sm text-gray-500">{reviews[currentReviewIndex].role}</p>
             <div className="flex items-center mt-2 mb-4">
-              {/* Star Ratings */}
-              <span className="text-sm text-yellow-400 sm:text-base">
-                ★★★★★
-              </span>
+              <span className="text-sm text-yellow-400 sm:text-base">{reviews[currentReviewIndex].rating}</span>
             </div>
-            <p className="text-sm text-gray-700 sm:text-base">
-              Your company has been great at keeping me in work, they always
-              line something else up.
-            </p>
-            <p className="mt-4 text-xs text-gray-400">23 Nov 2021</p>
+            <p className="text-sm text-gray-700 sm:text-base">{reviews[currentReviewIndex].text}</p>
+            <p className="mt-4 text-xs text-gray-400">{reviews[currentReviewIndex].date}</p>
+
+            {/* Dot Indicator Below the Review Card */}
+            <div className="flex justify-center gap-2 mt-4">
+              {reviews.map((_, index) => (
+                <span
+                  key={index}
+                  onClick={() => handleDotClick(index)}
+                  className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${currentReviewIndex === index ? 'bg-purple-600' : 'bg-gray-400'}`}
+                ></span>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -286,13 +319,11 @@ function Home() {
             <span className="text-purple-600">Client’s</span> Reviews
           </h2>
           <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
-            Our clients trust us for delivering reliable, innovative
-            microfinance solutions that drive growth and success across
-            industries worldwide.
+            Our clients trust us for delivering reliable, innovative microfinance solutions that drive growth and success across industries worldwide.
           </p>
         </div>
       </div>
-      </div>
+    </div>
 
       {/* Countries Serve Section */}
       <div className="mx-[20px] xl:mx-[120px]">
