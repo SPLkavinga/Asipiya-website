@@ -290,7 +290,7 @@ function Home() {
       <div className="mx-[20px] xl:mx-[120px] mt-20">
       <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
         {/* Left: Review Card */}
-        <div className="flex justify-center w-full lg:w-[500px]">
+        <div className="flex justify-center w-full lg:w-[620px] h-[250px]">
           <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%] transition-transform duration-300 ease-in-out transform">
             <h3 className="text-base font-semibold sm:text-lg">{reviews[currentReviewIndex].name}</h3>
             <p className="text-sm text-gray-500">{reviews[currentReviewIndex].role}</p>
