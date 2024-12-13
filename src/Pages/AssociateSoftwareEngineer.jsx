@@ -30,10 +30,10 @@ function AssociateSoftwareEngineer() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">
                 Ready to make an impact? We are looking for Associate Software Engineer to join our dynamic team.
             </p>
             <p className="mt-3 text-lg font-bold text-black">Requirements:</p>
@@ -41,7 +41,7 @@ function AssociateSoftwareEngineer() {
               {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Strong understanding of programming fundamentals, data structures, and algorithms.
                 </p>
             </div>
@@ -49,7 +49,7 @@ function AssociateSoftwareEngineer() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Proficiency in React.js with JavaScript/TypeScript, JSX, Redux, and asynchronous programming.
                 </p>
             </div>
@@ -57,7 +57,7 @@ function AssociateSoftwareEngineer() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Strong backend development skills using PHP with Laravel, covering MVC architecture, RESTful API 
                     development, routing, middleware, and authentication.
                 </p>
@@ -66,7 +66,7 @@ function AssociateSoftwareEngineer() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Good knowledge of PostgreSQL for database design, querying, and optimization.
                 </p>
             </div>
@@ -74,7 +74,7 @@ function AssociateSoftwareEngineer() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Excellent problem-solving skills, with the ability to analyze complex issues and implement effective solutions.
                 </p>
             </div>

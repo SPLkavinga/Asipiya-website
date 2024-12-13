@@ -27,10 +27,10 @@ function CustomerCareExecutive() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="mt-[8px] text-[16px] font-normal text-[#333333]">
                 This is a full-time on-site role for a Customer Care Executive located in Colombo. The Customer Care Executive 
                 will be responsible for providing customer support, ensuring customer satisfaction, addressing customer 
                 service inquiries and concerns, communicating effectively with customers, and driving sales.
@@ -42,7 +42,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Customer Support, Customer Satisfaction, and Customer Service skills
                 </p>
             </div>
@@ -51,7 +51,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Proficient in working with popular keyword tools such as Screaming Frog, Ahrefs, SEMRush, and SimilarWeb.
                 </p>
             </div>
@@ -60,7 +60,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Excellent communication skills, both written and verbal
                 </p>
             </div>
@@ -69,7 +69,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Experience in sales and achieving sales targets
                 </p>
             </div>
@@ -77,7 +77,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Ability to handle customer inquiries and concerns in a professional and timely manner
                 </p>
             </div>
@@ -85,7 +85,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Able to work under pressure and tight deadlines
                 </p>
             </div>
@@ -93,7 +93,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Good problem-solving and analytical skills
                 </p>
             </div>
@@ -101,7 +101,7 @@ function CustomerCareExecutive() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     A bachelor's degree in Business Administration, Marketing, or a related field is preferred
                 </p>
             </div>

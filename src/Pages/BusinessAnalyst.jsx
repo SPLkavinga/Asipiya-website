@@ -27,16 +27,16 @@ function BusinessAnalyst() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
     
             <p className="mt-3 text-lg font-bold text-black">Key Responsibilities:</p>
 
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Conduct thorough analysis of business processes and requirements.
                 </p>
             </div>
@@ -45,7 +45,7 @@ function BusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Collaborate with cross-functional teams to gather and document project requirements.
                 </p>
             </div>
@@ -54,7 +54,7 @@ function BusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Develop detailed business and system requirements specifications.
                 </p>
             </div>
@@ -63,7 +63,7 @@ function BusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Analyze data trends to provide actionable insights and recommendations.
                 </p>
             </div>
@@ -71,7 +71,7 @@ function BusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Work closely with stakeholders to ensure project success and alignment with business goals.
                 </p>
             </div>

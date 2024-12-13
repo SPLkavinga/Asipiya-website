@@ -27,11 +27,11 @@ function GraphicDesigner() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Position Overview:</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="mt-8  text-lg font-bold text-black">Position Overview:</p>
+            <p className="mt-[4px] text-[16px] font-normal text-[#333333]">
                 Craft visually compelling designs from home, balancing professional and personal commitments. 
                 Work on diverse projects, contributing to our brand's visual excellence.
             </p>
@@ -40,7 +40,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Design captivating graphics for digital and print, ensuring brand consistency.
                 </p>
             </div>
@@ -49,7 +49,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Develop engaging vector illustrations and edit compelling video content.
                 </p>
             </div>
@@ -58,7 +58,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Collaborate with teams, meet deadlines, and incorporate feedback effectively.
                 </p>
             </div>
@@ -69,7 +69,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Proficiency in Adobe Photoshop and Illustrator; experience in video editing
                 </p>
             </div>
@@ -77,7 +77,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Strong portfolio showcasing versatile design projects.
                 </p>
             </div>
@@ -85,7 +85,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Excellent understanding of design principles and typography.
                 </p>
             </div>
@@ -93,7 +93,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Self-motivated, with strong communication and collaboration skills.
                 </p>
             </div>
@@ -101,7 +101,7 @@ function GraphicDesigner() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Part-time availability with a flexible schedule.
                 </p>
             </div>

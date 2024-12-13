@@ -28,10 +28,10 @@ function InternBusinessAnalyst() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="mt-[4px] text-[16px] font-normal text-[#333333]">
                 We are seeking a motivated and detail-oriented Intern Business Analyst to join our dynamic team. 
                 This role provides an excellent opportunity to gain hands-on experience in data analysis, 
                 business process improvement, and strategic planning. If you are pursuing or have recently completed a 
@@ -42,8 +42,8 @@ function InternBusinessAnalyst() {
               {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Data Analysis: </span> 
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Data Analysis: </span> 
                     Collect, analyze, and interpret data to support business decisions.
                 </p>
             </div>
@@ -51,8 +51,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Report Preparation: </span> 
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Report Preparation: </span> 
                     Prepare detailed reports and presentations for management and stakeholders.
                 </p>
             </div>
@@ -60,8 +60,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Process Improvement: </span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Process Improvement: </span>
                     Identify areas for process improvements and contribute to the development of effective solutions.
                 </p>
             </div>
@@ -69,8 +69,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Market Research: </span> 
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Market Research: </span> 
                     Conduct market research to support business strategies and initiatives.
                 </p>
             </div>
@@ -78,8 +78,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'> Documentation: </span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'> Documentation: </span>
                     Assist in documenting business processes and requirements.
                 </p>
             </div>
@@ -87,8 +87,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Collaboration: </span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Collaboration: </span>
                         Work closely with team members and stakeholders to achieve project goals.
                 </p>
             </div>
@@ -98,8 +98,8 @@ function InternBusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'> Analytical Skills: </span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'> Analytical Skills: </span>
                     Strong ability to analyze data and identify trends.
                 </p>
             </div>
@@ -107,8 +107,8 @@ function InternBusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'> Communication Skills: </span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'> Communication Skills: </span>
                     Excellent verbal and written communication skills.
                 </p>
             </div>
@@ -116,8 +116,8 @@ function InternBusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'> Technical Proficiency:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'> Technical Proficiency:</span>
                     Familiarity with Microsoft Office Suite (Excel, Word, PowerPoint) and basic understanding of 
                     data analysis tools and software.
                 </p>
@@ -126,8 +126,8 @@ function InternBusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'> Problem-Solving Skills:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'> Problem-Solving Skills:</span>
                     Ability to think critically and solve problems efficiently.
                 </p>
             </div>
@@ -135,8 +135,8 @@ function InternBusinessAnalyst() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Detail-Oriented:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Detail-Oriented:</span>
                     Strong attention to detail to ensure accuracy in analysis and reporting.
                 </p>
             </div>
@@ -146,7 +146,7 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Pursuing or recently completed a degree in Business, Economics, Finance, Computer Science, 
                     or a related field.
                 </p>
@@ -157,7 +157,7 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Basic understanding of business analysis frameworks and methodologies.
                 </p>
             </div>
@@ -165,7 +165,7 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Knowledge of data analysis tools and software.
                 </p>
             </div>
@@ -175,8 +175,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Eagerness to Learn:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Eagerness to Learn:</span>
                     Enthusiasm for learning new concepts and applying them in real-world scenarios.
                 </p>
             </div>
@@ -184,8 +184,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Adaptability:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Adaptability:</span>
                      Ability to adapt to changing priorities and work in a fast-paced environment.
                 </p>
             </div>
@@ -193,8 +193,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'>Initiative:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'>Initiative:</span>
                     Proactive approach to tasks and willingness to take on new challenges.
                 </p>
             </div>
@@ -203,8 +203,8 @@ function InternBusinessAnalyst() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">
-                    <span className='font-bold text-black'> Team Player:</span>
+                <p className="text-[16px] font-normal text-[#333333]">
+                    <span className='font-semibold text-[#333333]'> Team Player:</span>
                     Ability to work collaboratively in a team environment.
                 </p>
             </div>
