@@ -1,9 +1,3 @@
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import NavBar from "./../Components/NabBar";
 import Footer from "./../Components/Footer";
 import { motion } from "framer-motion";
@@ -58,33 +52,6 @@ function Home() {
       icon: "📄", // Replace this with an actual image if necessary
     },
   ];
-
-    const reviews = [
-      {
-        name: "Samantha Payne",
-        title: "Graphic Designer",
-        rating: "★★★★★",
-        review:
-          "Your company has been great at keeping me in work, they always line something else up.",
-        date: "23 Nov 2021",
-      },
-      {
-        name: "John Doe",
-        title: "Software Engineer",
-        rating: "★★★★☆",
-        review:
-          "I appreciate the professionalism and quick support provided by your team. Highly recommended!",
-        date: "15 Oct 2022",
-      },
-      {
-        name: "Emily Smith",
-        title: "Marketing Specialist",
-        rating: "★★★★★",
-        review:
-          "Fantastic service! The team exceeded my expectations and delivered amazing results.",
-        date: "01 Jan 2023",
-      },
-    ];
 
   return (
     <>
@@ -288,65 +255,44 @@ function Home() {
 
       {/*<ClientCarousel />*/}
       <ClientCarousel />
-    
 
-      <div className="mx-[20px] xl:mx-[120px] mt-24">
-        <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
-          {/* Left: Review Slider */}
-          <div className="relative flex justify-center w-full lg:w-[500px]">
-            <Swiper
-              navigation={{
-                prevEl: '.swiper-button-prev', // Custom prev button selector
-                nextEl: '.swiper-button-next', // Custom next button selector
-              }}
-              modules={[Navigation]}
-              className="w-[90%] sm:w-[75%] md:w-[80%]"
-            >
-              {reviews.map((review, index) => (
-                <SwiperSlide key={index}>
-                  <div className="p-4 rounded-lg bg-slate-50 md:p-6">
-                    <h3 className="font-semibold text-center sm:text-lg">
-                      {review.name}
-                    </h3>
-                    <p className="text-sm text-center text-gray-500">{review.title}</p>
-                    <div className="flex items-center justify-center mt-2 mb-4">
-                      <span className="text-sm text-yellow-400 ">
-                        {review.rating}
-                      </span>
-                    </div>
-                    <p className="text-sm text-center text-gray-700 sm:text-base">
-                      {review.review}
-                    </p>
-                    <p className="mt-4 text-xs text-center text-gray-400">{review.date}</p>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-
-            {/* Custom Navigation Arrows */}
-            <div className="absolute text-2xl text-purple-600 transform -translate-y-1/2 cursor-pointer swiper-button-prev left-2 top-1/2">
-              <FaArrowLeft /> {/* Left arrow icon */}
+      {/* Clients Review Section */}
+      <div className="mx-[20px] xl:mx-[120px]">
+      <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
+        {/* Left: Review Card */}
+        <div className="flex justify-center w-full lg:w-[500px]">
+          <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%]">
+            <h3 className="text-base font-semibold sm:text-lg">
+              Samantha Payne
+            </h3>
+            <p className="text-sm text-gray-500">Graphic Designer</p>
+            <div className="flex items-center mt-2 mb-4">
+              {/* Star Ratings */}
+              <span className="text-sm text-yellow-400 sm:text-base">
+                ★★★★★
+              </span>
             </div>
-            <div className="absolute text-2xl text-purple-600 transform -translate-y-1/2 cursor-pointer swiper-button-next right-2 top-1/2">
-              <FaArrowRight /> {/* Right arrow icon */}
-            </div>
-          </div>
-
-          {/* Right: Title and Description */}
-          <div className="w-full text-center md:w-full lg:w-1/2 xl:text-left">
-            <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-semibold">
-              <span className="text-purple-600">Client’s</span> Reviews
-            </h2>
-            <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
-              Our clients trust us for delivering reliable, innovative microfinance solutions that drive growth and success across industries worldwide.
+            <p className="text-sm text-gray-700 sm:text-base">
+              Your company has been great at keeping me in work, they always
+              line something else up.
             </p>
+            <p className="mt-4 text-xs text-gray-400">23 Nov 2021</p>
           </div>
         </div>
+
+        {/* Right: Title and Description */}
+        <div className="w-full text-center md:w-full lg:w-1/2 xl:text-left">
+          <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-semibold">
+            <span className="text-purple-600">Client’s</span> Reviews
+          </h2>
+          <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
+            Our clients trust us for delivering reliable, innovative
+            microfinance solutions that drive growth and success across
+            industries worldwide.
+          </p>
+        </div>
       </div>
-
-
-
-
+      </div>
 
       {/* Countries Serve Section */}
       <div className="mx-[20px] xl:mx-[120px]">
