@@ -304,7 +304,7 @@ function Home() {
             >
               {reviews.map((review, index) => (
                 <SwiperSlide key={index}>
-                  <div className="p-4 bg-white rounded-lg shadow-lg md:p-6">
+                  <div className="p-4 rounded-lg bg-slate-50 md:p-6">
                     <h3 className="text-base font-semibold sm:text-lg">
                       {review.name}
                     </h3>
