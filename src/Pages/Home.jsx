@@ -305,19 +305,19 @@ function Home() {
               {reviews.map((review, index) => (
                 <SwiperSlide key={index}>
                   <div className="p-4 rounded-lg bg-slate-50 md:p-6">
-                    <h3 className="text-base font-semibold sm:text-lg">
+                    <h3 className="font-semibold text-center sm:text-lg">
                       {review.name}
                     </h3>
-                    <p className="text-sm text-gray-500">{review.title}</p>
-                    <div className="flex items-center mt-2 mb-4">
-                      <span className="text-sm text-yellow-400 sm:text-base">
+                    <p className="text-sm text-center text-gray-500">{review.title}</p>
+                    <div className="flex items-center justify-center mt-2 mb-4">
+                      <span className="text-sm text-yellow-400 ">
                         {review.rating}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-700 sm:text-base">
+                    <p className="text-sm text-center text-gray-700 sm:text-base">
                       {review.review}
                     </p>
-                    <p className="mt-4 text-xs text-gray-400">{review.date}</p>
+                    <p className="mt-4 text-xs text-center text-gray-400">{review.date}</p>
                   </div>
                 </SwiperSlide>
               ))}
