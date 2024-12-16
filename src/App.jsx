@@ -18,13 +18,15 @@ import BusinessAnalyst from './Pages/BusinessAnalyst';
 import GraphicDesigner from './Pages/Graphic Designer';
 import AssociateSoftwareEngineer from './Pages/AssociateSoftwareEngineer';
 import InternBusinessAnalyst from './Pages/InternBusinessAnalyst';
+import BlogList from './Pages/Blog/BlogList';
+import BlogPage from './Pages/Blog/BlogPage';
 
 function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/about' element={<AboutUs/>}/>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<AboutUs />} />
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/vacancie' element={<Vacancie/>}/>
       <Route path='/intern' element={<Intern/>}/>
@@ -42,6 +44,8 @@ function App() {
       <Route path='/Prawing' element={<Prawing/>}/>
       <Route path='/Leasing' element={<Leasing/>}/>
       <Route path='/ERP' element={<ERP/>}/>
+      <Route path="/Blogs" element={<BlogList />} />
+    <Route path="/Blog/:slug" element={<BlogPage />} />
     </Routes>
     </BrowserRouter>
   );

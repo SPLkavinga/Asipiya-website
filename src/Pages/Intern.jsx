@@ -28,10 +28,10 @@ function Intern() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">
                 Ready to make an impact? We are looking for Software Engineer to join our dynamic team.
             </p>
             <p className="mt-5 text-lg font-bold text-black">Requirements:</p>
@@ -39,13 +39,13 @@ function Intern() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Web Markup Proficiency:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">Web Markup Proficiency:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                 Demonstrated understanding of web markup, including HTML5 and CSS3.
                 </p>
             </div>
@@ -53,13 +53,13 @@ function Intern() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Front-End Technologies:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">Front-End Technologies:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Basic knowledge of Bootstrap and Tailwind CSS.
                 </p>
             </div>
@@ -67,13 +67,13 @@ function Intern() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Design Principles:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">Design Principles:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Strong knowledge of design patterns and Object-Oriented Programming (OOP) concepts.
                 </p>
             </div>
@@ -81,13 +81,13 @@ function Intern() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">UI/UX Understanding:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">UI/UX Understanding:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Familiarity with Figma design tools.
                 </p>
             </div>
@@ -95,13 +95,13 @@ function Intern() {
              {/* Web Markup Proficiency with a diamond bullet */}
              <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">JavaScript Expertise:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">JavaScript Expertise:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Good understanding of advanced JavaScript libraries and frameworks, particularly ReactJS.
                 </p>
             </div>
@@ -109,13 +109,13 @@ function Intern() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Development Methodologies:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">Development Methodologies:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Basic knowledge of Agile and waterfall methodologies.
                 </p>
             </div>
@@ -123,13 +123,13 @@ function Intern() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Version Control:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">Version Control:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Proficient understanding of code versioning tools, such as Git.
                 </p>
             </div>
@@ -137,13 +137,13 @@ function Intern() {
             {/* Web Markup Proficiency with a diamond bullet */}
             <div className="flex items-center mt-3 space-x-2">
                 <div className="w-3 h-3 transform rotate-45 bg-gradient-to-t from-blue-400 to-blue-600"></div>
-                <p className="text-sm font-semibold text-gray-600">Analytical Skills:</p>
+                <p className="text-[16px] font-semibold text-[#333333]">Analytical Skills:</p>
             </div>
 
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Strong problem-solving skills with meticulous attention to detail.
                 </p>
             </div>

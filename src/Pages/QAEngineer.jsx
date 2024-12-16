@@ -28,10 +28,10 @@ function QAEngineer() {
 
            {/* About This Position Section */}
             <div className="px-6 py-6 md:px-20 lg:px-32">
-            <p className="text-2xl font-bold text-gray-800">About This Position</p>
-            <div className="h-1 max-w-screen-xl mt-2 bg-gray-600"></div>
-            <p className="mt-3 text-sm font-semibold text-gray-600">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-3 text-sm font-semibold text-gray-600">
+            <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
+            <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
+            <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
+            <p className="mt-3 text-[16px] font-normal text-[#333333]">
                 This is a full-time Quality Assurance Engineer role with Asipiya Soft Solutions. 
                 The Quality Assurance Engineer will be responsible for ensuring quality and proper functionality 
                 of software applications. The Engineer will be expected to conduct manual testing and develop test 
@@ -43,7 +43,7 @@ function QAEngineer() {
              {/* Sub-point with dot icon and tab space */}
              <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Quality Assurance and Software Testing skills
                 </p>
             </div>
@@ -51,7 +51,7 @@ function QAEngineer() {
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Ability to execute tests and develop test cases
                 </p>
             </div>
@@ -59,7 +59,7 @@ function QAEngineer() {
              {/* Sub-point with dot icon and tab space */}
              <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Manual Testing skills
                 </p>
             </div>
@@ -69,7 +69,7 @@ function QAEngineer() {
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Bachelor's degree in Computer Science or related field
                 </p>
             </div>
@@ -77,7 +77,7 @@ function QAEngineer() {
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Experience with automation testing tools
                 </p>
             </div>
@@ -85,7 +85,7 @@ function QAEngineer() {
              {/* Sub-point with dot icon and tab space */}
              <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Experience in Agile development environments
                 </p>
             </div>
@@ -93,7 +93,7 @@ function QAEngineer() {
              {/* Sub-point with dot icon and tab space */}
              <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Excellent written and verbal communication skills
                 </p>
             </div>
@@ -101,7 +101,7 @@ function QAEngineer() {
             {/* Sub-point with dot icon and tab space */}
             <div className="flex items-start pl-6 mt-1 space-x-2">
                 <div className="w-2 h-2 mt-1 bg-gray-600 rounded-full"></div> {/* Dot icon */}
-                <p className="text-sm text-gray-600">
+                <p className="text-[16px] font-normal text-[#333333]">
                     Ability to work independently and in a team environment
                 </p>
             </div>
