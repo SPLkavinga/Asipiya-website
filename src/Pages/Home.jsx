@@ -201,7 +201,7 @@ function Home() {
         initial={{ opacity: 0 }} 
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }} 
+        transition={{ duration: 0.6 }} 
       >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8 ">
           {/* Features Grid */}
@@ -248,7 +248,7 @@ function Home() {
     initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
     whileInView={{ opacity: 1, x: 0 }} // Slide in from right when in view
     viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
-    transition={{ duration: 0.7, ease: "easeOut" }} // Smooth transition
+    transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition
   >
     <img src={img2} alt="Placeholder" />
   </motion.div>
@@ -259,7 +259,7 @@ function Home() {
     initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
     whileInView={{ opacity: 1, x: 0 }} // Slide in from left when in view
     viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
-    transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // Smooth transition with a slight delay
+    transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition with a slight delay
   >
     <h2 className="text-[30px] md:text-[39.81px] font-semibold text-purple-600 md:mb-0">
       Revolutionary
@@ -284,13 +284,13 @@ function Home() {
       {/* Language icon section */}
       <LogoRow />
 
-      {/*<ClientCarousel />*/}
+      {/*ClientCarousel */}
       <ClientCarousel />
 
       <div className="mx-[20px] xl:mx-[120px] mt-20">
       <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
         {/* Left: Review Card */}
-        <div className="flex justify-center w-full lg:w-[500px]">
+        <div className="flex justify-center w-full lg:w-[600px]">
           <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%] transition-transform duration-300 ease-in-out transform">
             <h3 className="text-base font-semibold sm:text-lg">{reviews[currentReviewIndex].name}</h3>
             <p className="text-sm text-gray-500">{reviews[currentReviewIndex].role}</p>
@@ -331,11 +331,11 @@ function Home() {
         {/* Image Section */}
         <motion.div
           className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] flex justify-center xl:justify-start"
-          initial={{ x: -100 }} // Start position off-screen to the left
-          whileInView={{ x: 0 }} // Move to its final position (normal flow)
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-          viewport={{ once: true }} // Trigger animation only once
-        >
+          initial={{ x: -100 }} 
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }} 
+          >
           <img className="object-contain" src={img3} alt="Countries We Serve" />
         </motion.div>
 
@@ -344,7 +344,7 @@ function Home() {
           className="w-full text-center md:w-full lg:w-1/2 lg:pl-8 xl:text-left"
           initial={{ x: 100 }} 
           whileInView={{ x: 0 }} 
-          transition={{ duration: 0.7, ease: "easeOut" }} 
+          transition={{ duration: 0.4, ease: "easeOut" }} 
           viewport={{ once: true }} 
         >
           <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">

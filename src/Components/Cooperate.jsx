@@ -11,7 +11,7 @@ function Cooperate() {
         initial={{ opacity: 0 }} // Start with opacity 0
         whileInView={{ opacity: 1 }} // Animate to opacity 1 when in view
         viewport={{ once: true }} // Ensure animation triggers only once
-        transition={{ duration: 2 }} // Smooth transition
+        transition={{ duration: 1 }} // Smooth transition
       >
         <p className="text-[39.81px] font-bold text-center text-black">
           LET'S DEVELOP,{" "}

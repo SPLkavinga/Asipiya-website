@@ -25,12 +25,23 @@ import NavBar from "./../Components/NabBar";
 import WhyChooseUs from "./../Components/WhyChooseUs";
 import Leadership from "./../Components/Leadership";
 import Cooperate from "../Components/Cooperate";
+import { motion } from "framer-motion";
 
 function AboutUs() {
   const textVariants = {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
+
+  const animationVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
+
 
   return (
     <>
@@ -46,23 +57,43 @@ function AboutUs() {
         {/* Darker overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
         <div className="z-10 w-full py-8 text-center xl:text-left md:w-full md:px-4 xl:mx-[120px] mx-[20px]">
-          <p className="mb-[16px] text-sm text-white md:text-[19.2px]">
+          <motion.p className="mb-[16px] text-sm text-white md:text-[19.2px]"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          variants={textVariants}
+          >
             About US
-          </p>
-          <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2">
+          </motion.p>
+          <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          variants={textVariants}
+          >
             Design & Develop For
-          </h2>
-          <h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[8px]">
+          </motion.h2>
+          <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[8px]"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.4 }}
+          variants={textVariants}
+          >
             Better Solution
-          </h2>
-          <p className="mb-8 text-white md:text-[16px] font-normal leading-normal tracking-wide w-full md:w-full xl:w-[692px]">
+          </motion.h2>
+          <motion.p className="mb-8 text-white md:text-[16px] font-normal leading-normal tracking-wide w-full md:w-full xl:w-[692px]"
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 0.5, delay: 0.6 }}
+          variants={textVariants}
+          >
             Welcome to Asipiya Soft Solutions PVT Ltd, your gateway to
             comprehensive and cutting-edge software solutions tailored for
             businesses of all sizes. At Asipiya Soft Solutions, we pride
             ourselves on being your trusted partner in navigating the digital
             landscape, offering a range of services designed to enhance and
             streamline your business operations.
-          </p>
+          </motion.p>
         </div>
       </div>
 
@@ -101,8 +132,13 @@ function AboutUs() {
 
       {/* Mission Vision Section */}
 
-      <section className="container py-10 mt-5 md:mt-20 ">
-        <div className="flex flex-col items-center justify-center gap-6 xl:flex-row md:gap-8 mx-[20px] xl:mx-[120px]">
+      <section className="container py-10 mt-5 md:mt-10 ">
+        <motion.div className="flex flex-col items-center justify-center gap-6 xl:flex-row md:gap-8 mx-[20px] xl:mx-[120px]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        variants={animationVariants}
+        >
           {/* Vision */}
           <div className="w-[350px] text-center">
             <div className="flex items-center justify-center">
@@ -158,7 +194,7 @@ function AboutUs() {
               sustainable success.
             </p>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Why ChooseUs Section */}
