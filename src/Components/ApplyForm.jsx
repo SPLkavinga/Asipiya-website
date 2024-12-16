@@ -69,7 +69,7 @@ function ApplyForm() {
                                             rows="3"
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                                            className="block w-full  py-2 mt-1 text-[14px] p-4 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     ) : (
@@ -78,7 +78,7 @@ function ApplyForm() {
                                             id={key}
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                                            className="block w-full text-[14px] py-2 mt-1 p-4 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     )}
@@ -95,7 +95,7 @@ function ApplyForm() {
                                         type="file"
                                         id={key}
                                         onChange={handleChange}
-                                        className="block w-full py-4 mt-1 text-gray-500 border border-gray-300"
+                                        className="block w-full py-4 mt-1 p-4 text-[14px] text-gray-500 border border-gray-300"
                                     />
                                 </div>
                             )

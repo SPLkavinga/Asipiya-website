@@ -87,9 +87,9 @@ function Vacancie() {
           <div className="p-6">
             {vacancies.map((vacancy, index) => (
               <Link to={vacancy.link} key={index} className="block mb-4">
-                <div className="flex flex-col items-start p-4 h-full xl:h-[84px] transition-colors border-2 border-[#D9D9D9] rounded-[30px] bg-[#F9F5FF] hover:bg-purple-100 md:flex-row md:justify-between md:items-center">
+                <div className="flex flex-col items-start p-6 h-full xl:h-[84px] transition-colors border-2 border-[#D9D9D9] rounded-[15px] bg-[#F9F5FF] hover:border-purple-600 md:flex-row md:justify-between md:items-center">
                   {/* Vacancy Title */}
-                  <span className="text-[15px] xl:text-[19.2px] font-medium text-[#333333]">
+                  <span className="text-[15px] xl:text-[16px] font-semibold text-[#333333]">
                     {vacancy.title}
                   </span>
 
@@ -110,8 +110,8 @@ function Vacancie() {
       </div>
 
       <div className="flex items-center justify-center min-h-screen bg-white">
-        <div className="w-full max-w-[1200px] px-4 mx-[10px] xl:px-[102px] mb-5 bg-white border border-gray-300 rounded-md shadow-md ">
-          <h1 className="w-full mb-2 text-[#333333] text-[38.81px] font-medium text-center mt-10 ">
+        <div className="w-full max-w-4xl p-8 mb-5 border border-gray-500 rounded-md shadow-md">
+          <h1 className="w-full mb-2 text-[#333333] text-[38.81px] font-medium text-center mt-4 ">
             Position Not Available?
           </h1>
           <p className="mb-6 font-normal text-center text-gray-500 border-b-2 border-gray-400">
