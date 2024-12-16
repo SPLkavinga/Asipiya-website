@@ -129,7 +129,7 @@ const Microfinance = () => {
       initial={{ opacity: 0 }} 
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1 }} 
+      transition={{ duration: 0.6 }} 
       >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
