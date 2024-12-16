@@ -1,3 +1,4 @@
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -14,15 +15,38 @@ import NavBar from "./../Components/NabBar";
 import Footer from "./../Components/Footer";
 
 function Contact() {
-  const textVariants = {
-    hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
-    visible: { opacity: 1, y: 0 }, // Move to its final position (up)
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = {
+      firstName: event.target.firstName.value,
+      lastName: event.target.lastName.value,
+      email: event.target.email.value,
+      phoneNumber: event.target.phoneNumber.value,
+      message: event.target.message.value,
+      interests: Array.from(
+        event.target.querySelectorAll("button.selected"),
+        (button) => button.textContent
+      ),
+    };
+
+    try {
+      // Send data to the backend
+      await axios.post("http://localhost:5000/send-email", formData);
+      alert("Message sent successfully!");
+    } catch (error) {
+      alert("Failed to send message. Please try again.");
+    }
+  };
+
+  const toggleSelection = (event) => {
+    event.target.classList.toggle("selected");
   };
 
   return (
     <>
       <NavBar />
-      {/* Full-screen background section */}
       <div
         className="relative flex flex-col items-center justify-center w-full h-[650px] xl:h-screen bg-center bg-cover xl:flex-row px-[20px] xl:px-[120px]"
         style={{
@@ -30,16 +54,16 @@ function Contact() {
           backgroundSize: "cover",
         }}
       >
-        {/* Darker overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
-
-        {/* Left Side: Text Content */}
         <motion.div
           className="z-10 mt-[500px] xl:mt-0 w-full px-6 py-8 text-center text-white xl:w-1/2 xl:px-12 xl:text-left"
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.5, delay: 0.2 }}
-          variants={textVariants}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
         >
           <div className="text-center xl:text-start max-w-[487px] w-full">
             <h2 className="text-3xl font-bold md:text-[20px] xl:text-5xl">
@@ -54,22 +78,20 @@ function Contact() {
             </p>
           </div>
         </motion.div>
-
-        {/* Right Side: Contact Form */}
         <motion.div
           className="z-10 w-full px-6 py-8 mt-8 bg-white shadow-lg md:mt-3 rounded-xl md:w-[700px] xl:w-[692px]"
-          initial={{ x: 100 }} // Start position off-screen to the right
-          whileInView={{ x: 0 }} // Move to its final position
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-          viewport={{ once: true }} // Trigger animation only once
+          initial={{ x: 100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
-          <form>
-            {/* First Row: First Name, Last Name, and Phone Number */}
+          <form onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 lg:grid-cols-3">
               <div>
                 <label className="block mb-2 text-gray-700">First Name</label>
                 <input
                   type="text"
+                  name="firstName"
                   placeholder="First Name"
                   className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
@@ -78,82 +100,58 @@ function Contact() {
                 <label className="block mb-2 text-gray-700">Last Name</label>
                 <input
                   type="text"
+                  name="lastName"
                   placeholder="Last Name"
                   className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
               <div>
-                <label className="block mb-2 text-gray-700">
-                  Mobile Number
-                </label>
+                <label className="block mb-2 text-gray-700">Mobile Number</label>
                 <input
                   type="text"
+                  name="phoneNumber"
                   placeholder="+94 70 2882 222"
                   className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
             </div>
-
-            {/* Email Address */}
             <div className="mb-4">
               <label className="block mb-2 text-gray-700">Email Address</label>
               <input
                 type="email"
+                name="email"
                 placeholder="Enter Email Address"
                 className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
             </div>
-
-            {/* Message */}
             <div className="mb-4">
               <label className="block mb-2 text-gray-700">Message</label>
               <textarea
+                name="message"
                 placeholder="Leave a Message here ....."
                 className="w-full text-[14px] p-3 text-gray-600 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
                 rows="3"
               ></textarea>
             </div>
-
-            {/* Interested Options */}
             <div className="mb-6">
-              <label className="block mb-2 text-gray-700 ">
+              <label className="block mb-2 text-gray-700">
                 I'm interested in...
               </label>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                <button
-                  type="button"
-                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
-                >
-                  UI/UX Design
-                </button>
-                <button
-                  type="button"
-                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
-                >
-                  Web Design
-                </button>
-                <button
-                  type="button"
-                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
-                >
-                  Design System
-                </button>
-                <button
-                  type="button"
-                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none "
-                >
-                  Software Solutions
-                </button>
-                <button
-                  type="button"
-                  className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
-                >
-                  Other
-                </button>
+                {["UI/UX Design", "Web Design", "Design System", "Software Solutions", "Other"].map(
+                  (interest) => (
+                    <button
+                      type="button"
+                      key={interest}
+                      onClick={toggleSelection}
+                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
+                    >
+                      {interest}
+                    </button>
+                  )
+                )}
               </div>
             </div>
-
-            {/* Privacy Policy */}
             <div className="flex items-center mb-6">
               <input
                 type="checkbox"
@@ -167,8 +165,6 @@ function Contact() {
                 </a>
               </label>
             </div>
-
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full py-2 text-lg text-white transition-all bg-purple-500 rounded-full hover:bg-purple-600"
@@ -180,7 +176,6 @@ function Contact() {
       </div>
       <br />
       <br />
-
       <div className="container px-[40px] xl:px-[120px] xl:mt-[0px] mt-[500px] ">
         <motion.div
           className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 md:mt-0"
