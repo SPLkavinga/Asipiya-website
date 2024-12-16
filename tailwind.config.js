@@ -25,8 +25,18 @@ module.exports = {
     rules: [
       {
         test: /\.mjs$/,
+        resolve: {
+          fullySpecified: false, // Disable fully specified imports for .mjs
+        },
         include: /node_modules/,
         type: 'javascript/auto',
+       
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules\/(fast-copy|contentful-sdk-core)/,
+        use: 'source-map-loader',
       },
     ],
   },

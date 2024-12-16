@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useState } from 'react';
 import {
   AiOutlineMessage,
   AiOutlineMail,
@@ -9,12 +10,16 @@ import {
   AiOutlineFacebook,
   AiOutlineInstagram,
   AiOutlineLinkedin,
+  AiOutlineCheckCircle, // Add success icon
 } from "react-icons/ai";
 import backgroundImg from "../assets/Contact.png";
 import NavBar from "./../Components/NabBar";
 import Footer from "./../Components/Footer";
 
 function Contact() {
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedInterests, setSelectedInterests] = useState([]);
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -25,23 +30,31 @@ function Contact() {
       email: event.target.email.value,
       phoneNumber: event.target.phoneNumber.value,
       message: event.target.message.value,
-      interests: Array.from(
-        event.target.querySelectorAll("button.selected"),
-        (button) => button.textContent
-      ),
+      interests: selectedInterests,
     };
 
     try {
       // Send data to the backend
       await axios.post("http://localhost:5000/send-email", formData);
-      alert("Message sent successfully!");
+      
+      // Show success popup
+      setShowPopup(true);
+
+      // Hide the popup after 3 seconds
+      setTimeout(() => setShowPopup(false), 3000);
     } catch (error) {
       alert("Failed to send message. Please try again.");
     }
   };
 
-  const toggleSelection = (event) => {
-    event.target.classList.toggle("selected");
+  const toggleSelection = (interest) => {
+    setSelectedInterests((prevInterests) => {
+      if (prevInterests.includes(interest)) {
+        return prevInterests.filter(item => item !== interest); // Remove interest
+      } else {
+        return [...prevInterests, interest]; // Add interest
+      }
+    });
   };
 
   return (
@@ -143,8 +156,12 @@ function Contact() {
                     <button
                       type="button"
                       key={interest}
-                      onClick={toggleSelection}
-                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
+                      onClick={() => toggleSelection(interest)}
+                      className={`p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none ${
+                        selectedInterests.includes(interest)
+                          ? "bg-purple-500 text-white"
+                          : ""
+                      }`}
                     >
                       {interest}
                     </button>
@@ -281,6 +298,16 @@ function Contact() {
       <br />
 
       <Footer />
+
+      {/* Popup for success message */}
+      {showPopup && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="flex flex-col items-center w-full max-w-lg p-8 space-y-4 bg-white shadow-lg rounded-xl">
+            <AiOutlineCheckCircle className="w-12 h-12 text-green-600" />
+            <p className="text-lg font-semibold text-gray-700">Successfully submitted the form!</p>
+          </div>
+        </div>
+      )}
     </>
   );
 }

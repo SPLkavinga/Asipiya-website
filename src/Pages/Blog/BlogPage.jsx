@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import NavBar from "../../Components/NabBar";
 import Footer from "../../Components/Footer";
 
+
 const BlogPage = () => {
   const { slug } = useParams();
   const [blog, setBlog] = useState(null);
@@ -37,9 +38,9 @@ const BlogPage = () => {
       <img
         src={blog.image}
         alt={blog.title}
-        className="w-full h-full object-cover rounded-md mb-6"
+        className="object-cover w-full h-full mb-6 rounded-md"
       />
-      <div className="prose space-y-6"> 
+      <div className="space-y-6 prose"> 
         {documentToReactComponents(blog.content)}
       </div>
     </div>

@@ -1,5 +1,5 @@
-// Frontend Code (React Component)
 import React, { useState } from "react";
+import { FaCheckCircle } from "react-icons/fa"; // Importing success icon
 
 function ApplyForm() {
     const [formData, setFormData] = useState({
@@ -12,6 +12,9 @@ function ApplyForm() {
         message: "",
         image: null,
     });
+
+    const [successMessage, setSuccessMessage] = useState(""); // State for success message
+    const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
     const handleChange = (e) => {
         const { id, value, files } = e.target;
@@ -36,14 +39,22 @@ function ApplyForm() {
             });
 
             if (response.ok) {
-                alert("Application submitted successfully!");
+                setSuccessMessage("Application submitted successfully!"); // Set success message
             } else {
-                alert("Failed to submit the application.");
+                setSuccessMessage("Failed to submit the application.");
             }
         } catch (error) {
             console.error("Error submitting form:", error);
-            alert("An error occurred while submitting the form.");
+            setSuccessMessage("An error occurred while submitting the form.");
         }
+
+        // Show modal after submission
+        setShowModal(true);
+
+        // Automatically close the modal after 4 seconds
+        setTimeout(() => {
+            setShowModal(false);
+        }, 4000);
     };
 
     return (
@@ -110,6 +121,24 @@ function ApplyForm() {
                             </button>
                         </div>
                     </form>
+
+                    {/* Success Modal Popup */}
+                    {showModal && (
+                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
+                            <div className="p-6 text-center bg-white rounded-md shadow-lg w-80">
+                                <div className="flex items-center justify-center mb-3 space-x-2">
+                                    <FaCheckCircle className="text-3xl text-green-500" />
+                                    <p className="font-semibold text-green-600">{successMessage}</p>
+                                </div>
+                                <button
+                                    onClick={() => setShowModal(false)}
+                                    className="px-4 py-2 mt-4 text-white bg-purple-600 rounded-md hover:bg-purple-700"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </>
