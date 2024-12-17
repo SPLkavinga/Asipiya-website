@@ -101,10 +101,10 @@ function ApplyForm() {
                             )
                         ))}
 
-                        <div className="text-center">
+                        <div className="text-end">
                             <button
                                 type="submit"
-                                className="px-6 py-2 font-medium text-white bg-purple-600 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                className="px-6 py-2 font-medium text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full shadow-md  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                             >
                                 Submit
                             </button>

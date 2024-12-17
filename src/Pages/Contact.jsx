@@ -144,7 +144,7 @@ function Contact() {
                       type="button"
                       key={interest}
                       onClick={toggleSelection}
-                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
+                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-[#7D00C5] hover:text-white focus:outline-none"
                     >
                       {interest}
                     </button>
@@ -167,7 +167,7 @@ function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full py-2 text-lg text-white transition-all bg-purple-500 rounded-full hover:bg-purple-600"
+              className="w-full py-2 text-lg text-white transition-all bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full "
             >
               Send message
             </button>

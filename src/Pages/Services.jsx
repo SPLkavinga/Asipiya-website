@@ -130,7 +130,7 @@ function Services() {
       {/* Services Grid */}
       <div className="container ">
       <h1 className="mt-10 mb-[8px] text-[30px] xl:text-[39.81px] font-medium text-center text-black">
-        Services We're <span className="text-purple-800">Offer</span>
+        Services We're <span className="text-[#7D00C5]">Offer</span>
       </h1>
       
       {/* Services Grid */}

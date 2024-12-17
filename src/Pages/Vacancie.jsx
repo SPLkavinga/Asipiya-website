@@ -81,7 +81,7 @@ function Vacancie() {
       <div className="flex items-center justify-center min-h-screen px-4 py-10 md:p-20">
         <div className="w-full max-w-[1200px]">
           <h1 className="mb-[8px] text-3xl font-bold text-center text-[#333333]">
-            Open <span className="text-purple-600"> Vacancies</span>
+            Open <span className="text-[#7D00C5]"> Vacancies</span>
           </h1>
           <div className="h-1 max-w-screen-xl mt-1 bg-gray-600"></div>
           <div className="p-6">
@@ -240,7 +240,7 @@ function Vacancie() {
             <div className="text-end">
               <button
                 type="submit"
-                className="px-6 mb-10  py-2 w-[150px] xl:w-[222px] font-medium text-white bg-purple-600 rounded-full shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                className="px-6 mb-10  py-2 w-[150px] xl:w-[222px] font-medium text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full shadow-md  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
               >
                 Submit
               </button>

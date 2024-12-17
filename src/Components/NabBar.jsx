@@ -35,10 +35,10 @@ function NavBar() {
 
       {/* Right Section: Buttons */}
       <div className="hidden mr-4 space-x-4 md:flex">
-        <button className="bg-[#7D00C5] rounded-full w-[147px] h-[44px] text-white font-semibold">
+        <button className="bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full w-[147px] h-[44px] text-white font-semibold">
           Our Product
         </button>
-        <button className="bg-white border-[#333333] border-opacity-70 border-2 rounded-full w-[147px] h-[44px] text-[#333333] text-opacity-70 font-semibold">
+        <button className="bg-white border-[#333333]  hover:bg-[#7D00C5] hover:text-white border-opacity-70 border-2 rounded-full w-[147px] h-[44px] text-[#333333] text-opacity-70 font-semibold">
           Let's Talk
         </button>
       </div>

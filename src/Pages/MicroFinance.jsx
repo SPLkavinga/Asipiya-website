@@ -115,7 +115,7 @@ const Microfinance = () => {
             className="w-full flex justify-center xl:justify-start"
           >
             <Link
-              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
+              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full flex items-center justify-center"
               to="/About"
             >
               Let's get started
@@ -157,7 +157,7 @@ const Microfinance = () => {
             ))}
           </motion.div>
           <div className="mt-[32px] text-center">
-            <button className="w-[183px] h-[48px] px-6  text-[16px] font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
+            <button className="w-[183px] h-[48px] px-6  text-[16px] font-semibold text-white transition bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full">
               Explore
             </button>
           </div>
