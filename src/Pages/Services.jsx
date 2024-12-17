@@ -5,6 +5,8 @@ import backgroundImg from '../assets/serviceback.png';
 import Cooperate from './../Components/Cooperate';
 import Footer from './../Components/Footer';
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 const services = [
   {
@@ -73,6 +75,25 @@ const textVariants = {
 };
 
 function Services() {
+   const [loading, setLoading] = useState(true);
+    
+      // Simulate a loading delay of 3 seconds
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
+      // Loading screen
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center w-full h-screen bg-white">
+            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+          </div>
+        );
+      }
   return (
     <>
       <NavBar />

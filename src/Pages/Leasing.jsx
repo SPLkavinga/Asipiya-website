@@ -13,6 +13,8 @@ import img6 from "../assets/cash4.png";
 import BusinessForward from "./../Components/BusinessForward";
 import { motion } from "framer-motion";
 import AnimatedSection from "../Components/AnimatedSection";
+import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 const textVariants = {
   hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
@@ -59,6 +61,26 @@ const features = [
 ];
 
 const Leasing = () => {
+
+  const [loading, setLoading] = useState(true);
+    
+      // Simulate a loading delay of 3 seconds
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
+      // Loading screen
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center w-full h-screen bg-white">
+            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+          </div>
+        );
+      }
   return (
     <>
       <NavBar />
@@ -106,7 +128,7 @@ const Leasing = () => {
             animate="visible"
             transition={{ duration: 0.5, delay: 0.5 }}
             variants={textVariants}
-            className="w-full flex justify-center xl:justify-start"
+            className="flex justify-center w-full xl:justify-start"
           >
             <Link
               className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
@@ -200,7 +222,7 @@ const Leasing = () => {
             <img src={img3} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Lease Agreement Management</h2>
             <p className="mt-4 text-base text-gray-500">
               The Asipiya Leasing App also simplifies the lease agreement
@@ -248,7 +270,7 @@ const Leasing = () => {
             <img src={img4} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">
               Financial Reports & Analytics
             </h2>
@@ -301,7 +323,7 @@ const Leasing = () => {
             <img src={img5} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Profit/Loss</h2>
             <p className="mt-4 text-base text-gray-500">
               The Profit/Loss feature in the Asipiya Leasing App calculates the
@@ -350,7 +372,7 @@ const Leasing = () => {
             <img src={img6} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Trial Balance</h2>
             <p className="mt-4 text-base text-gray-500">
               The Trial Balance feature in the Asipiya Leasing App provides a
@@ -407,7 +429,7 @@ const Leasing = () => {
             <img src={img6} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Interbank Transfers:</h2>
             <p className="mt-4 text-base text-gray-500">
               The Interbank Transfers feature in the Asipiya Leasing App
@@ -454,7 +476,7 @@ const Leasing = () => {
             <img src={img6} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Reconcile Entries</h2>
             <p className="mt-4 text-base text-gray-500">
               The Reconcile Entries feature matches and verifies financial

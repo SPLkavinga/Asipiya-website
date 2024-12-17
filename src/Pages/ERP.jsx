@@ -13,6 +13,8 @@ import img6 from "../assets/cash4.png";
 import BusinessForward from "./../Components/BusinessForward";
 import { motion } from "framer-motion";
 import AnimatedSection from "../Components/AnimatedSection";
+import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 const features = [
   {
@@ -59,6 +61,25 @@ const textVariants = {
 };
 
 const ERP = () => {
+  const [loading, setLoading] = useState(true);
+    
+      // Simulate a loading delay of 3 seconds
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
+      // Loading screen
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center w-full h-screen bg-white">
+            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+          </div>
+        );
+      }
   return (
     <>
       <NavBar />
@@ -101,7 +122,7 @@ const ERP = () => {
             animate="visible"
             transition={{ duration: 0.5, delay: 0.5 }}
             variants={textVariants}
-            className="w-full flex justify-center xl:justify-start"
+            className="flex justify-center w-full xl:justify-start"
           >
             <Link
               className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
@@ -202,7 +223,7 @@ const ERP = () => {
           <img src={img3} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">POS (Point of Sale)</h2>
           <p className="mt-4 text-base text-gray-500">
             A smart, user-friendly interface for managing sales transactions.
@@ -256,7 +277,7 @@ const ERP = () => {
           <img src={img4} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Document Management</h2>
           <p className="mt-4 text-base text-gray-500">
             Efficiently manages documents such as bills, contracts, and
@@ -308,7 +329,7 @@ const ERP = () => {
           <img src={img5} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Inventory Management</h2>
           <p className="mt-4 text-base text-gray-500">
             Streamline your operations with smart inventory management that
@@ -363,7 +384,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Quality Control</h2>
           <p className="mt-4 text-base text-gray-500">
             Define and manage quality control points within the ERP system. With
@@ -412,7 +433,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Social Marketing</h2>
           <p className="mt-4 text-base text-gray-500">
             Asipiya ERP allows you to manage and monitor all your social media
@@ -467,7 +488,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold "> Marketing Automation</h2>
           <p className="mt-4 text-base text-gray-500">
             Asipiya ERP empowers your business by automating multi-channel
@@ -521,7 +542,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Appraisal</h2>
           <p className="mt-4 text-base text-gray-500">
             Optimize your employee evaluation process with Asipiya ERP’s
@@ -567,7 +588,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Project</h2>
           <p className="mt-4 text-base text-gray-500">
             Asipiya ERP helps organize, schedule, and plan both internal and
@@ -620,7 +641,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Planning</h2>
           <p className="mt-4 text-base text-gray-500">
             Plan and schedule tasks and shifts with Asipiya ERP’s Planning
@@ -672,7 +693,7 @@ const ERP = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">IoT</h2>
           <p className="mt-4 text-base text-gray-500">
             Connect external devices to Asipiya ERP through its IoT integration.
@@ -717,7 +738,7 @@ const ERP = () => {
         <div className="w-[300px] h-[180px] xl:w-1/2 xl:h-1/2 mb-4 md:mb-0 flex justify-center md:justify-start ">
           <img src={img6} alt="Placeholder" />
         </div>
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Customization</h2>
           <p className="mt-4 text-base text-gray-500">
             Personalize your Asipiya ERP database to meet the specific needs of

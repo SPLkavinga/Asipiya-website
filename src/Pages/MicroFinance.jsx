@@ -15,6 +15,8 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 import AnimatedSection from "../Components/AnimatedSection";
+import { useState} from "react";
+import logo from "../assets/logo.png";
 
 const features = [
   {
@@ -65,6 +67,26 @@ const Microfinance = () => {
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
 
+   const [loading, setLoading] = useState(true);
+    
+      // Simulate a loading delay of 3 seconds
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
+      // Loading screen
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center w-full h-screen bg-white">
+            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+          </div>
+        );
+      }
+
   return (
     <>
       <NavBar />
@@ -112,7 +134,7 @@ const Microfinance = () => {
             animate="visible"
             transition={{ duration: 0.5, delay: 0.5 }}
             variants={textVariants}
-            className="w-full flex justify-center xl:justify-start"
+            className="flex justify-center w-full xl:justify-start"
           >
             <Link
               className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
@@ -201,7 +223,7 @@ const Microfinance = () => {
           <img src={img3} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
           <p className="mt-4 text-base text-gray-500">
             The Cash Flow Monthly feature in Asipiya Finance offers detailed
@@ -243,7 +265,7 @@ const Microfinance = () => {
           <img src={img4} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Balance Sheet</h2>
           <p className="mt-4 text-base text-gray-500">
             The Profit/Loss feature in Asipiya Finance calculates net profit or
@@ -285,7 +307,7 @@ const Microfinance = () => {
           <img src={img5} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
           <p className="mt-4 text-base text-gray-500">
             Asipiya Finance’s Trial Balance feature summarizes all ledger
@@ -326,7 +348,7 @@ const Microfinance = () => {
           <img src={img6} alt="Placeholder" />
         </div>
 
-        <div className="w-fulltext-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="p-4 w-fulltext-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Interbank Transfers</h2>
           <p className="mt-4 text-base text-gray-500">
             Asipiya Finance’s Interbank Transfers feature enables smooth and
@@ -367,7 +389,7 @@ const Microfinance = () => {
           <img src={img4} alt="Placeholder" />
         </div>
 
-        <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+        <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Reconcile Entries</h2>
           <p className="mt-4 text-base text-gray-500">
             Asipiya Finance’s Reconcile Entries feature ensures financial

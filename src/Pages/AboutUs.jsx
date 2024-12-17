@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   FaSchool,
@@ -25,13 +26,34 @@ import NavBar from "./../Components/NabBar";
 import WhyChooseUs from "./../Components/WhyChooseUs";
 import Leadership from "./../Components/Leadership";
 import Cooperate from "../Components/Cooperate";
+import logo from "../assets/logo.png"; // Make sure to add your logo path here
 
 function AboutUs() {
+  const [loading, setLoading] = useState(true);
+
+  // Simulate a loading delay of 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
   const textVariants = {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
 
+  // Loading screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen bg-white">
+        <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+      </div>
+    );
+  }
+
+  // Main page content after loading
   return (
     <>
       <NavBar />
@@ -100,27 +122,21 @@ function AboutUs() {
       </section>
 
       {/* Mission Vision Section */}
-
       <section className="container py-10 mt-5 md:mt-20 ">
         <div className="flex flex-col items-center justify-center gap-6 xl:flex-row md:gap-8 mx-[20px] xl:mx-[120px]">
           {/* Vision */}
           <div className="w-[350px] text-center">
             <div className="flex items-center justify-center">
               <img className="w-[183px] h-[177px]" src={vission} alt="Vision" />
-              {/* Vertical line shown only on large screens */}
-              <div className="hidden lg:block w-[1px] h-[180px] bg-gray-300 mx-4"></div>
             </div>
             <p className="mt-4 text-[39.81px] text-[#333333] font-semibold">
               Our Vision
             </p>
             <p className="mt-2 text-[16px] text-[#525252] text-opacity-80">
-              Pioneering transformative software solutions <br/>for business success
+              Pioneering transformative software solutions <br /> for business success
               in a tech-driven future.
             </p>
           </div>
-
-          {/* Vertical Line (Hidden on small screens, shown on larger screens) */}
-          <div className="hidden lg:block w-[3px] h-[180px] bg-gray-300 mx-4 mt-12"></div>
 
           {/* Mission */}
           <div className="w-[350px] text-center">
@@ -130,7 +146,6 @@ function AboutUs() {
                 src={mission}
                 alt="Mission"
               />
-              {/* Vertical line shown only on large screens */}
             </div>
             <p className="mt-4 text-[39.81px] text-[#333333] font-semibold">
               Our Mission
@@ -141,8 +156,6 @@ function AboutUs() {
               sustainable success.
             </p>
           </div>
-          {/* Vertical Line (Hidden on small screens, shown on larger screens) */}
-          <div className="hidden lg:block w-[3px] h-[180px] bg-gray-300 mx-4 -mt-12"></div>
 
           {/* Values */}
           <div className="w-[350px] text-center">
@@ -165,7 +178,6 @@ function AboutUs() {
       <div className="mt-6 md:mt-16">
         <WhyChooseUs />
       </div>
-
       {/* Design, Development, testing Section */}
       <div className="w-full bg-white mt-[120px]">
         <div className="w-full ">
@@ -232,10 +244,10 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* Leadership section */}
+      {/* Leadership Section */}
       <Leadership />
 
-      {/* Cooperate section */}
+      {/* Cooperate Section */}
       <Cooperate />
 
       <Footer />

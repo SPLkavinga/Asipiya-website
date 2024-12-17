@@ -5,6 +5,8 @@ import Footer from "./../Components/Footer";
 import NavBar from "./../Components/NabBar";
 import ApplyForm from "./../Components/ApplyForm";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 function Vacancie() {
     const vacancies = [
@@ -24,6 +26,26 @@ function Vacancie() {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
+
+   const [loading, setLoading] = useState(true);
+    
+      // Simulate a loading delay of 3 seconds
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
+      // Loading screen
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center w-full h-screen bg-white">
+            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+          </div>
+        );
+      }
 
   return (
     <>

@@ -13,6 +13,8 @@ import img6 from "../assets/cash4.png";
 import BusinessForward from "./../Components/BusinessForward";
 import { motion } from "framer-motion";
 import AnimatedSection from "../Components/AnimatedSection";
+import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 const features = [
   {
@@ -59,6 +61,26 @@ const textVariants = {
 };
 
 const Prawing = () => {
+   const [loading, setLoading] = useState(true);
+    
+      // Simulate a loading delay of 3 seconds
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // 3 seconds
+        return () => clearTimeout(timer);
+      }, []);
+    
+    
+      // Loading screen
+      if (loading) {
+        return (
+          <div className="flex items-center justify-center w-full h-screen bg-white">
+            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+          </div>
+        );
+      }
+
   return (
     <>
       <NavBar />
@@ -106,7 +128,7 @@ const Prawing = () => {
             animate="visible"
             transition={{ duration: 0.5, delay: 0.5 }}
             variants={textVariants}
-            className="w-full flex justify-center xl:justify-start"
+            className="flex justify-center w-full xl:justify-start"
           >
             <Link
               className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
@@ -198,7 +220,7 @@ const Prawing = () => {
             <img src={img3} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Pawning Ticket Issuance</h2>
             <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App automatically generates comprehensive
@@ -241,7 +263,7 @@ const Prawing = () => {
             <img src={img4} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">
               Interest and Penalty Calculation
             </h2>
@@ -286,7 +308,7 @@ const Prawing = () => {
             <img src={img5} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">Gold Auction Management</h2>
             <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App manages the auction process for
@@ -329,7 +351,7 @@ const Prawing = () => {
             <img src={img6} alt="Placeholder" />
           </div>
 
-          <div className="w-full text-left md:w-1/2 md:mr-28 md:text-left p-4">
+          <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
             <h2 className="text-2xl font-bold ">
               Bulk Payment and Invoice Processing
             </h2>

@@ -2,8 +2,29 @@ import backgroundImg from '../assets/Intern.png';
 import Footer from './../Components/Footer';
 import NavBar from './../Components/NabBar';
 import ApplyForm from './../Components/ApplyForm';
+import { useState, useEffect } from "react";
+import logo from "../assets/logo.png";
 
 function GraphicDesigner() {
+    const [loading, setLoading] = useState(true);
+      
+        // Simulate a loading delay of 3 seconds
+        useEffect(() => {
+          const timer = setTimeout(() => {
+            setLoading(false);
+          }, 3000); // 3 seconds
+          return () => clearTimeout(timer);
+        }, []);
+      
+      
+        // Loading screen
+        if (loading) {
+          return (
+            <div className="flex items-center justify-center w-full h-screen bg-white">
+              <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+            </div>
+          );
+        }
     return (
         <>
             <NavBar />
@@ -30,7 +51,7 @@ function GraphicDesigner() {
             <p className="text-[32px] font-semibold text-[#333333]">About This Position</p>
             <div className="h-1 max-w-screen-xl mt-2 bg-[#333333]"></div>
             <p className="mt-[4px] text-[16px] font-semibold text-[#333333]">Join Asipiya Soft Solution's Innovation Journey!</p>
-            <p className="mt-8  text-lg font-bold text-black">Position Overview:</p>
+            <p className="mt-8 text-lg font-bold text-black">Position Overview:</p>
             <p className="mt-[4px] text-[16px] font-normal text-[#333333]">
                 Craft visually compelling designs from home, balancing professional and personal commitments. 
                 Work on diverse projects, contributing to our brand's visual excellence.
