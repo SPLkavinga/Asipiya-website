@@ -24,7 +24,7 @@ function ClientCarousel() {
 
   return (
     <motion.div
-      className="h-[206px] bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] mt-[120px]"
+      className="h-[160px] xl:h-[206px] bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] mt-[120px]"
       initial={{ opacity: 0 }} // Start hidden
       whileInView={{ opacity: 1 }} // Animate to visible when in view
       viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% of section is visible
@@ -63,7 +63,7 @@ function ClientCarousel() {
                 <img
                   src={client.logo}
                   alt={client.alt}
-                  className="w-24 h-24 mx-auto"
+                  className="w-16 h-16 xl:w-24 xl:h-24 mx-auto"
                 />
               </motion.div>
             </SwiperSlide>

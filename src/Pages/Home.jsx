@@ -179,7 +179,7 @@ function Home() {
 
       <div className="mx-[20px] xl:mx-[120px] ">
         <p className="text-[30px] md:text-[39.81px] font-medium text-center mt-[30px] md:mt-[78px]">
-          Our <span className="text-purple-600"> Services</span>{" "}
+          Our <span className="text-[#7D00C5]"> Services</span>{" "}
         </p>
         <p className="mt-[4px] text-center text-slate-500 text-[15px] md:text-[16px]">
           At Asipiya Soft Solutions, we specialize in designing scalable
@@ -233,7 +233,7 @@ function Home() {
 
           {/* Button */}
           <div className="mt-12 text-center">
-            <button className="w-[183px] h-[48px] px-6 py-1 text-[16px] font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
+            <button className="w-[183px] h-[48px] px-6 py-1 text-[16px] font-semibold text-white transition bg-[#7D00C5] rounded-full hover:bg-purple-700">
               Learn More
             </button>
           </div>
@@ -256,12 +256,12 @@ function Home() {
   {/* Text Section */}
   <motion.div
     className="w-full text-center md:w-1/2 xl:text-left "
-    initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
-    whileInView={{ opacity: 1, x: 0 }} // Slide in from left when in view
-    viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
-    transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition with a slight delay
+    initial={{ opacity: 0, x: -100 }} 
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.2 }} 
+    transition={{ duration: 0.4, ease: "easeOut" }} 
   >
-    <h2 className="text-[30px] md:text-[39.81px] font-semibold text-purple-600 md:mb-0">
+    <h2 className="text-[30px] md:text-[39.81px] font-semibold text-[#7D00C5] md:mb-0">
       Revolutionary
     </h2>
     <h2 className="text-[30px] md:text-[39.81px] font-semibold md:mb-2">
@@ -306,7 +306,7 @@ function Home() {
                 <span
                   key={index}
                   onClick={() => handleDotClick(index)}
-                  className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${currentReviewIndex === index ? 'bg-purple-600' : 'bg-gray-400'}`}
+                  className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${currentReviewIndex === index ? 'bg-[#7D00C5]' : 'bg-gray-400'}`}
                 ></span>
               ))}
             </div>
@@ -316,7 +316,7 @@ function Home() {
         {/* Right: Title and Description */}
         <div className="w-full text-center md:w-full lg:w-[575px] xl:text-left">
           <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-semibold">
-            <span className="text-purple-600">Client’s</span> Reviews
+            <span className="text-[#7D00C5]">Client’s</span> Reviews
           </h2>
           <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
             Our clients trust us for delivering reliable, innovative microfinance solutions that drive growth and success across industries worldwide.
@@ -348,7 +348,7 @@ function Home() {
           viewport={{ once: true }} 
         >
           <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
-            <span className="text-purple-600">Countries </span>We Serve
+            <span className="text-[#7D00C5]">Countries </span>We Serve
           </h2>
           <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252]">
             We offer innovative microfinance solutions in Dubai, the United

@@ -8,17 +8,17 @@ const Footer = () => {
     <footer className="py-3 text-white bg-purple-900 mt-[120px]">
       <div className="container mx-auto text-center md:text-left ">
         {/* Top Section - Logo, Tagline, Email, and Phone in one line */}
-        <div className="flex flex-col items-center gap-2 px-24 pb-4 mb-4 border-b border-white md:flex-row md:gap-14">
+        <div className="flex flex-col items-center gap-2 px-24 pb-4 mb-4 border-b border-white md:flex-row md:gap-[150px]">
           {/* Logo */}
           <img className="w-[160px] h-[60px] mb-2 md:mb-0" src={logo} alt="Asipiya Logo" />
 
           {/* Tagline */}
-          <p className="mb-2 text-sm md:text-base md:ml-2 md:mb-0">
+          <p className="mb-2 text-sm md:text-[13.33px] font-medium md:ml-2 md:mb-0">
             Your trusted partner for cutting-edge software solutions. Streamlining business operations at Asipiya
           </p>
 
           {/* Contact Info - Email and Phone */}
-          <div className="flex flex-col items-center md:flex-row">
+          <div className="flex flex-col items-center md:flex-row md:text-[13.33px] font-medium">
             <p className="mr-4">
               <a href="mailto:Info@Asipiya.com" className="underline">Info@Asipiya.com</a>
             </p>
@@ -29,9 +29,9 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="mb-6 md:mb-0">
+        <div className="mb-6 md:mb-0 w-[320px] mx-auto ">
           {/* Row for Home, Services, and Contact Us */}
-          <div className="flex justify-center mb-4 space-x-14">
+          <div className="flex justify-start mb-4 space-x-14 md:text-[13.33px] font-medium">
             <div>
               <h3 className="mb-2 font-bold">Home</h3>
               <ul>
@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           {/* Centered About Us, Blogs Links, and Social Media Icons in One Row */}
-          <div className="flex justify-center mt-5 space-x-12 ">
+          <div className="flex justify-start mt-5 space-x-12 md:text-[13.33px] font-medium ">
             <div>
               <h3 className="mb-2 font-bold">About Us</h3>
               <ul>
@@ -72,9 +72,13 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Social Media Section moved next to Blogs */}
-            <div >
-              <h3 className="mb-2 font-bold">Get In Touch</h3>
+            
+          </div>
+        </div>
+
+        {/* Social Media Section moved next to Blogs */}
+        <div  className="flex flex-col items-center   mt-6" >
+              <h3 className="mb-2 font-bold ">Get In Touch</h3>
               <div className="flex space-x-4">
                 <a href="https://wa.me/+94778820000" className="text-white hover:text-gray-400" target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-whatsapp"></i>
@@ -90,12 +94,10 @@ const Footer = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
 
         {/* Bottom Section */}
-        <div className="mt-6 text-center">
-          <p className="pt-4 border-t border-gray-700">&copy; All rights reserved © 2023</p>
+        <div className="mt-[8px] text-center md:text-[13.33px] font-medium">
+          <p className="pt-4 border-t border-white">&copy; All rights reserved © 2023</p>
         </div>
       </div>
     </footer>
