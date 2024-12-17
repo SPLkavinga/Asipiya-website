@@ -26,6 +26,8 @@ import NavBar from "./../Components/NabBar";
 import WhyChooseUs from "./../Components/WhyChooseUs";
 import Leadership from "./../Components/Leadership";
 import Cooperate from "../Components/Cooperate";
+import { motion } from "framer-motion";
+import logo from "../assets/logo.png";
 
 function AboutUs() {
   const [loading, setLoading] = useState(true);
@@ -206,7 +208,7 @@ function AboutUs() {
               sustainable success.
             </p>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Why ChooseUs Section */}
