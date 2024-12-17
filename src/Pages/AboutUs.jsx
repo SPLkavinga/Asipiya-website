@@ -206,7 +206,7 @@ function AboutUs() {
       <div className="w-full bg-white mt-[120px]">
         <div className="w-full ">
           {/* Design Section */}
-          <div className="flex items-center justify-center  px-6 py-4 w-full h-full Xl:w-full xl:h-[163px] space-x-6 bg-gradient-to-r from-pink-200 via-purple-100 to-pink-200">
+          <div className="flex items-center justify-center  px-6 py-4 w-full h-full Xl:w-full xl:h-[163px] space-x-6 bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4]">
             <div className="flex-shrink-0 ">
               <img
                 src={designImage}
@@ -246,7 +246,7 @@ function AboutUs() {
           </div>
 
           {/* Testing & QA Section */}
-          <div className="flex items-center justify-center w-full h-full Xl:w-full xl:h-[163px] px-6 py-4 space-x-6 bg-gradient-to-r from-pink-200 via-purple-100 to-pink-200">
+          <div className="flex items-center justify-center w-full h-full Xl:w-full xl:h-[163px] px-6 py-4 space-x-6 bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4]">
             <div className="flex-shrink-0">
               <img
                 src={testingImage}

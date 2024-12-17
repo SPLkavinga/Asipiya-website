@@ -20,7 +20,7 @@ const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7, logo8, logo9, l
 
 function LogoRow() {
   return (
-    <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#f8f5f7] to-[#e5d4ed] py-4 mt-8 xl:mt-14">
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-4 mt-8 xl:mt-14">
       <motion.div
         className="flex"
         animate={{ x: ["0%", "-50%"] }} 
