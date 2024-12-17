@@ -176,7 +176,7 @@ function Home() {
               className="flex justify-center w-full xl:justify-start"
             >
               <Link
-                className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
+                className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full flex items-center justify-center"
                 to="/About"
               >
                 Let's get started
@@ -200,7 +200,7 @@ function Home() {
 
       <div className="mx-[20px] xl:mx-[120px] ">
         <p className="text-[30px] md:text-[39.81px] font-medium text-center mt-[30px] md:mt-[78px]">
-          Our <span className="text-purple-600"> Services</span>{" "}
+          Our <span className="text-[#7D00C5]"> Services</span>{" "}
         </p>
         <p className="mt-[4px] text-center text-slate-500 text-[15px] md:text-[16px]">
           At Asipiya Soft Solutions, we specialize in designing scalable
@@ -222,7 +222,7 @@ function Home() {
         initial={{ opacity: 0 }} 
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1 }} 
+        transition={{ duration: 0.6 }} 
       >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8 ">
           {/* Features Grid */}
@@ -254,7 +254,7 @@ function Home() {
 
           {/* Button */}
           <div className="mt-12 text-center">
-            <button className="w-[183px] h-[48px] px-6 py-1 text-[16px] font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
+            <button className="w-[183px] h-[48px] px-6 py-1 text-[16px] font-semibold text-white transition bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full ">
               Learn More
             </button>
           </div>
@@ -269,7 +269,7 @@ function Home() {
     initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
     whileInView={{ opacity: 1, x: 0 }} // Slide in from right when in view
     viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
-    transition={{ duration: 0.7, ease: "easeOut" }} // Smooth transition
+    transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition
   >
     <img src={img2} alt="Placeholder" />
   </motion.div>
@@ -277,12 +277,12 @@ function Home() {
   {/* Text Section */}
   <motion.div
     className="w-full text-center md:w-1/2 xl:text-left "
-    initial={{ opacity: 0, x: -100 }} // Start off-screen to the left
-    whileInView={{ opacity: 1, x: 0 }} // Slide in from left when in view
-    viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
-    transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }} // Smooth transition with a slight delay
+    initial={{ opacity: 0, x: -100 }} 
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, amount: 0.2 }} 
+    transition={{ duration: 0.4, ease: "easeOut" }} 
   >
-    <h2 className="text-[30px] md:text-[39.81px] font-semibold text-purple-600 md:mb-0">
+    <h2 className="text-[30px] md:text-[39.81px] font-semibold text-[#7D00C5] md:mb-0">
       Revolutionary
     </h2>
     <h2 className="text-[30px] md:text-[39.81px] font-semibold md:mb-2">
@@ -305,13 +305,13 @@ function Home() {
       {/* Language icon section */}
       <LogoRow />
 
-      {/*<ClientCarousel />*/}
+      {/*ClientCarousel */}
       <ClientCarousel />
 
-      <div className="mx-[20px] xl:mx-[120px] mt-20">
+      <div className="mx-[20px] xl:mx-[120px] mt-8 xl:mt-20">
       <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
         {/* Left: Review Card */}
-        <div className="flex justify-center w-full lg:w-[500px]">
+        <div className="flex justify-center w-full lg:w-[600px]">
           <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%] transition-transform duration-300 ease-in-out transform">
             <h3 className="text-base font-semibold sm:text-lg">{reviews[currentReviewIndex].name}</h3>
             <p className="text-sm text-gray-500">{reviews[currentReviewIndex].role}</p>
@@ -327,7 +327,7 @@ function Home() {
                 <span
                   key={index}
                   onClick={() => handleDotClick(index)}
-                  className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${currentReviewIndex === index ? 'bg-purple-600' : 'bg-gray-400'}`}
+                  className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${currentReviewIndex === index ? 'bg-[#7D00C5]' : 'bg-gray-400'}`}
                 ></span>
               ))}
             </div>
@@ -337,7 +337,7 @@ function Home() {
         {/* Right: Title and Description */}
         <div className="w-full text-center md:w-full lg:w-[575px] xl:text-left">
           <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-semibold">
-            <span className="text-purple-600">Client’s</span> Reviews
+            <span className="text-[#7D00C5]">Client’s</span> Reviews
           </h2>
           <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
             Our clients trust us for delivering reliable, innovative microfinance solutions that drive growth and success across industries worldwide.
@@ -352,11 +352,11 @@ function Home() {
         {/* Image Section */}
         <motion.div
           className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] flex justify-center xl:justify-start"
-          initial={{ x: -100 }} // Start position off-screen to the left
-          whileInView={{ x: 0 }} // Move to its final position (normal flow)
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
-          viewport={{ once: true }} // Trigger animation only once
-        >
+          initial={{ x: -100 }} 
+          whileInView={{ x: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }} 
+          >
           <img className="object-contain" src={img3} alt="Countries We Serve" />
         </motion.div>
 
@@ -365,11 +365,11 @@ function Home() {
           className="w-full text-center md:w-full lg:w-1/2 lg:pl-8 xl:text-left"
           initial={{ x: 100 }} 
           whileInView={{ x: 0 }} 
-          transition={{ duration: 0.7, ease: "easeOut" }} 
+          transition={{ duration: 0.4, ease: "easeOut" }} 
           viewport={{ once: true }} 
         >
           <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
-            <span className="text-purple-600">Countries </span>We Serve
+            <span className="text-[#7D00C5]">Countries </span>We Serve
           </h2>
           <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252]">
             We offer innovative microfinance solutions in Dubai, the United

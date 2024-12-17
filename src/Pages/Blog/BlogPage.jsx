@@ -42,8 +42,8 @@ const BlogPage = () => {
   return (
     <>
     <NavBar/>
-    <div className="p-6 mx-[120px] ">
-      <h1 className="text-[60px] font-bold mb-[4px]">{blog.title}</h1>
+    <div className=" mx-[20px] xl:mx-[120px] ">
+      <h1 className="text-[30px] xl:text-[60px] font-bold mb-[4px]">{blog.title}</h1>
       <div className="flex items-center mb-4 ">
         <img
           src={blog.profileimage}

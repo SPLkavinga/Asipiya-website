@@ -125,7 +125,7 @@ const ERP = () => {
             className="flex justify-center w-full xl:justify-start"
           >
             <Link
-              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5] rounded-full flex items-center justify-center"
+              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full flex items-center justify-center"
               to="/About"
             >
               Let's get started
@@ -139,7 +139,7 @@ const ERP = () => {
       initial={{ opacity: 0 }} 
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.6 }}
        >
 
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
@@ -168,7 +168,7 @@ const ERP = () => {
             ))}
           </motion.div>
           <div className="mt-[32px]  text-center">
-            <button className="w-[183px] h-[48px] px-6  text-[16px] font-semibold text-white transition bg-purple-600 rounded-full hover:bg-purple-700">
+            <button className="w-[183px] h-[48px] px-6  text-[16px] font-semibold text-white transition rounded-full bg-[#7D00C5]  hover:bg-[#5C0091]">
               Explore
             </button>
           </div>

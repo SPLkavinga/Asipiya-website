@@ -1,30 +1,45 @@
 import React from "react";
 import { motion } from "framer-motion";
-import frame from "../assets/Frame 4.png"; // Replace with your image path
+
+// Import your images
+import logo1 from "../assets/AppLogo/image.png";
+import logo2 from "../assets/AppLogo/image-1.png";
+import logo3 from "../assets/AppLogo/image-2.png";
+import logo4 from "../assets/AppLogo/image-3.png";
+import logo5 from "../assets/AppLogo/image-4.png";
+import logo6 from "../assets/AppLogo/image-5.png";
+import logo7 from "../assets/AppLogo/image-6.png";
+import logo8 from "../assets/AppLogo/image-7.png";
+import logo9 from "../assets/AppLogo/image-8.png";
+import logo10 from "../assets/AppLogo/image-9.png";
+import logo11 from "../assets/AppLogo/image-10.png";
+import logo12 from "../assets/AppLogo/image-11.png";
+
+// Array of logos
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7, logo8, logo9, logo10, logo11, logo12];
 
 function LogoRow() {
-  // Number of icons to display (duplicated for seamless animation)
-  const logos = Array(10).fill(frame); // Adjust the count based on your need
-
   return (
-    <div className="relative w-full overflow-hidden py-8">
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-4 mt-8 xl:mt-14">
       <motion.div
-        className="flex "
-        animate={{ x: ["0%", "-100%"] }} // Moves left continuously
+        className="flex"
+        animate={{ x: ["0%", "-50%"] }} 
         transition={{
-          repeat: Infinity, // Repeat infinitely
-          duration: 15, // Adjust duration for speed
-          ease: "linear", // Smooth animation
+          repeat: Infinity,
+          duration: 15,
+          ease: "linear",
         }}
+        style={{ willChange: "transform" }}
       >
-        {/* Duplicating the list for seamless looping */}
-        {[...logos, ...logos].map((logo, index) => (
-          <img
-            key={index}
-            src={logo}
-            alt={`Logo ${index}`}
-            className="w-[1000px] md:w-auto h-[60px] md:h-[114px] " // Adjust height as needed
-          />
+        {/* Duplicate logos 3 times to avoid gaps */}
+        {[...logos, ...logos, ...logos].map((logo, index) => (
+          <div key={index} className="flex items-center justify-center px-4 shrink-0">
+            <img
+              src={logo}
+              alt={`Logo ${index}`}
+              className="h-10 md:h-14 xl:h-14 w-auto object-contain"
+            />
+          </div>
         ))}
       </motion.div>
     </div>

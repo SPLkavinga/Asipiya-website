@@ -85,8 +85,9 @@ const BlogList = () => {
           </motion.p>
         </div>
       </div>
-      <div className="mx-[20px] xl:mx-[120px] ">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8 w-[1000px] h-full">
+      
+      <div className="mx-[20px] xl:mx-[120px] mt-16 ">
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8 w-full xl:w-[1000px] h-full">
     {blogs.map((blog) => (
       <Link
         to={`/blog/${blog.slug}`}

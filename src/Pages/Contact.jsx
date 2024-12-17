@@ -104,7 +104,7 @@ function Contact() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="text-center xl:text-start max-w-[487px] w-full">
+          <div className="text-center md:text-left xl:text-start max-w-[487px] w-full mx-auto">
             <h2 className="text-3xl font-bold md:text-[20px] xl:text-5xl">
               Let’s Level Up Your
             </h2>
@@ -145,7 +145,9 @@ function Contact() {
                 />
               </div>
               <div>
-                <label className="block mb-2 text-gray-700">Mobile Number</label>
+                <label className="block mb-2 text-gray-700">
+                  Mobile Number
+                </label>
                 <input
                   type="text"
                   name="phoneNumber"
@@ -182,12 +184,8 @@ function Contact() {
                     <button
                       type="button"
                       key={interest}
-                      onClick={() => toggleSelection(interest)}
-                      className={`p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none ${
-                        selectedInterests.includes(interest)
-                          ? "bg-purple-500 text-white"
-                          : ""
-                      }`}
+                      onClick={toggleSelection}
+                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
                     >
                       {interest}
                     </button>
@@ -210,7 +208,7 @@ function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full py-2 text-lg text-white transition-all bg-purple-500 rounded-full hover:bg-purple-600"
+              className="w-full py-2 text-lg text-white transition-all bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full "
             >
               Send message
             </button>

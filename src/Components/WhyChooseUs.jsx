@@ -92,7 +92,7 @@ function WhyChooseUs() {
           className="flex justify-center w-full md:w-1/2"
           initial={{ x: -100 }} // Start position off-screen to the left
           whileInView={{ x: 0 }} // Move to its final position
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          transition={{ duration: 0.4, ease: "easeOut" }} // Smooth movement animation
           viewport={{ once: true }} // Trigger animation only once
         >
           <img
@@ -107,7 +107,7 @@ function WhyChooseUs() {
           className="flex flex-col items-start w-full md:w-1/2"
           initial={{ x: 100 }} // Start position off-screen to the right
           whileInView={{ x: 0 }} // Move to its final position
-          transition={{ duration: 0.7, ease: "easeOut" }} // Smooth movement animation
+          transition={{ duration: 0.4, ease: "easeOut" }} // Smooth movement animation
           viewport={{ once: true }} // Trigger animation only once
         >
           {/* Section Heading */}

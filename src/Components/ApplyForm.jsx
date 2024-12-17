@@ -80,7 +80,7 @@ function ApplyForm() {
                                             rows="3"
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                                            className="block w-full  py-2 mt-1 text-[14px] p-4 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     ) : (
@@ -89,7 +89,7 @@ function ApplyForm() {
                                             id={key}
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="block w-full py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                                            className="block w-full text-[14px] py-2 mt-1 p-4 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     )}
@@ -106,16 +106,16 @@ function ApplyForm() {
                                         type="file"
                                         id={key}
                                         onChange={handleChange}
-                                        className="block w-full py-4 mt-1 text-gray-500 border border-gray-300"
+                                        className="block w-full py-4 mt-1 p-4 text-[14px] text-gray-500 border border-gray-300"
                                     />
                                 </div>
                             )
                         ))}
 
-                        <div className="text-center">
+                        <div className="text-end">
                             <button
                                 type="submit"
-                                className="px-6 py-2 font-medium text-white bg-purple-600 rounded-md shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                className="px-6 py-2 font-medium text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full shadow-md  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                             >
                                 Submit
                             </button>

@@ -1,79 +1,48 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
-import logo1 from "../assets/bg2.png"; // Replace with actual paths
-import logo2 from "../assets/bg2.png";
-import logo3 from "../assets/bg2.png";
-import logo4 from "../assets/bg2.png";
-import logo5 from "../assets/bg2.png";
-import logo6 from "../assets/bg2.png";
+// Import your images
+import logo1 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo2 from "../assets/ClientLogo/ClientLogo2.jpg";
+import logo3 from "../assets/ClientLogo/ClientLogo3.jpg";
+import logo4 from "../assets/ClientLogo/ClientLogo4.jpg";
+import logo5 from "../assets/ClientLogo/ClientLogo5.jpg";
+import logo6 from "../assets/ClientLogo/ClientLogo6.jpg";
+import logo7 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo8 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo9 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo10 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo11 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo12 from "../assets/ClientLogo/ClientLogo1.jpg";
+
+// Array of logos
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7, logo8, logo9, logo10, logo11, logo12];
 
 function ClientCarousel() {
-  const clients = [
-    { id: 1, logo: logo1, alt: "Client 1" },
-    { id: 2, logo: logo2, alt: "Client 2" },
-    { id: 3, logo: logo3, alt: "Client 3" },
-    { id: 4, logo: logo4, alt: "Client 4" },
-    { id: 5, logo: logo5, alt: "Client 5" },
-    { id: 6, logo: logo6, alt: "Client 6" },
-  ];
-
   return (
-    <motion.div
-      className="h-[206px] bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] mt-[120px]"
-      initial={{ opacity: 0 }} // Start hidden
-      whileInView={{ opacity: 1 }} // Animate to visible when in view
-      viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% of section is visible
-      transition={{ duration: 0.7, ease: "easeOut" }} // Smooth fade-in transition
-    >
-      {/* Heading */}
-      <h2 className="text-[33.18px] font-medium text-center text-gray-800 mb-[16px]">
-        Our Clients
-      </h2>
-
-      {/* Carousel Section */}
-      <div className="max-w-6xl mx-auto">
-        <Swiper
-          modules={[Pagination]}
-          spaceBetween={20}
-          slidesPerView={5} // Show 5 images at a time
-          pagination={{
-            clickable: true,
-            el: ".swiper-pagination",
-          }}
-          loop={true}
-          breakpoints={{
-            640: { slidesPerView: 2 }, // 2 slides on smaller screens
-            768: { slidesPerView: 3 }, // 3 slides on medium screens
-            1024: { slidesPerView: 5 }, // 5 slides on large screens
-          }}
-        >
-          {clients.map((client, index) => (
-            <SwiperSlide key={client.id} className="flex justify-center items-center">
-              <motion.div
-                initial={{ opacity: 0 }} // Start with opacity 0
-                whileInView={{ opacity: 1 }} // Fade in when slide is in view
-                viewport={{ once: true, amount: 0.5 }} // Trigger once when 50% of the slide is visible
-                transition={{ duration: 0.5, delay: index * 0.2 }} // Staggered animation
-              >
-                <img
-                  src={client.logo}
-                  alt={client.alt}
-                  className="w-24 h-24 mx-auto"
-                />
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      {/* Pagination */}
-      <div className="mt-6 swiper-pagination text-center"></div>
-    </motion.div>
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-4 xl:py-10 mt-16 xl:mt-36">
+      <motion.div
+        className="flex"
+        animate={{ x: ["0%", "-50%"] }} 
+        transition={{
+          repeat: Infinity,
+          duration: 15,
+          ease: "linear",
+        }}
+        style={{ willChange: "transform" }}
+      >
+        {/* Duplicate logos 3 times to avoid gaps */}
+        {[...logos, ...logos, ...logos].map((logo, index) => (
+          <div key={index} className="flex items-center justify-center px-4 shrink-0">
+            <img
+              src={logo}
+              alt={`Logo ${index}`}
+              className="h-16 md:h-24 xl:h-28 w-auto object-contain "
+            />
+          </div>
+        ))}
+      </motion.div>
+    </div>
   );
 }
 
