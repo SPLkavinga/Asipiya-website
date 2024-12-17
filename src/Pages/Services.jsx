@@ -88,43 +88,46 @@ function Services() {
         {/* Darker Overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
 
-        <div className="z-10 w-full mx-[20px] xl:mx-[120px] py-8  md:w-2/3 p-4 md:mt-[-50px] text-center xl:text-start">
-          <motion.p className="mb-3 text-sm text-white md:text-[19.2px] "
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.1 }}
-          variants={textVariants}
-          >Services</motion.p>
+        <div className="z-10 w-full mx-[20px] md:mx-[60px] xl:mx-[120px] py-8 md:w-2/3 p-4 md:mt-[-50px] text-center md:text-left">
+  <motion.p className="mb-3 text-sm text-white md:text-[19.2px] "
+    initial="hidden"
+    animate="visible"
+    transition={{ duration: 0.5, delay: 0.1 }}
+    variants={textVariants}
+  >
+    Services
+  </motion.p>
 
-          <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2"
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.1 }}
-          variants={textVariants}
-          >
-            Our Services
-          </motion.h2>
+  <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-2"
+    initial="hidden"
+    animate="visible"
+    transition={{ duration: 0.5, delay: 0.1 }}
+    variants={textVariants}
+  >
+    Our Services
+  </motion.h2>
 
-          <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[16px]"
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.1 }}
-          variants={textVariants}
-          >
-            and Expertise
-          </motion.h2>
-          
-          <motion.p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-full xl:w-[488px]"
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.5, delay: 0.1 }}
-          variants={textVariants}
-          >
-            At Asipiya Soft Solutions, we empower your business for success in
-            the digital age. Join us on an innovative journey towards efficiency
-            and thrive together in shaping your future.
-          </motion.p>
-        </div>
+  <motion.h2 className="text-4xl font-semibold text-white md:text-[47.78px] mb-[16px]"
+    initial="hidden"
+    animate="visible"
+    transition={{ duration: 0.5, delay: 0.1 }}
+    variants={textVariants}
+  >
+    and Expertise
+  </motion.h2>
+
+  <motion.p className="mb-8 font-normal text-white md:text-[16px] leading-normal tracking-wide w-full xl:w-[488px]"
+    initial="hidden"
+    animate="visible"
+    transition={{ duration: 0.5, delay: 0.1 }}
+    variants={textVariants}
+  >
+    At Asipiya Soft Solutions, we empower your business for success in
+    the digital age. Join us on an innovative journey towards efficiency
+    and thrive together in shaping your future.
+  </motion.p>
+</div>
+
       </div>
 
       {/* Services Grid */}

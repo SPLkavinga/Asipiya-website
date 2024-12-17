@@ -65,7 +65,7 @@ function Contact() {
             visible: { opacity: 1, y: 0 },
           }}
         >
-          <div className="text-center xl:text-start max-w-[487px] w-full">
+          <div className="text-center md:text-left xl:text-start max-w-[487px] w-full mx-auto">
             <h2 className="text-3xl font-bold md:text-[20px] xl:text-5xl">
               Let’s Level Up Your
             </h2>
@@ -106,7 +106,9 @@ function Contact() {
                 />
               </div>
               <div>
-                <label className="block mb-2 text-gray-700">Mobile Number</label>
+                <label className="block mb-2 text-gray-700">
+                  Mobile Number
+                </label>
                 <input
                   type="text"
                   name="phoneNumber"
@@ -138,18 +140,22 @@ function Contact() {
                 I'm interested in...
               </label>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {["UI/UX Design", "Web Design", "Design System", "Software Solutions", "Other"].map(
-                  (interest) => (
-                    <button
-                      type="button"
-                      key={interest}
-                      onClick={toggleSelection}
-                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-[#7D00C5] hover:text-white focus:outline-none"
-                    >
-                      {interest}
-                    </button>
-                  )
-                )}
+                {[
+                  "UI/UX Design",
+                  "Web Design",
+                  "Design System",
+                  "Software Solutions",
+                  "Other",
+                ].map((interest) => (
+                  <button
+                    type="button"
+                    key={interest}
+                    onClick={toggleSelection}
+                    className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-[#7D00C5] hover:text-white focus:outline-none"
+                  >
+                    {interest}
+                  </button>
+                ))}
               </div>
             </div>
             <div className="flex items-center mb-6">

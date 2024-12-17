@@ -156,7 +156,7 @@ function AboutUs() {
           </div>
 
           {/* Vertical Line (Hidden on small screens, shown on larger screens) */}
-          <div className="hidden lg:block w-[3px] h-[180px] bg-gray-300 mx-4 mt-12"></div>
+          <div className="hidden xl:block w-[3px] h-[180px] bg-gray-300 mx-4 mt-12"></div>
 
           {/* Mission */}
           <div className="w-[350px] text-center">
@@ -178,7 +178,7 @@ function AboutUs() {
             </p>
           </div>
           {/* Vertical Line (Hidden on small screens, shown on larger screens) */}
-          <div className="hidden lg:block w-[3px] h-[180px] bg-gray-300 mx-4 -mt-12"></div>
+          <div className="hidden xl:block w-[3px] h-[180px] bg-gray-300 mx-4 -mt-12"></div>
 
           {/* Values */}
           <div className="w-[350px] text-center">

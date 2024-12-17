@@ -20,7 +20,7 @@ const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7, logo8, logo9, l
 
 function ClientCarousel() {
   return (
-    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-10 mt-8 xl:mt-36">
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-4 xl:py-10 mt-16 xl:mt-36">
       <motion.div
         className="flex"
         animate={{ x: ["0%", "-50%"] }} 
@@ -37,7 +37,7 @@ function ClientCarousel() {
             <img
               src={logo}
               alt={`Logo ${index}`}
-              className="h-10 md:h-14 xl:h-28 w-auto object-contain"
+              className="h-16 md:h-24 xl:h-28 w-auto object-contain "
             />
           </div>
         ))}

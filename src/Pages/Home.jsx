@@ -287,7 +287,7 @@ function Home() {
       {/*ClientCarousel */}
       <ClientCarousel />
 
-      <div className="mx-[20px] xl:mx-[120px] mt-20">
+      <div className="mx-[20px] xl:mx-[120px] mt-8 xl:mt-20">
       <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
         {/* Left: Review Card */}
         <div className="flex justify-center w-full lg:w-[600px]">
