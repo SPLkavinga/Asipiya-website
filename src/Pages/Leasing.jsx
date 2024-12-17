@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "./../Components/Footer";
 import NavBar from "./../Components/NabBar";
 import Cooperate from "./../Components/Cooperate";
-import backgroundImg from "../assets/bg12.jpg";
+import backgroundImg from "../assets/servicesbg.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/Cash1.png";
 import img3 from "../assets/Cash2.png";
@@ -109,7 +109,7 @@ const Leasing = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             variants={textVariants}
           >
-            Discover smarter leasing with the Asipiya Leasing App.
+            Discover <br/> smarter leasing with the Asipiya Leasing App.
           </motion.h2>
           <motion.p
             className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start"
@@ -200,7 +200,7 @@ const Leasing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
             <h2 className="text-2xl font-bold ">Vehicle Management</h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Asipiya Leasing App is designed to streamline the vehicle
               leasing process. It offers comprehensive vehicle inventory
               management, allowing users to track details like make, model,
@@ -247,7 +247,7 @@ const Leasing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
             <h2 className="text-2xl font-bold ">Payment & Billing System</h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Asipiya Leasing App enhances financial management by providing
               customers with a clear payment schedule and automated reminders to
               ensure timely payments. It supports seamless online payment
@@ -300,7 +300,7 @@ const Leasing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
             <h2 className="text-2xl font-bold ">Cash Flow Accumulated</h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Cash Flow Accumulated feature in the Asipiya Leasing App
               offers a detailed tracking of total cash inflows and outflows over
               a specified period, providing a clear picture of the company’s
@@ -349,7 +349,7 @@ const Leasing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
             <h2 className="text-2xl font-bold ">Balance Sheet</h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Balance Sheet feature in the Asipiya Leasing App generates a
               comprehensive statement of the company’s assets, liabilities, and
               equity at a specific point in time. This financial snapshot is
@@ -398,7 +398,7 @@ const Leasing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
             <h2 className="text-2xl font-bold ">General Ledger Summary: </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The General Ledger Summary feature in the Asipiya Leasing App
               consolidates and summarizes all financial transactions recorded in
               the general ledger. It offers a comprehensive overview of the
@@ -409,7 +409,7 @@ const Leasing = () => {
             </p>
             <br />
             <h2 className="text-2xl font-bold ">Branch Equity: </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Branch Equity feature tracks and manages the equity or net
               worth of individual branches within the company. By monitoring the
               financial performance and stability of each branch separately, it
@@ -455,7 +455,7 @@ const Leasing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
             <h2 className="text-2xl font-bold ">Chart of Accounts: </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Chart of Accounts feature in the Asipiya Leasing App maintains
               a comprehensive list of all accounts used in the company’s
               accounting system. This structured framework organizes financial

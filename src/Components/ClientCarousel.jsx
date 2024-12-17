@@ -8,7 +8,7 @@ import logo3 from "../assets/ClientLogo/ClientLogo3.jpg";
 import logo4 from "../assets/ClientLogo/ClientLogo4.jpg";
 import logo5 from "../assets/ClientLogo/ClientLogo5.jpg";
 import logo6 from "../assets/ClientLogo/ClientLogo6.jpg";
-import logo7 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo7 from "../assets/ClientLogo/ClientLogo7.png";
 import logo8 from "../assets/ClientLogo/ClientLogo1.jpg";
 import logo9 from "../assets/ClientLogo/ClientLogo1.jpg";
 import logo10 from "../assets/ClientLogo/ClientLogo1.jpg";
@@ -16,15 +16,15 @@ import logo11 from "../assets/ClientLogo/ClientLogo1.jpg";
 import logo12 from "../assets/ClientLogo/ClientLogo1.jpg";
 
 // Array of logos
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7, logo8, logo9, logo10, logo11, logo12];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7];
 
 function ClientCarousel() {
   return (
     <>
-    <p className="text-[30px] md:text-[39.81px] font-medium text-center md:mt-20 mt-10 xl:mt-20 ">
+    <p className="text-[30px] md:text-[39.81px] font-semibold text-center md:mt-20 mt-10 xl:mt-36 ">
           Our <span className="text-[#7D00C5]"> Clients</span>{" "}
         </p>
-    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-4 xl:py-10 mt-8 ">
+    <div className="relative w-full overflow-hidden bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4] py-4 xl:py-8 mt-4 ">
       
       <motion.div
         className="flex"

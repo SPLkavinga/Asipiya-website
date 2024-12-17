@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "./../Components/Footer";
 import NavBar from "./../Components/NabBar";
 import Cooperate from "./../Components/Cooperate";
-import backgroundImg from "../assets/bg12.jpg";
+import backgroundImg from "../assets/servicesbg.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/Cash1.png";
 import img3 from "../assets/Cash2.png";
@@ -20,39 +20,39 @@ import logo from "../assets/logo.png";
 
 const features = [
   {
-    title: "Branch-wise Group/Loan Creation",
+    title: "Easy access with your Mobile",
     description:
-      "With Asipiya Finance, create and manage groups and loans seamlessly across different branches.",
+      "The Asipiya Microfinance System is designed for smooth operation on smartphones.",
     icon: "🏢", // Replace with SVG or actual icon
   },
   {
-    title: "Digital Application",
+    title: "Secure Transactions",
     description:
-      "Improve loan officer efficiency and extend outreach with the Asipiya Finance Mobile Application for your field officers!",
+      "Your data is protected with advanced security on the Asipiya Microfinance System.",
     icon: "📱", // Replace with SVG or actual icon
   },
   {
-    title: "Management Dashboard",
+    title: "Data-Driven Insights",
     description:
-      "Asipiya Finance enables management to make faster and more informed decisions through real-time data insights.",
+      "Leverage powerful analytics to optimize your Pawning strategies and performance..",
     icon: "📊", // Replace with SVG or actual icon
   },
   {
     title: "Integrated Accounting",
     description:
-      "With Asipiya Finance, you gain access to fully automated financial reports and manual journal entry options, ensuring reduced paperwork and efficient management.",
+      "With Asipiya Microfinance System, you gain access to fully automated financial reports and manual journal entry options, ensuring reduced paperwork and efficient management.",
     icon: "📋", // Replace with SVG or actual icon
   },
   {
-    title: "Individual & Group Management",
+    title: "Real-Time Updates",
     description:
-      "The Asipiya Finance Microfinance System fully supports methodologies for both individual and group clients.",
+      "Get instant notifications and live monitoring for better decision-making.",
     icon: "👥", // Replace with SVG or actual icon
   },
   {
-    title: "Loan Management",
+    title: "24/7 Availability",
     description:
-      "Easily launch loan products and generate loan-related documents instantly with the Asipiya Finance Microfinance Management System.",
+      "Round-the-clock access ensures convenience for users with varying schedules.",
     icon: "💼", // Replace with SVG or actual icon
   },
 ];
@@ -115,8 +115,8 @@ const Microfinance = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             variants={textVariants}
           >
-            Empowering Lives Globally with Asipiya Finance With Trusted
-            Microfinance Solutions.
+            Empowering Lives Globally with Asipiya Microfinance
+            Trusted Microfinance Solutions.
           </motion.h2>
           <motion.p
             className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start"
@@ -125,8 +125,7 @@ const Microfinance = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             variants={textVariants}
           >
-            Achieve complete control and visibility of your microfinance
-            operations with the Asipiya Finance .
+            Achieve complete control and visibility of your microfinance operations with the Asipiya Microfinance System .
           </motion.p>
           {/* Button below the text content */}
           <motion.div
@@ -137,7 +136,7 @@ const Microfinance = () => {
             className="flex justify-center w-full xl:justify-start"
           >
             <Link
-              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full flex items-center justify-center"
+              className="w-[150px] h-[45px] xl:w-[250px] xl:h-[50px] py-2 mb-4 text-[16px] xl:text-[19.2px] font-semibold text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full flex items-center justify-center"
               to="/About"
             >
               Let's get started
@@ -190,9 +189,8 @@ const Microfinance = () => {
         How Can Microfinance Help You?
       </p>
       <p className="mt-3 text-center text-[#666666] ">
-        Transform your business with Asipiya Finance, a cloud-based Microfinance
-        System designed to improve efficiency, reduce costs <br /> and enable
-        effortless product launches.
+      Transform your business with Asipiya Microfinance System, a cloud-based Microfinance System 
+      designed to improve efficiency, reduce costs,<br/> and enable effortless product launches.
       </p>
 
       <AnimatedSection>
@@ -204,8 +202,8 @@ const Microfinance = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Cash Flow Accumulated</h2>
-          <p className="mt-4 text-sm text-gray-500">
-            With Asipiya Finance, the Cash Flow Accumulated feature offers a
+          <p className="mt-4 text-base text-gray-500">
+            With Asipiya Microfinance System, the Cash Flow Accumulated feature offers a
             clear view of your company’s financial health by tracking cash
             inflows and outflows. This tool enables you to monitor liquidity,
             assess cash generation, and stay on top of financial obligations,
@@ -226,7 +224,7 @@ const Microfinance = () => {
         <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Cash Flow Monthly</h2>
           <p className="mt-4 text-base text-gray-500">
-            The Cash Flow Monthly feature in Asipiya Finance offers detailed
+            The Cash Flow Monthly feature in Asipiya Microfinance System offers detailed
             insights into monthly cash inflows and outflows, helping your
             organization identify patterns, manage short-term liquidity, and
             ensure sufficient cash to meet operational needs. This feature
@@ -246,7 +244,7 @@ const Microfinance = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
           <h2 className="text-2xl font-bold ">Profit/Loss:</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             The Profit/Loss feature calculates the net profit or loss by
             comparing the company’s total revenues with its total expenses over
             a specific period. This is crucial for assessing the company's
@@ -268,7 +266,7 @@ const Microfinance = () => {
         <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Balance Sheet</h2>
           <p className="mt-4 text-base text-gray-500">
-            The Profit/Loss feature in Asipiya Finance calculates net profit or
+            The Profit/Loss feature in Asipiya Microfinance System calculates net profit or
             loss by comparing your company’s total revenues with total expenses
             over a specific period. This is essential for assessing financial
             performance, understanding profitability, and making informed
@@ -288,7 +286,7 @@ const Microfinance = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
           <h2 className="text-2xl font-bold ">Trial Balance</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             The Trial Balance feature prepares a summary of all ledger accounts
             with their respective debit and credit balances. This serves as a
             preliminary check before preparing financial statements, ensuring
@@ -310,7 +308,7 @@ const Microfinance = () => {
         <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
           <p className="mt-4 text-base text-gray-500">
-            Asipiya Finance’s Trial Balance feature summarizes all ledger
+          Asipiya Microfinance System’s Trial Balance feature summarizes all ledger
             accounts with debit and credit balances, ensuring that debits and
             credits match before preparing financial statements. This tool is
             key for detecting errors or discrepancies in accounting records,
@@ -330,8 +328,8 @@ const Microfinance = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
           <h2 className="text-2xl font-bold "> Branch Equity</h2>
-          <p className="mt-4 text-sm text-gray-500">
-            With Asipiya Finance, the Branch Equity feature allows you to
+          <p className="mt-4 text-base text-gray-500">
+            With Asipiya Microfinance System, the Branch Equity feature allows you to
             monitor and manage the equity of each branch individually. By
             evaluating financial performance, asset management, and
             profitability, this tool supports better decision-making and
@@ -351,7 +349,7 @@ const Microfinance = () => {
         <div className="p-4 w-fulltext-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Interbank Transfers</h2>
           <p className="mt-4 text-base text-gray-500">
-            Asipiya Finance’s Interbank Transfers feature enables smooth and
+           Asipiya Microfinance System’s Interbank Transfers feature enables smooth and
             accurate recording of fund transfers between your company’s bank
             accounts. This feature supports efficient cash management, optimizes
             liquidity, and ensures that financial obligations are met promptly.
@@ -369,8 +367,8 @@ const Microfinance = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 mx-[20px] xl:mx-[120px]">
           <h2 className="text-2xl font-bold ">General Ledger Summary:</h2>
-          <p className="mt-4 text-sm text-gray-500">
-            The General Ledger Summary feature in Asipiya Finance consolidates
+          <p className="mt-4 text-base text-gray-500">
+            The General Ledger Summary feature in Asipiya Microfinance System consolidates
             and summarizes all financial transactions recorded in the general
             ledger. It provides a comprehensive overview of your company’s
             financial activities, supporting detailed financial analysis and
@@ -392,7 +390,7 @@ const Microfinance = () => {
         <div className="w-full p-4 text-left md:w-1/2 md:mr-28 md:text-left">
           <h2 className="text-2xl font-bold ">Reconcile Entries</h2>
           <p className="mt-4 text-base text-gray-500">
-            Asipiya Finance’s Reconcile Entries feature ensures financial
+          Asipiya Microfinance System’s Reconcile Entries feature ensures financial
             accuracy by matching and verifying records with bank statements or
             external documents. This includes managing discrepancies, such as
             when cash collectors have deposited customer amounts but haven’t
@@ -421,8 +419,8 @@ const Microfinance = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10">
           <h2 className="text-2xl font-bold ">Manual Journal:</h2>
-          <p className="mt-4 text-sm text-gray-500">
-            Asipiya Finance’s Manual Journal feature gives you the ability to
+          <p className="mt-4 text-base text-gray-500">
+          Asipiya Microfinance System’s Manual Journal feature gives you the ability to
             record and manage journal entries manually for transactions that
             aren’t automatically processed. This feature handles adjustments,
             corrections, and complex entries, ensuring that every financial

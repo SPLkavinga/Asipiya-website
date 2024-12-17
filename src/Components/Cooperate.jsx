@@ -19,7 +19,7 @@ function Cooperate() {
         </p>
         <img className="mt-16 mb-5 w-[250px] h-[150px] md:h-[250px] md:w-[450px]" src={img5} alt="Centered_Image" />
         <Link
-          to="/your-target-path"
+          to="/contact"
           className="w-[200px] h-[50px] md:w-[483px] md:h-[72px] font-bold text-[#333333] text-center transition bg-white hover:bg-[#7D00C5] hover:text-white   border-2  border-[#333333] rounded-full text-[30px] md:text-[39.81px] pt-1"
         >
           Let's Talk

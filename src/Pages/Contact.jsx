@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useState , useEffect } from 'react';
+import { useState, useEffect } from "react";
 import {
   AiOutlineMessage,
   AiOutlineMail,
@@ -17,17 +17,12 @@ import NavBar from "./../Components/NabBar";
 import Footer from "./../Components/Footer";
 import logo from "../assets/logo.png";
 
-
 function Contact() {
-
-  
   const [showPopup, setShowPopup] = useState(false);
   const [selectedInterests, setSelectedInterests] = useState([]);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    
 
     // Collect form data
     const formData = {
@@ -42,7 +37,7 @@ function Contact() {
     try {
       // Send data to the backend
       await axios.post("http://localhost:5000/send-email", formData);
-      
+
       // Show success popup
       setShowPopup(true);
 
@@ -56,7 +51,7 @@ function Contact() {
   const toggleSelection = (interest) => {
     setSelectedInterests((prevInterests) => {
       if (prevInterests.includes(interest)) {
-        return prevInterests.filter(item => item !== interest); // Remove interest
+        return prevInterests.filter((item) => item !== interest); // Remove interest
       } else {
         return [...prevInterests, interest]; // Add interest
       }
@@ -64,24 +59,27 @@ function Contact() {
   };
 
   const [loading, setLoading] = useState(true);
-  
-    // Simulate a loading delay of 3 seconds
-    useEffect(() => {
-      const timer = setTimeout(() => {
-        setLoading(false);
-      }, 1000); // 3 seconds
-      return () => clearTimeout(timer);
-    }, []);
-  
-  
-    // Loading screen
-    if (loading) {
-      return (
-        <div className="flex items-center justify-center w-full h-screen bg-white">
-          <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
-        </div>
-      );
-    }
+
+  // Simulate a loading delay of 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Loading screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen bg-white">
+        <img
+          src={logo}
+          alt="Loading..."
+          className="w-[200px] h-auto animate-bounce"
+        />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -179,18 +177,26 @@ function Contact() {
                 I'm interested in...
               </label>
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {["UI/UX Design", "Web Design", "Design System", "Software Solutions", "Other"].map(
-                  (interest) => (
-                    <button
-                      type="button"
-                      key={interest}
-                      onClick={toggleSelection}
-                      className="p-2 text-gray-600 border border-gray-300 rounded-xl hover:bg-purple-500 hover:text-white focus:outline-none"
-                    >
-                      {interest}
-                    </button>
-                  )
-                )}
+                {[
+                  "UI/UX Design",
+                  "Web Design",
+                  "Design System",
+                  "Software Solutions",
+                  "Other",
+                ].map((interest) => (
+                  <button
+                    type="button"
+                    key={interest}
+                    onClick={() => toggleSelection(interest)}
+                    className={`p-2 border rounded-xl focus:outline-none ${
+                      selectedInterests.includes(interest)
+                        ? "bg-purple-500 text-white border-purple-500" 
+                        : "text-gray-600 border-gray-300 hover:bg-purple-500 hover:text-white" 
+                    }`}
+                  >
+                    {interest}
+                  </button>
+                ))}
               </div>
             </div>
             <div className="flex items-center mb-6">
@@ -328,7 +334,9 @@ function Contact() {
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="flex flex-col items-center w-full max-w-lg p-8 space-y-4 bg-white shadow-lg rounded-xl">
             <AiOutlineCheckCircle className="w-12 h-12 text-green-600" />
-            <p className="text-lg font-semibold text-gray-700">Successfully submitted the form!</p>
+            <p className="text-lg font-semibold text-gray-700">
+              Successfully submitted the form!
+            </p>
           </div>
         </div>
       )}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "./../Components/Footer";
 import NavBar from "./../Components/NabBar";
 import Cooperate from "./../Components/Cooperate";
-import backgroundImg from "../assets/bg12.jpg";
+import backgroundImg from "../assets/servicesbg.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/Cash1.png";
 import img3 from "../assets/Cash2.png";
@@ -38,7 +38,7 @@ const features = [
   {
     title: "Seamless Integration ",
     description:
-      " Integrate Asipiya Prawing effortlessly with your existing workflows and technology.",
+      " Integrate Asipiya Pawning effortlessly with your existing workflows and technology.",
     icon: "📋", // Replace with SVG or actual icon
   },
   {
@@ -50,7 +50,7 @@ const features = [
   {
     title: "Customizable Features",
     description:
-      "Adapt Asipiya Prawing to suit your unique prawning needs with flexible options.",
+      "Adapt Asipiya Pawning to suit your unique prawning needs with flexible options.",
     icon: "💼", // Replace with SVG or actual icon
   },
 ];
@@ -109,7 +109,7 @@ const Prawing = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             variants={textVariants}
           >
-            Discover smarter prawning with Asipiya Prawing.
+            Discover <br/> smarter prawning with Asipiya Pawning.
           </motion.h2>
           <motion.p
             className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start"
@@ -119,7 +119,7 @@ const Prawing = () => {
             variants={textVariants}
           >
             Get total control of your prawning operations with the Asipiya
-            Prawing
+            Pawning
           </motion.p>
 
           {/* Button below the text content */}
@@ -150,7 +150,7 @@ const Prawing = () => {
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="text-[30px] xl:text-[32px] font-semibold text-[#333333] sm:text-4xl mt-[16px]">
-              Why Choose Asipiya pawning?
+              Why Choose Asipiya Pawning?
             </h2>
           </div>
 
@@ -181,7 +181,7 @@ const Prawing = () => {
       </motion.div>
 
       <p className="mt-10 text-[32px] font-semibold text-[#333333] text-center">
-        How Can Asipiya Prawing System Help You?
+        How Can Asipiya Pawning System Help You?
       </p>
       <p className="mt-3 text-center text-[#666666]">
         Transform your business using Microfinance which will improve
@@ -201,7 +201,7 @@ const Prawing = () => {
             <h2 className="text-2xl font-bold ">
               Gold Valuation and Collateral Management
             </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App streamlines the assessment and
               valuation of gold items, ensuring accurate tracking of collateral
               and efficient loan issuance. With its intuitive interface, users
@@ -224,7 +224,7 @@ const Prawing = () => {
             <h2 className="text-2xl font-bold ">Pawning Ticket Issuance</h2>
             <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App automatically generates comprehensive
-              pawning tickets, including detailed item descriptions, gold
+              Pawning tickets, including detailed item descriptions, gold
               weight, assessed value, loan amount, interest rate, and maturity
               date. This ensures a seamless and professional process, reducing
               manual effort while maintaining accurate and standardized
@@ -245,7 +245,7 @@ const Prawing = () => {
             <h2 className="text-2xl font-bold ">
               Loan Issuance Based on Gold Value
             </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App facilitates loan issuance based on the
               appraised value of gold collateral. It offers customizable
               loan-to-value (LTV) ratios, allowing flexibility to align with
@@ -289,7 +289,7 @@ const Prawing = () => {
             <h2 className="text-2xl font-bold ">
               Renewal and Redemption Options
             </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App streamlines the management of loan
               renewals and gold item redemptions. It allows customers to renew
               pawning loans with ease, updating terms and conditions as needed.
@@ -333,7 +333,7 @@ const Prawing = () => {
             <h2 className="text-2xl font-bold ">
               Document and Asset Management
             </h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               The Asipiya Pawning Web App allows users to upload and securely
               store gold appraisals, pawn tickets, and customer documents. It
               ensures easy access to records through an organized and searchable
@@ -375,7 +375,7 @@ const Prawing = () => {
 
           <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
             <h2 className="text-2xl font-bold ">Service Benefits</h2>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-base text-gray-500">
               .Service Assistance: The supplier agreed to provide service
               assistance for any software-related issues. <br />
               .Lifetime Software Updates: The supplier agreed to provide

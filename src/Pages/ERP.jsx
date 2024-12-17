@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Footer from "./../Components/Footer";
 import NavBar from "./../Components/NabBar";
 import Cooperate from "./../Components/Cooperate";
-import backgroundImg from "../assets/bg12.jpg";
+import backgroundImg from "../assets/servicesbg.png";
 import img1 from "../assets/img1.png";
 import img2 from "../assets/Cash1.png";
 import img3 from "../assets/Cash2.png";
@@ -106,7 +106,7 @@ const ERP = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             variants={textVariants}
           >
-            Discover smarter Business Management with the Asipiya ERP System{" "}
+            Discover <br/> smarter Business Management with the Asipiya ERP System{" "}
           </motion.h2>
           <motion.p className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start"
            initial="hidden"
@@ -195,7 +195,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Sales Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Optimizes sales processes, from generating quotations and invoices
             to integrating seamlessly with emails and other communication
             platforms. The Asipiya ERP streamlines the order management process,
@@ -206,7 +206,7 @@ const ERP = () => {
           <h2 className="text-2xl font-bold ">
             CRM (Customer Relationship Management)
           </h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Centralizes all customer interactions, offering detailed customer
             insights and accurate sales forecasts. This feature enables
             real-time reporting, helping businesses stay informed and improve
@@ -252,7 +252,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Rental Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             TSimplifies the rental process, from scheduling to invoicing,
             ensuring smooth management of rented assets and compatibility with
             other product management apps to enhance operational efficiency.
@@ -260,8 +260,8 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">Accounting & Finance</h2>
-          <p className="mt-4 text-sm text-gray-500">
-            bookkeeping system integrated with inventory and sales management to
+          <p className="mt-4 text-base text-gray-500">
+            book keeping system integrated with inventory and sales management to
             ensure efficient finance management. The system offers automated
             bank synchronization, reconciliation, and flexible fiscal reporting
             for comprehensive financial insights..
@@ -305,7 +305,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Expense Tracking</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Keeps track of the business’s expenses, providing a detailed
             overview to ensure that budgets are adhered to. This tool helps
             businesses control their spending and optimize cash flow
@@ -313,7 +313,7 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">E-Signature</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Enables digital signing of documents and contracts, improving
             efficiency and reducing paperwork, while maintaining compliance with
             industry standards for digital signatures.
@@ -359,7 +359,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Purchase Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Automate and streamline your purchasing workflow. With Asipiya ERP,
             track all agreements, quotations, and purchase orders, ensuring the
             best offers and timely procurement.
@@ -367,7 +367,7 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">Maintenance Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Schedule, track, and manage maintenance activities with automated
             triggers. Asipiya ERP provides critical performance data such as
             MTBF (Mean Time Between Failures) and MTTR (Mean Time to Repair),
@@ -416,7 +416,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Live Chat</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Enhance customer engagement by providing real-time support through
             live chat. Asipiya ERP integrates live chat functionality, helping
             you respond promptly to customer inquiries, providing instant
@@ -463,7 +463,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">SMS Marketing</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Instantly reach your customers with SMS campaigns. Asipiya ERP
             ensures direct, efficient communication by delivering your marketing
             messages straight to your contacts’ mobile phones.
@@ -471,7 +471,7 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">Event Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Organize and promote events effortlessly with Asipiya ERP. From
             ticket sales to event logistics and marketing, this feature offers
             an all-in-one solution to create, manage, and track events, ensuring
@@ -517,7 +517,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Recruitment</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Simplify your hiring process with Asipiya ERP’s recruitment module.
             Post job openings, track applicants, and streamline the candidate
             management process, all from one easy-to-use platform.
@@ -525,7 +525,7 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">Time Off Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Manage employee leave efficiently with Asipiya ERP. Keep track of
             absences and time-off requests in real-time, and generate detailed
             reports on employee attendance and leave statistics with just a few
@@ -571,7 +571,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Fleet Management</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Centralize the management of your vehicles, contracts, and
             assignments with Asipiya ERP’s fleet management feature. It
             automatically integrates with your sales and finance systems,
@@ -616,7 +616,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Field Service</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Work from anywhere with Asipiya ERP’s Field Service feature. It
             enables employees to deliver excellent service to customers while on
             the go, allowing seamless access to job details from any device.
@@ -624,7 +624,7 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">Helpdesk</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Get a real-time overview of client tickets and ensure customer
             service is timely and efficient. Asipiya ERP integrates with custom
             SLA rules, optimizing the helpdesk’s responsiveness and
@@ -669,7 +669,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Discuss</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Facilitate communication within your team using Asipiya ERP’s
             integrated discussion tools. Stay connected with your team across
             all modules and collaborate effortlessly within the system.
@@ -677,7 +677,7 @@ const ERP = () => {
           <br />
 
           <h2 className="text-2xl font-bold ">Approvals</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             Streamline the approval process with Asipiya ERP’s centralized
             dashboard. Manage employee requests and approvals efficiently,
             providing customized rights and boosting overall productivity.
@@ -723,7 +723,7 @@ const ERP = () => {
 
         <div className="w-full text-left md:w-1/2 md:pl-8 md:text-left md:ml-20 md:m-10 ">
           <h2 className="text-2xl font-bold ">Knowledge</h2>
-          <p className="mt-4 text-sm text-gray-500">
+          <p className="mt-4 text-base text-gray-500">
             FAsipiya ERP contributes to knowledge sharing by integrating a
             collaborative library. Access documents, best practices, and other
             resources, enhancing team collaboration across all departments.

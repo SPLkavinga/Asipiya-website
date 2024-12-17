@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -13,34 +14,75 @@ function NavBar() {
 
       {/* Middle Section: Desktop Navigation */}
       <ul className="hidden xl:flex space-x-8 text-[16px] font-medium">
-        <li>
-          <a href="/" className="hover:text-[#9733D1]">Home</a>
+        <li className="relative group">
+          <a
+            href="/"
+            className="hover:text-[#9733D1] transition-colors duration-300"
+          >
+            Home
+          </a>
+          <span className="absolute left-0 bottom-0 h-[3px] rounded-full w-0 bg-[#9733D1] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="/about" className="hover:text-[#9733D1]">About us</a>
+        <li className="relative group">
+          <a
+            href="/about"
+            className="hover:text-[#9733D1] transition-colors duration-300"
+          >
+            About us
+          </a>
+          <span className="absolute left-0 bottom-0 h-[3px] rounded-full w-0 bg-[#9733D1] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="/Services" className="hover:text-[#9733D1]">Services</a>
+        <li className="relative group">
+          <a
+            href="/Services"
+            className="hover:text-[#9733D1] transition-colors duration-300"
+          >
+            Services
+          </a>
+          <span className="absolute left-0 bottom-0 h-[3px] rounded-full w-0 bg-[#9733D1] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="/Blogs" className="hover:text-[#9733D1]">Blogs</a>
+        <li className="relative group">
+          <a
+            href="/Blogs"
+            className="hover:text-[#9733D1] transition-colors duration-300"
+          >
+            Blogs
+          </a>
+          <span className="absolute left-0 bottom-0 h-[3px] rounded-full w-0 bg-[#9733D1] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="/vacancie" className="hover:text-[#9733D1]">Careers</a>
+        <li className="relative group">
+          <a
+            href="/vacancie"
+            className="hover:text-[#9733D1] transition-colors duration-300"
+          >
+            Careers
+          </a>
+          <span className="absolute left-0 bottom-0 h-[3px] rounded-full w-0 bg-[#9733D1] transition-all duration-300 group-hover:w-full"></span>
         </li>
-        <li>
-          <a href="/contact" className="hover:text-[#9733D1]">Contact Us</a>
+        <li className="relative group">
+          <a
+            href="/contact"
+            className="hover:text-[#9733D1] transition-colors duration-300"
+          >
+            Contact Us
+          </a>
+          <span className="absolute left-0 bottom-0 h-[3px] rounded-full w-0 bg-[#9733D1] transition-all duration-300 group-hover:w-full"></span>
         </li>
       </ul>
 
       {/* Right Section: Buttons */}
       <div className="hidden mr-4 space-x-4 md:flex">
-        <button className="bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full w-[147px] h-[44px] text-white font-semibold">
-          Our Product
-        </button>
-        <button className="bg-white border-[#333333]  hover:bg-[#7D00C5] hover:text-white border-opacity-70 border-2 rounded-full w-[147px] h-[44px] text-[#333333] text-opacity-70 font-semibold">
-          Let's Talk
-        </button>
+        <Link to="/Services">
+          <button className="bg-[#7D00C5] hover:bg-[#5C0091] rounded-full w-[147px] h-[44px] text-white font-semibold">
+            Our Product
+          </button>
+        </Link>
+
+        <Link to="/contact">
+          <button className="bg-white border-[#333333]  hover:bg-[#7D00C5] hover:text-white border-opacity-70 border-2 rounded-full w-[147px] h-[44px] text-[#333333] text-opacity-70 font-semibold">
+            Let's Talk
+          </button>
+        </Link>
       </div>
 
       {/* Hamburger Menu for Mobile */}
@@ -65,7 +107,10 @@ function NavBar() {
 
       {/* Drawer Overlay */}
       {isDrawerOpen && (
-        <div className="fixed inset-0 z-40 bg-black bg-opacity-50" onClick={() => setIsDrawerOpen(false)}></div>
+        <div
+          className="fixed inset-0 z-40 bg-black bg-opacity-50"
+          onClick={() => setIsDrawerOpen(false)}
+        ></div>
       )}
 
       {/* Drawer */}
@@ -96,22 +141,34 @@ function NavBar() {
 
         <ul className="space-y-6 p-4 text-[16px] font-medium">
           <li>
-            <a href="/" className="hover:text-[#9733D1]">Home</a>
+            <a href="/" className="hover:text-[#9733D1]">
+              Home
+            </a>
           </li>
           <li>
-            <a href="/about" className="hover:text-[#9733D1]">About us</a>
+            <a href="/about" className="hover:text-[#9733D1]">
+              About us
+            </a>
           </li>
           <li>
-            <a href="/Services" className="hover:text-[#9733D1]">Services</a>
+            <a href="/Services" className="hover:text-[#9733D1]">
+              Services
+            </a>
           </li>
           <li>
-            <a href="/Blogs" className="hover:text-[#9733D1]">Blogs</a>
+            <a href="/Blogs" className="hover:text-[#9733D1]">
+              Blogs
+            </a>
           </li>
           <li>
-            <a href="/vacancie" className="hover:text-[#9733D1]">Careers</a>
+            <a href="/vacancie" className="hover:text-[#9733D1]">
+              Careers
+            </a>
           </li>
           <li>
-            <a href="/contact" className="hover:text-[#9733D1]">Contact Us</a>
+            <a href="/contact" className="hover:text-[#9733D1]">
+              Contact Us
+            </a>
           </li>
         </ul>
       </div>
