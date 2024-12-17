@@ -14,7 +14,7 @@ function AssociateSoftwareEngineer() {
         useEffect(() => {
           const timer = setTimeout(() => {
             setLoading(false);
-          }, 3000); // 3 seconds
+          }, 1000); // 3 seconds
           return () => clearTimeout(timer);
         }, []);
       

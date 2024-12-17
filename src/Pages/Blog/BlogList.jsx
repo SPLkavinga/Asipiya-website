@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import backgroundImg from "../../assets/background.png";
 import NavBar from "../../Components/NabBar";
 import Footer from "../../Components/Footer";
+import logo from "../../assets/logo.png";
 
 const BlogList = () => {
   const [blogs, setBlogs] = useState([]);
@@ -17,6 +18,27 @@ const BlogList = () => {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
+
+   const [loading, setLoading] = useState(true);
+      
+        // Simulate a loading delay of 3 seconds
+        useEffect(() => {
+          const timer = setTimeout(() => {
+            setLoading(false);
+          }, 1000); // 3 seconds
+          return () => clearTimeout(timer);
+        }, []);
+      
+      
+        // Loading screen
+        if (loading) {
+          return (
+            <div className="flex items-center justify-center w-full h-screen bg-white">
+              <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
+            </div>
+          );
+        }
+  
 
   return (
     <div>
@@ -69,16 +91,16 @@ const BlogList = () => {
       <Link
         to={`/blog/${blog.slug}`}
         key={blog.id}
-        className="border rounded-lg hover:shadow-lg transition flex flex-col h-full"
+        className="flex flex-col h-full transition border rounded-lg hover:shadow-lg"
       >
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full h-48 object-cover rounded-md mb-4"
+          className="object-cover w-full h-48 mb-4 rounded-md"
         />
-        <h2 className="text-xl font-semibold p-4 flex-grow">{blog.title}</h2> {/* The title will expand with flex-grow */}
+        <h2 className="flex-grow p-4 text-xl font-semibold">{blog.title}</h2> {/* The title will expand with flex-grow */}
         
-        <div className="flex items-center mb-4 p-4 mt-auto"> {/* mt-auto ensures it stays at the bottom */}
+        <div className="flex items-center p-4 mt-auto mb-4"> {/* mt-auto ensures it stays at the bottom */}
           <img
             src={blog.profileimage}
             className="w-[30px] h-[30px] object-cover rounded-full"
