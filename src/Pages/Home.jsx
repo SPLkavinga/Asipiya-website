@@ -242,7 +242,6 @@ function Home() {
         </p>
       </div>
 
-      {/*Service section */}
       <motion.div
         className="py-12 bg-[#CFB1D4] bg-opacity-30"
         initial={{ opacity: 0 }}
@@ -250,10 +249,10 @@ function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8 ">
+        <div className="px-[20px] mx-auto max-w-7xl sm:px-6 lg:px-8">
           {/* Features Grid */}
           <motion.div
-            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -266,8 +265,12 @@ function Home() {
                 className="flex items-center p-6 transition rounded-lg hover:bg-purple-50 hover:shadow-sm"
               >
                 {/* Image on the left */}
-                <div className="mr-4 ">
-                  <img src={feature.image} alt={feature.title} className="w-full h-[150px] object-contain" />
+                <div className="mr-4">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-[150px] object-contain"
+                  />
                 </div>
 
                 {/* Title and Description on the right */}
@@ -283,7 +286,7 @@ function Home() {
 
           {/* Button */}
           <div className="mt-12 text-center">
-            <button className="w-[183px] h-[48px] px-6 py-1 text-[16px] font-semibold text-white transition bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full ">
+            <button className="w-[183px] h-[48px] px-6 py-1 text-[16px] font-semibold text-white transition bg-[#7D00C5] hover:bg-[#5C0091] rounded-full">
               Learn More
             </button>
           </div>
@@ -336,7 +339,7 @@ function Home() {
       {/*ClientCarousel */}
       <ClientCarousel />
 
-      <div className="mx-[20px] xl:mx-[120px] mt-8 xl:mt-20">
+      <div className="mx-[20px] md:mx-[20px] lg:mx-[120px] flex flex-col items-center justify-center  xl:flex-row-reverse mt-[40px] md:mt-[80px]">
         <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
           {/* Left: Review Card */}
           <div className="flex justify-center w-full lg:w-[600px]">
@@ -391,11 +394,11 @@ function Home() {
       </div>
 
       {/* Countries Serve Section */}
-      <div className="mx-[20px] xl:mx-[120px]">
-        <motion.div className="flex flex-col items-center justify-center p-9 gap-8   md:gap-12 xl:flex-row xl:items-start xl:justify-between mt-[80px] md:mt-[80px] xl:mt-[120px]">
+      <div>
+        <motion.div className="mx-[20px] md:mx-[20px] lg:mx-[120px] flex flex-col items-center justify-center  xl:flex-row mt-[40px] md:mt-[80px]">
           {/* Image Section */}
           <motion.div
-            className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] flex justify-center xl:justify-start"
+            className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] flex justify-center xl:justify-start "
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -410,7 +413,7 @@ function Home() {
 
           {/* Text Section */}
           <motion.div
-            className="w-full text-center md:w-full lg:w-1/2 lg:pl-8 xl:text-left"
+            className="w-full text-center md:w-full lg:w-1/2 lg:pl-16 xxl:p-48 xl:text-left"
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
@@ -419,7 +422,7 @@ function Home() {
             <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
               <span className="text-[#7D00C5]">Countries </span>We Serve
             </h2>
-            <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252]">
+            <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252] w-[600px]">
               We offer innovative microfinance solutions in Dubai, the United
               States, Canada, Singapore, Sri Lanka, and Australia, empowering
               businesses and communities with reliable financial support.

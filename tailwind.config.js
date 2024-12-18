@@ -5,15 +5,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        // Add a custom monitor screen size
+        'xxl': '1920px', // Customize as needed
+      },
       colors: {
         purple: {
           500: '#6B46C1',
           600: '#553C9A',
-          
         },
         indigo: {
           600: '#5A67D8',
-          
         },
       },
       fontFamily: {
@@ -30,7 +32,6 @@ module.exports = {
         },
         include: /node_modules/,
         type: 'javascript/auto',
-       
       },
       {
         enforce: 'pre',

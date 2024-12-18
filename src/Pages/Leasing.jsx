@@ -148,7 +148,7 @@ const Leasing = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }} 
       >
-        <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
+        <div className="px-[20px] mx-auto xl:mx-auto  max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="text-[30px] xl:text-[32px] font-semibold text-[#333333] sm:text-4xl mt-[16px]">
               Why Choose the Asipiya Leasing App?

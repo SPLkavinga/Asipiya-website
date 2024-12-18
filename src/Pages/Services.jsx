@@ -176,7 +176,7 @@ function Services() {
         <h1 className="mt-10 mb-[8px] text-[30px] xl:text-[39.81px] font-medium text-center text-black">
           Services We're <span className="text-[#7D00C5]">Offer</span>
         </h1>
-        <div className="grid justify-center grid-cols-1 gap-4 mb-4 mx-[20px] xl:mx-[120px] p-4 xl:p-14 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid justify-center grid-cols-1 gap-4 mb-4 mx-[20px] xl:mx-[120px] xxl:mx-16 p-4 xl:p-14 xxl:p-22 md:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4">
           {services.map((service) => (
             <motion.div
               key={service.id}
