@@ -44,121 +44,81 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="mb-6 md:mb-0 w-[320px] mx-auto ">
+        <div className="mb-6 md:mb-0 flex justify-center">
           {/* Row for Home, Services, and Contact Us */}
           <div className="flex justify-start mb-4 space-x-14  md:text-[13.33px] font-medium  text-start">
             <div>
-              <h3 className="mb-2 font-bold">Home</h3>
-              <ul>
-                <li>
-                  <Link to="/" className="hover:underline">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/" className="hover:underline">
-                    Tech Stack
-                  </Link>
-                </li>
-              </ul>
+              <Link to="/" className="mb-2  font-bold hover:underline">
+                Home
+              </Link>
             </div>
             <div>
-              <h3 className="mb-2 font-bold">Services</h3>
-              <ul>
-                <li>
-                  <Link to="/services" className="hover:underline">
-                    Services
-                  </Link>
-                </li>
-              </ul>
+              <Link
+                to="/services"
+                className="mb-2 font-semibold hover:underline"
+              >
+                Services
+              </Link>
             </div>
             <div>
-              <h3 className="mb-2 font-bold">Contact Us</h3>
-              <ul>
-                <li>
-                  <Link to="/contact" className="hover:underline">
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
+              <Link
+                to="/contact"
+                className="mb-2 font-semibold hover:underline"
+              >
+                {" "}
+                Contact Us
+              </Link>
             </div>
-          </div>
 
-          {/* Centered About Us, Blogs Links, and Social Media Icons in One Row */}
-          <div className="flex justify-start mt-5 space-x-14 md:text-[13.33px] font-medium text-start ">
             <div>
-              <h3 className="mb-2 font-bold">About Us</h3>
-              <ul>
-                <li>
-                  <Link to="/mission" className="hover:underline">
-                    Mission
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/vision" className="hover:underline">
-                    Vision
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/values" className="hover:underline">
-                    Values
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/leadership" className="hover:underline">
-                    Leadership
-                  </Link>
-                </li>
-              </ul>
+              <Link to="/about" className="mb-2 font-semibold hover:underline">
+                About Us
+              </Link>
             </div>
+
             <div>
-              <h3 className="mb-2 font-bold ">Blogs</h3>
-              <ul>
-                <li>
-                  <Link to="/blog" className="hover:underline">
-                    Search
-                  </Link>
-                </li>
-              </ul>
+              <Link to="/blog" className="mb-2 font-semibold hover:underline">
+                Blogs
+              </Link>
             </div>
           </div>
         </div>
 
         {/* Social Media Section moved next to Blogs */}
-        <div className="flex flex-col items-center   mt-6">
-          <h3 className="mb-2 font-bold ">Get In Touch</h3>
+        <div className="flex flex-col items-center mb-2  mt-2">
+         
           <div className="flex space-x-4">
             <a
               href="https://wa.me/+94778820000"
-              className="text-white hover:text-gray-400"
+              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-whatsapp"></i>
+              <i className="fab fa-whatsapp text-3xl"></i>
             </a>
             <a
               href="https://instagram.com"
-              className="text-white hover:text-gray-400"
+              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram text-3xl"></i>
             </a>
             <a
               href="https://facebook.com"
-              className="text-white hover:text-gray-400"
+              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-facebook"></i>
+              <i className="fab fa-facebook text-3xl"></i>
             </a>
             <a
               href="https://linkedin.com"
-              className="text-white hover:text-gray-400"
+              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-linkedin"></i>
+              <i className="fab fa-linkedin text-3xl"></i>
             </a>
           </div>
         </div>
