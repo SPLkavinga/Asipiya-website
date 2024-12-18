@@ -67,7 +67,7 @@ function AboutUs() {
 
   // Main page content after loading
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NavBar />
       {/* Full-screen background section */}
       <div
@@ -297,7 +297,7 @@ function AboutUs() {
       <Cooperate />
 
       <Footer />
-    </>
+    </div>
   );
 }
 

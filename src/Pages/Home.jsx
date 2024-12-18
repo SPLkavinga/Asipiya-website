@@ -122,7 +122,7 @@ function Home() {
   }
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NavBar />
 
       {/* Full-screen background section */}
@@ -422,7 +422,7 @@ function Home() {
       <Cooperate />
 
       <Footer />
-    </>
+    </div>
   );
 }
 

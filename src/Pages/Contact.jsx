@@ -82,7 +82,7 @@ function Contact() {
   }
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NavBar />
       <div
         className="relative flex flex-col items-center justify-center w-full h-[650px] xl:h-screen bg-center bg-cover xl:flex-row px-[20px] xl:px-[120px]"
@@ -340,7 +340,7 @@ function Contact() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 
