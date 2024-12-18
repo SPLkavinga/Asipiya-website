@@ -64,10 +64,10 @@ function ApplyForm() {
         <>
             <div className="flex items-center justify-center min-h-screen mt-10">
                 <div className="w-full max-w-4xl p-8 bg-white border border-gray-200 rounded-lg shadow-lg">
-                    <h1 className="text-2xl font-semibold text-center text-gray-800 mb-4">
-                        Apply for this Job
+                    <h1 className="mb-4 text-2xl font-semibold text-center text-gray-800">
+                        Apply for the Job
                     </h1>
-                    <div className="h-1 w-full bg-gray-300 mb-6"></div>
+                    <div className="w-full h-1 mb-6 bg-gray-300"></div>
 
                     {/* Form Section */}
                     <form className="space-y-6" onSubmit={handleSubmit}>
@@ -76,7 +76,7 @@ function ApplyForm() {
                                 <div key={key}>
                                     <label
                                         htmlFor={key}
-                                        className="block text-sm font-medium text-gray-700 mb-1"
+                                        className="block mb-1 text-sm font-medium text-gray-700"
                                     >
                                         {key
                                             .charAt(0)
@@ -89,7 +89,7 @@ function ApplyForm() {
                                             rows="3"
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 text-sm"
+                                            className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     ) : (
@@ -98,7 +98,7 @@ function ApplyForm() {
                                             id={key}
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 text-sm"
+                                            className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     )}
@@ -107,7 +107,7 @@ function ApplyForm() {
                                 <div key={key}>
                                     <label
                                         htmlFor={key}
-                                        className="block text-sm font-medium text-gray-700 mb-1"
+                                        className="block mb-1 text-sm font-medium text-gray-700"
                                     >
                                         Upload Image
                                     </label>
@@ -135,7 +135,7 @@ function ApplyForm() {
                     {/* Success Modal */}
                     {showModal && (
                         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
-                            <div className="w-80 p-6 text-center bg-white rounded-lg shadow-lg">
+                            <div className="p-6 text-center bg-white rounded-lg shadow-lg w-80">
                                 <div className="flex items-center justify-center mb-3 space-x-2">
                                     <FaCheckCircle className="text-3xl text-green-500" />
                                     <p className="font-semibold text-green-600">{successMessage}</p>

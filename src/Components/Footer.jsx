@@ -44,9 +44,9 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-<div className="flex flex-col items-center justify-center mb-6 md:mb-0 xl:flex-row">
+<div className="flex flex-col items-center justify-center mb-6 md:mb-8 xl:flex-row md:mt-5">
   {/* Row for Home, Services, and Contact Us */}
-  <div className="flex flex-col xl:flex-row xl:space-x-14 space-y-4 md:space-y-0 md:text-[13.33px] font-medium text-center xl:text-start">
+  <div className="flex flex-col xl:flex-row xl:space-x-8 space-y-4 md:space-y-0 md:text-[13.33px] font-medium text-center xl:text-start">
     <div>
       <Link to="/" className="text-[16px] font-bold hover:underline">
         Home
