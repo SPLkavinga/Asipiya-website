@@ -76,6 +76,7 @@ function AboutUs() {
           backgroundImage: `url(${backgroundImg})`,
           backgroundSize: "cover",
         }}
+        
       >
         {/* Darker overlay */}
         <div className="absolute inset-0 z-0 bg-black bg-opacity-70"></div>
@@ -121,7 +122,7 @@ function AboutUs() {
       </div>
 
       {/* Count Row Section (White) */}
-      <section className="container px-6 py-10 mx-auto mt-28 text-black bg-gradient-to-r from-purple-400 via-purple-100 to-purple-400 ">
+      <section className="container px-6 py-10 mx-auto text-black mt-28 bg-gradient-to-r from-purple-400 via-purple-100 to-purple-400 ">
         <Slide direction="up" triggerOnce>
           <div className="grid grid-cols-1 gap-6 text-center xl:grid-cols-4 xl:gap-8 xl:px-40">
             <div className="p-2">
@@ -301,4 +302,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default AboutUs;
