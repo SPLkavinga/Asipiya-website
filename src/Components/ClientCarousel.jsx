@@ -9,14 +9,14 @@ import logo4 from "../assets/ClientLogo/ClientLogo4.jpg";
 import logo5 from "../assets/ClientLogo/ClientLogo5.jpg";
 import logo6 from "../assets/ClientLogo/ClientLogo6.jpg";
 import logo7 from "../assets/ClientLogo/ClientLogo7.png";
-import logo8 from "../assets/ClientLogo/ClientLogo1.jpg";
-import logo9 from "../assets/ClientLogo/ClientLogo1.jpg";
-import logo10 from "../assets/ClientLogo/ClientLogo1.jpg";
-import logo11 from "../assets/ClientLogo/ClientLogo1.jpg";
+import logo8 from "../assets/ClientLogo/ClientLogo8.jpg";
+import logo9 from "../assets/ClientLogo/ClientLogo9.jpg";
+import logo10 from "../assets/ClientLogo/ClientLogo10.jpg";
+import logo11 from "../assets/ClientLogo/ClientLogo11.jpg";
 import logo12 from "../assets/ClientLogo/ClientLogo1.jpg";
 
 // Array of logos
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7];
+const logos = [logo1, logo2, logo3, logo4, logo5, logo6 , logo7, logo8, logo9, logo10 , logo11];
 
 function ClientCarousel() {
   return (

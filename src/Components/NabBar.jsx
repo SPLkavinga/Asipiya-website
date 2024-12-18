@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <div className="bg-white text-black px-4 py-4 h-[90px] flex items-center justify-between">
       {/* Left Section: Logo */}
-      <div className="flex justify-center ml-4">
+      <div className="flex justify-center ml-4 mr-20">
         <img src={logo} alt="LOGO" className="w-[131px]" />
       </div>
 

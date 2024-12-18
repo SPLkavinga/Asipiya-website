@@ -114,8 +114,8 @@ const Footer = () => {
 </div>
 
 
-        {/* Bottom Section  uuu */}
-        <div className="mt-[32px] text-center md:text-[13.33px] font-medium" > 
+        {/* Bottom Section */}
+        <div className="mt-[32px] text-center md:text-[13.33px] font-medium">
           <p className="pt-4 border-t border-white">
             &copy; All rights reserved © 2023
           </p>

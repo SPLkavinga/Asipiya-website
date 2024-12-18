@@ -21,92 +21,108 @@ function Home() {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
-
   const features = [
     {
-      title: "Micro Finance",
+      title: "Microfinance System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
       icon: "🚀", // Replace this with an actual image if necessary
+      path: "/microfinance",
     },
     {
-      title: "Prawning System",
+      title: "Pawning System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
       icon: "🖥️", // Replace this with an actual image if necessary
+      path: "/Prawing",
     },
     {
       title: "Leasing System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
       icon: "📱", // Replace this with an actual image if necessary
+      path: "/Leasing",
     },
     {
       title: "ERP Solutions",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
       icon: "📊", // Replace this with an actual image if necessary
+      path: "/ERP",
     },
     {
       title: "Invoice System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
       icon: "📄", // Replace this with an actual image if necessary
+      path: "/ERP",
+    },
+  ];
+
+  const reviews = [
+    {
+      name: "Samantha Payne",
+      role: "Graphic Designer",
+      rating: "★★★★★",
+      text: "Your company has been great at keeping me in work, they always line something else up.",
+      date: "23 Nov 2021",
+    },
+    {
+      name: "John Doe",
+      role: "Web Developer",
+      rating: "★★★★★",
+      text: "This team helped me build a new platform, and the results were outstanding. I can’t recommend them enough!",
+      date: "10 Feb 2023",
+    },
+    {
+      name: "Emily Clark",
+      role: "Marketing Specialist",
+      rating: "★★★★★",
+      text: "A great experience overall. They’ve consistently exceeded my expectations on every project!",
+      date: "5 Mar 2023",
     },
   ];
 
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
-  const reviews = [
-    {
-      name: 'Samantha Payne',
-      role: 'Graphic Designer',
-      rating: '★★★★★',
-      text: 'Your company has been great at keeping me in work, they always line something else up.',
-      date: '23 Nov 2021',
-    },
-    {
-      name: 'John Doe',
-      role: 'Web Developer',
-      rating: '★★★★★',
-      text: 'This team helped me build a new platform, and the results were outstanding. I can’t recommend them enough!',
-      date: '10 Feb 2023',
-    },
-    {
-      name: 'Emily Clark',
-      role: 'Marketing Specialist',
-      rating: '★★★★★',
-      text: 'A great experience overall. They’ve consistently exceeded my expectations on every project!',
-      date: '5 Mar 2023',
-    },
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    }, 5000); // Switch review every 5 seconds (5000ms)
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, [reviews.length]);
 
   const handleDotClick = (index) => {
     setCurrentReviewIndex(index);
   };
 
-   const [loading, setLoading] = useState(true);
-    
-      // Simulate a loading delay of 3 seconds
-      useEffect(() => {
-        const timer = setTimeout(() => {
-          setLoading(false);
-        }, 1000); // 3 seconds
-        return () => clearTimeout(timer);
-      }, []);
-    
-    
-      // Loading screen
-      if (loading) {
-        return (
-          <div className="flex items-center justify-center w-full h-screen bg-white">
-            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
-          </div>
-        );
-      }
+  const [loading, setLoading] = useState(true);
+
+  // Simulate a loading delay of 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Loading screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen bg-white">
+        <img
+          src={logo}
+          alt="Loading..."
+          className="w-[200px] h-auto animate-bounce"
+        />
+      </div>
+    );
+  }
 
   return (
-    <>
+    <div className="overflow-x-hidden">
       <NavBar />
 
       {/* Full-screen background section */}
@@ -219,23 +235,24 @@ function Home() {
       {/*Service section */}
       <motion.div
         className="py-12 bg-[#CFB1D4] bg-opacity-30"
-        initial={{ opacity: 0 }} 
+        initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }} 
+        transition={{ duration: 0.6 }}
       >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8 ">
           {/* Features Grid */}
           <motion.div
             className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
             initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true, amount: 0.2 }} 
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             {features.map((feature, index) => (
-              <div
+              <Link
                 key={index}
+                to={feature.path} // Navigate to the feature path on click
                 className="flex items-center p-6 transition rounded-lg hover:bg-purple-50 hover:shadow-sm"
               >
                 {/* Icon on the left */}
@@ -248,7 +265,7 @@ function Home() {
                   </h3>
                   <p className="text-sm text-gray-600">{feature.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </motion.div>
 
@@ -261,46 +278,45 @@ function Home() {
         </div>
       </motion.div>
 
-{/* Micro Finance section */}
-<div className="mx-[20px] md:mx-[20px] lg:mx-[120px] flex flex-col items-center justify-center  xl:flex-row-reverse mt-[40px] md:mt-[80px]">
-  {/* Image Section */}
-  <motion.div
-    className="w-[250px] h-[150px] md:w-[400px] md:h-[250px] xl:w-[500px] xl:h-[366.59px] mb-4 xl:mb-0  flex justify-center md:justify-start "
-    initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
-    whileInView={{ opacity: 1, x: 0 }} // Slide in from right when in view
-    viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
-    transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition
-  >
-    <img src={img2} alt="Placeholder" />
-  </motion.div>
+      {/* Micro Finance section */}
+      <div className="mx-[20px] md:mx-[20px] lg:mx-[120px] flex flex-col items-center justify-center  xl:flex-row-reverse mt-[40px] md:mt-[80px]">
+        {/* Image Section */}
+        <motion.div
+          className="w-[250px] h-[150px] md:w-[400px] md:h-[250px] xl:w-[500px] xl:h-[366.59px] mb-4 xl:mb-0  flex justify-center md:justify-start "
+          initial={{ opacity: 0, x: 100 }} // Start off-screen to the right
+          whileInView={{ opacity: 1, x: 0 }} // Slide in from right when in view
+          viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of element is in view
+          transition={{ duration: 0.4, ease: "easeOut" }} // Smooth transition
+        >
+          <img src={img2} alt="Placeholder" />
+        </motion.div>
 
-  {/* Text Section */}
-  <motion.div
-    className="w-full text-center md:w-1/2 xl:text-left "
-    initial={{ opacity: 0, x: -100 }} 
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true, amount: 0.2 }} 
-    transition={{ duration: 0.4, ease: "easeOut" }} 
-  >
-    <h2 className="text-[30px] md:text-[39.81px] font-semibold text-[#7D00C5] md:mb-0">
-      Revolutionary
-    </h2>
-    <h2 className="text-[30px] md:text-[39.81px] font-semibold md:mb-2">
-      Microfinance Solutions
-    </h2>
-    <h2 className="mb-4 text-[30px] md:text-[39.81px] font-bold">
-      Development
-    </h2>
-    <p className="text-[15px] md:text-[16px] text-[#525252]">
-      Building scalable microfinance solutions, ready-to-launch tools, and{" "}
-      <br />
-      applications powered by cutting-edge technologies for financial{" "}
-      <br />
-      empowerment.
-    </p>
-  </motion.div>
-</div>
-
+        {/* Text Section */}
+        <motion.div
+          className="w-full text-center md:w-1/2 xl:text-left "
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <h2 className="text-[30px] md:text-[39.81px] font-semibold text-[#7D00C5] md:mb-0">
+            Revolutionary
+          </h2>
+          <h2 className="text-[30px] md:text-[39.81px] font-semibold md:mb-2">
+            Microfinance Solutions
+          </h2>
+          <h2 className="mb-4 text-[30px] md:text-[39.81px] font-bold">
+            Development
+          </h2>
+          <p className="text-[15px] md:text-[16px] text-[#525252]">
+            Building scalable microfinance solutions, ready-to-launch tools, and{" "}
+            <br />
+            applications powered by cutting-edge technologies for financial{" "}
+            <br />
+            empowerment.
+          </p>
+        </motion.div>
+      </div>
 
       {/* Language icon section */}
       <LogoRow />
@@ -309,84 +325,104 @@ function Home() {
       <ClientCarousel />
 
       <div className="mx-[20px] xl:mx-[120px] mt-8 xl:mt-20">
-      <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
-        {/* Left: Review Card */}
-        <div className="flex justify-center w-full lg:w-[600px]">
-          <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%] transition-transform duration-300 ease-in-out transform">
-            <h3 className="text-base font-semibold sm:text-lg">{reviews[currentReviewIndex].name}</h3>
-            <p className="text-sm text-gray-500">{reviews[currentReviewIndex].role}</p>
-            <div className="flex items-center mb-[4px]">
-              <span className="text-sm text-yellow-400 sm:text-base">{reviews[currentReviewIndex].rating}</span>
-            </div>
-            <p className="text-sm text-gray-700 sm:text-base">{reviews[currentReviewIndex].text}</p>
-            <p className="mt-4 text-xs text-gray-400">{reviews[currentReviewIndex].date}</p>
+        <div className="flex flex-col-reverse items-center justify-center gap-8 p-5 bg-white md:gap-12 xl:flex-row xl:items-start xl:justify-between">
+          {/* Left: Review Card */}
+          <div className="flex justify-center w-full lg:w-[600px]">
+            <div className="p-4 md:p-6 bg-white shadow-lg rounded-lg w-[90%] sm:w-[75%] md:w-[80%] transition-transform duration-300 ease-in-out transform">
+              <h3 className="text-base font-semibold sm:text-lg">
+                {reviews[currentReviewIndex].name}
+              </h3>
+              <p className="text-sm text-gray-500">
+                {reviews[currentReviewIndex].role}
+              </p>
+              <div className="flex items-center mb-[4px]">
+                <span className="text-sm text-yellow-400 sm:text-base">
+                  {reviews[currentReviewIndex].rating}
+                </span>
+              </div>
+              <p className="text-sm text-gray-700 sm:text-base">
+                {reviews[currentReviewIndex].text}
+              </p>
+              <p className="mt-4 text-xs text-gray-400">
+                {reviews[currentReviewIndex].date}
+              </p>
 
-            {/* Dot Indicator Below the Review Card */}
-            <div className="flex justify-center gap-2 mt-4">
-              {reviews.map((_, index) => (
-                <span
-                  key={index}
-                  onClick={() => handleDotClick(index)}
-                  className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${currentReviewIndex === index ? 'bg-[#7D00C5]' : 'bg-gray-400'}`}
-                ></span>
-              ))}
+              {/* Dot Indicator Below the Review Card */}
+              <div className="flex justify-center gap-2 mt-4">
+                {reviews.map((_, index) => (
+                  <span
+                    key={index}
+                    onClick={() => handleDotClick(index)}
+                    className={`w-2.5 h-2.5 rounded-full cursor-pointer hover:bg-gray-500 ${
+                      currentReviewIndex === index
+                        ? "bg-[#7D00C5]"
+                        : "bg-gray-400"
+                    }`}
+                  ></span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Right: Title and Description */}
-        <div className="w-full text-center md:w-full lg:w-[575px] xl:text-left">
-          <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-medium">
-            <span className="text-[#7D00C5]">Client’s</span> Reviews
-          </h2>
-          <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
-            Our clients trust us for delivering reliable, innovative microfinance solutions that drive growth and success across industries worldwide.
-          </p>
+          {/* Right: Title and Description */}
+          <div className="w-full text-center md:w-full lg:w-[575px] xl:text-left">
+            <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-medium">
+              <span className="text-[#7D00C5]">Client’s</span> Reviews
+            </h2>
+            <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
+              Our clients trust us for delivering reliable, innovative
+              microfinance solutions that drive growth and success across
+              industries worldwide.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
       {/* Countries Serve Section */}
       <div className="mx-[20px] xl:mx-[120px]">
-      <motion.div className="flex flex-col items-center justify-center p-9 gap-8   md:gap-12 xl:flex-row xl:items-start xl:justify-between mt-[80px] md:mt-[80px] xl:mt-[120px]">
-        {/* Image Section */}
-        <motion.div
-          className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] flex justify-center xl:justify-start"
-          initial={{ x: -100 }} 
-          whileInView={{ x: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          viewport={{ once: true }} 
+        <motion.div className="flex flex-col items-center justify-center p-9 gap-8   md:gap-12 xl:flex-row xl:items-start xl:justify-between mt-[80px] md:mt-[80px] xl:mt-[120px]">
+          {/* Image Section */}
+          <motion.div
+            className="w-[250px] h-[150px] md:h-[350px] md:w-[590px] flex justify-center xl:justify-start"
+            initial={{ x: -100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
-          <img className="object-contain" src={img3} alt="Countries We Serve" />
-        </motion.div>
+            <img
+              className="object-contain"
+              src={img3}
+              alt="Countries We Serve"
+            />
+          </motion.div>
 
-        {/* Text Section */}
-        <motion.div
-          className="w-full text-center md:w-full lg:w-1/2 lg:pl-8 xl:text-left"
-          initial={{ x: 100 }} 
-          whileInView={{ x: 0 }} 
-          transition={{ duration: 0.4, ease: "easeOut" }} 
-          viewport={{ once: true }} 
-        >
-          <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
-            <span className="text-[#7D00C5]">Countries </span>We Serve
-          </h2>
-          <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252]">
-            We offer innovative microfinance solutions in Dubai, the United
-            States, Canada, Singapore, Sri Lanka, and Australia, empowering
-            businesses and communities with reliable financial support.
-          </p>
-          <div className="flex justify-center xl:justify-start">
-            <img className="h-10 mt-6" src={img4} alt="Countries we serve" />
-          </div>
+          {/* Text Section */}
+          <motion.div
+            className="w-full text-center md:w-full lg:w-1/2 lg:pl-8 xl:text-left"
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
+              <span className="text-[#7D00C5]">Countries </span>We Serve
+            </h2>
+            <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252]">
+              We offer innovative microfinance solutions in Dubai, the United
+              States, Canada, Singapore, Sri Lanka, and Australia, empowering
+              businesses and communities with reliable financial support.
+            </p>
+            <div className="flex justify-center xl:justify-start">
+              <img className="h-10 mt-6" src={img4} alt="Countries we serve" />
+            </div>
+          </motion.div>
         </motion.div>
-      </motion.div>
       </div>
 
       <Cooperate />
 
       <Footer />
-    </>
+    </div>
   );
 }
 

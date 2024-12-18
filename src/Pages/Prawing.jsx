@@ -20,19 +20,19 @@ const features = [
   {
     title: "Enhanced Efficiency",
     description:
-      "Streamline your prawning operations with automated tools and real-time tracking.",
+      "Streamline your Pawning operations with automated tools and real-time tracking.",
     icon: "🏢", // Replace with SVG or actual icon
   },
   {
     title: "User-Friendly Interface",
     description:
-      "Enjoy a simple, intuitive design that makes prawning easier for all user",
+      "Enjoy a simple, intuitive design that makes Pawning easier for all user",
     icon: "📱", // Replace with SVG or actual icon
   },
   {
     title: "Data-Driven Insights",
     description:
-      "Leverage powerful analytics to optimize your prawning strategies and performance.",
+      "Leverage powerful analytics to optimize your Pawning strategies and performance.",
     icon: "📊", // Replace with SVG or actual icon
   },
   {
@@ -61,25 +61,28 @@ const textVariants = {
 };
 
 const Prawing = () => {
-   const [loading, setLoading] = useState(true);
-    
-      // Simulate a loading delay of 3 seconds
-      useEffect(() => {
-        const timer = setTimeout(() => {
-          setLoading(false);
-        }, 1000); // 3 seconds
-        return () => clearTimeout(timer);
-      }, []);
-    
-    
-      // Loading screen
-      if (loading) {
-        return (
-          <div className="flex items-center justify-center w-full h-screen bg-white">
-            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
-          </div>
-        );
-      }
+  const [loading, setLoading] = useState(true);
+
+  // Simulate a loading delay of 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Loading screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen bg-white">
+        <img
+          src={logo}
+          alt="Loading..."
+          className="w-[200px] h-auto animate-bounce"
+        />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -109,7 +112,7 @@ const Prawing = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             variants={textVariants}
           >
-            Discover <br/> smarter prawning with Asipiya Pawning.
+            Discover <br /> smarter prawning with Asipiya Pawning.
           </motion.h2>
           <motion.p
             className="mt-3 mb-8 text-[16px] xl:text-[19.2px] font-medium text-black text-opacity-70 text-center xl:text-start"
@@ -141,11 +144,12 @@ const Prawing = () => {
       </div>
 
       {/* Why Choose Microfinance Solution section */}
-      <motion.div className="h-full  py-[16px] bg-purple-50 mt-32"
-      initial={{ opacity: 0 }} 
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      <motion.div
+        className="h-full  py-[16px] bg-purple-50 mt-32"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
@@ -154,11 +158,12 @@ const Prawing = () => {
             </h2>
           </div>
 
-          <motion.div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 "
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }} 
-          viewport={{ once: true, amount: 0.2 }} 
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          <motion.div
+            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 "
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col text-left bg-purple-50">
