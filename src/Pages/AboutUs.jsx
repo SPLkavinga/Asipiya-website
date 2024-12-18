@@ -121,7 +121,7 @@ function AboutUs() {
       </div>
 
       {/* Count Row Section (White) */}
-      <section className="container px-6 py-10 mx-auto mt-10 text-black bg-gradient-to-r from-purple-400 via-purple-100 to-purple-400 ">
+      <section className="container px-6 py-10 mx-auto mt-28 text-black bg-gradient-to-r from-purple-400 via-purple-100 to-purple-400 ">
         <Slide direction="up" triggerOnce>
           <div className="grid grid-cols-1 gap-6 text-center xl:grid-cols-4 xl:gap-8 xl:px-40">
             <div className="p-2">
@@ -155,7 +155,7 @@ function AboutUs() {
 
       {/* Mission Vision Section */}
 
-      <section className="container py-10 mt-5 md:mt-20 ">
+      <section className="container py-10 mt-5 md:mt-10 ">
       <AnimatedSection>
         <div className="flex flex-col items-center justify-center gap-6 xl:flex-row md:gap-8 mx-[20px] xl:mx-[120px]">
           {/* Vision */}
