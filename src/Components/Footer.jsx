@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="py-3 text-white bg-purple-900 mt-[120px]">
       <div className="container mx-auto text-center md:text-left ">
         {/* Top Section - Logo, Tagline, Email, and Phone in one line */}
-        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-4 mb-4  md:flex-row md:gap-[150px]">
+        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-2 mb-2  md:flex-row md:gap-[150px]">
           {/* Logo */}
           <img
             className="w-[160px] h-[60px] mb-2 md:mb-0"
@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Contact Info - Email and Phone */}
           <div className="flex flex-col items-center md:text-[13.33px] font-medium">
             <div className="flex flex-row">
-              <p className="mr-4 flex items-center">
+              <p className="flex items-center mr-4">
                 <MdOutlineAttachEmail className="mr-1" />
                 <a href="mailto:Info@Asipiya.com" className="underline">
                   Info@Asipiya.com
@@ -44,11 +44,11 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="mb-6 md:mb-0 flex justify-center">
+        <div className="flex justify-center mb-6 md:mb-0">
           {/* Row for Home, Services, and Contact Us */}
           <div className="flex justify-start mb-4 space-x-14  md:text-[13.33px] font-medium  text-start">
             <div>
-              <Link to="/" className="mb-2  font-bold hover:underline">
+              <Link to="/" className="mb-2 font-bold hover:underline">
                 Home
               </Link>
             </div>
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media Section moved next to Blogs */}
-        <div className="flex flex-col items-center mb-2  mt-2">
+        <div className="flex flex-col items-center mt-2 mb-2">
          
           <div className="flex space-x-4">
             <a
@@ -94,7 +94,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-whatsapp text-3xl"></i>
+              <i className="text-3xl fab fa-whatsapp"></i>
             </a>
             <a
               href="https://instagram.com"
@@ -102,7 +102,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-instagram text-3xl"></i>
+              <i className="text-3xl fab fa-instagram"></i>
             </a>
             <a
               href="https://facebook.com"
@@ -110,7 +110,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-facebook text-3xl"></i>
+              <i className="text-3xl fab fa-facebook"></i>
             </a>
             <a
               href="https://linkedin.com"
@@ -118,7 +118,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fab fa-linkedin text-3xl"></i>
+              <i className="text-3xl fab fa-linkedin"></i>
             </a>
           </div>
         </div>
