@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="py-3 text-white bg-purple-900 mt-[120px]">
       <div className="container mx-auto text-center md:text-left ">
         {/* Top Section - Logo, Tagline, Email, and Phone in one line */}
-        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-4 mb-4 border-b border-white md:flex-row md:gap-[150px]">
+        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-4 mb-4  md:flex-row md:gap-[150px]">
           {/* Logo */}
           <img
             className="w-[160px] h-[60px] mb-2 md:mb-0"
