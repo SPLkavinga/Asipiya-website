@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/AsipiyawhiteLogo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { MdCallToAction, MdOutlineAttachEmail } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
@@ -10,16 +10,16 @@ const Footer = () => {
     <footer className="py-3 text-white bg-purple-900 mt-[120px]">
       <div className="container mx-auto text-center md:text-left ">
         {/* Top Section - Logo, Tagline, Email, and Phone in one line */}
-        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-4 mb-4  md:flex-row md:gap-[150px]">
+        <div className="flex flex-col items-center px-[20px] xl:px-8  mb-4  md:flex-col ">
           {/* Logo */}
           <img
-            className="w-[160px] h-[60px] mb-2 md:mb-0"
+            className="w-[150px] h-[140px] "
             src={logo}
             alt="Asipiya Logo"
           />
 
           {/* Tagline */}
-          <p className="mb-2 text-sm md:text-[13.33px] font-medium md:ml-2 md:mb-0">
+          <p className="mb-2 text-sm md:text-[16px] text-center font-medium md:ml-2 md:mb-4">
             Your trusted partner for cutting-edge software solutions.
             Streamlining business operations at Asipiya
           </p>
@@ -27,14 +27,14 @@ const Footer = () => {
           {/* Contact Info - Email and Phone */}
           <div className="flex flex-col items-center md:text-[13.33px] font-medium">
             <div className="flex flex-row">
-              <p className="mr-4 flex items-center">
-                <MdOutlineAttachEmail className="mr-1" />
+              <p className="mr-8 flex items-center">
+                <MdOutlineAttachEmail className="mr-2 text-lg" />
                 <a href="mailto:Info@Asipiya.com" className="underline">
                   Info@Asipiya.com
                 </a>
               </p>
               <p className="flex items-center">
-                <IoCallOutline className="mr-1" />
+                <IoCallOutline className="mr-2 text-lg" />
                 <a href="tel:+94778820000" className="underline">
                   +94 77 882 0000
                 </a>
@@ -44,87 +44,78 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links */}
-        <div className="mb-6 md:mb-0 flex justify-center">
-          {/* Row for Home, Services, and Contact Us */}
-          <div className="flex justify-start mb-4 space-x-14  md:text-[13.33px] font-medium  text-start">
-            <div>
-              <Link to="/" className="mb-2  font-bold hover:underline">
-                Home
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/services"
-                className="mb-2 font-semibold hover:underline"
-              >
-                Services
-              </Link>
-            </div>
-            <div>
-              <Link
-                to="/contact"
-                className="mb-2 font-semibold hover:underline"
-              >
-                {" "}
-                Contact Us
-              </Link>
-            </div>
+<div className="mb-6 md:mb-0 flex flex-col xl:flex-row justify-center items-center">
+  {/* Row for Home, Services, and Contact Us */}
+  <div className="flex flex-col xl:flex-row xl:space-x-14 space-y-4 md:space-y-0 md:text-[13.33px] font-medium text-center xl:text-start">
+    <div>
+      <Link to="/" className="text-[16px] font-bold hover:underline">
+        Home
+      </Link>
+    </div>
+    <div>
+      <Link to="/services" className="text-[16px] font-semibold hover:underline">
+        Services
+      </Link>
+    </div>
+    <div>
+      <Link to="/contact" className="text-[16px] font-semibold hover:underline">
+        Contact Us
+      </Link>
+    </div>
+    <div>
+      <Link to="/about" className="text-[16px] font-semibold hover:underline">
+        About Us
+      </Link>
+    </div>
+    <div>
+      <Link to="/blog" className="text-[16px] font-semibold hover:underline">
+        Blogs
+      </Link>
+    </div>
+  </div>
+</div>
 
-            <div>
-              <Link to="/about" className="mb-2 font-semibold hover:underline">
-                About Us
-              </Link>
-            </div>
+{/* Social Media Section */}
+<div className="flex flex-col items-center space-y-4 mt-2">
+  <div className="flex space-x-4">
+    <a
+      href="https://api.whatsapp.com/send/?phone=%2B94741870003&text&type=phone_number&app_absent=0"
+      className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-whatsapp text-3xl"></i>
+    </a>
+    <a
+      href="https://www.instagram.com/asipiyasoftsolutions/"
+      className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-instagram text-3xl"></i>
+    </a>
+    <a
+      href="https://www.facebook.com/AsipiyaSoftSolutions?mibextid=ZbWKwL"
+      className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-facebook text-3xl"></i>
+    </a>
+    <a
+      href="https://www.linkedin.com/company/asipiya/"
+      className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i className="fab fa-linkedin text-3xl"></i>
+    </a>
+  </div>
+</div>
 
-            <div>
-              <Link to="/blog" className="mb-2 font-semibold hover:underline">
-                Blogs
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Social Media Section moved next to Blogs */}
-        <div className="flex flex-col items-center mb-2  mt-2">
-         
-          <div className="flex space-x-4">
-            <a
-              href="https://wa.me/+94778820000"
-              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-whatsapp text-3xl"></i>
-            </a>
-            <a
-              href="https://instagram.com"
-              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-instagram text-3xl"></i>
-            </a>
-            <a
-              href="https://facebook.com"
-              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-facebook text-3xl"></i>
-            </a>
-            <a
-              href="https://linkedin.com"
-              className="flex items-center justify-center text-white bg-[#7D00C5] hover:bg-[#5C0091] h-12 w-12 rounded-full"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin text-3xl"></i>
-            </a>
-          </div>
-        </div>
 
         {/* Bottom Section */}
-        <div className="mt-[8px] text-center md:text-[13.33px] font-medium">
+        <div className="mt-[32px] text-center md:text-[13.33px] font-medium">
           <p className="pt-4 border-t border-white">
             &copy; All rights reserved © 2023
           </p>
