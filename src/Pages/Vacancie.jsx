@@ -9,43 +9,55 @@ import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 
 function Vacancie() {
-    const vacancies = [
-        { title: "Intern Software Engineer", link: "/intern" },
-        { title: "Intern UI-UX Engineer", link: "/UiUxIntern" },
-        { title: "Digital Marketing Specialist Intern", link: "/DigitalMarketingIntern" },
-        { title: "Quality Assurance Engineer", link: "/QAEngineer" },
-        { title: "Search Engine Optimization Specialist", link: "/SearchEngineOptimizationSpecialist" },
-        { title: "Customer Care Executive", link: "/CustomerCareExecutive" },
-        { title: "Business Analyst", link: "/BusinessAnalyst" },
-        { title: "Graphic Designer", link: "/GraphicDesigner" },
-        { title: "Associate Software Engineer", link: "/AssociateSoftwareEngineer" },
-        { title: "Intern Business Analyst", link: "/InternBusinessAnalyst" },
-    ];
+  const vacancies = [
+    { title: "Intern Software Engineer", link: "/intern" },
+    { title: "Intern UI-UX Engineer", link: "/UiUxIntern" },
+    {
+      title: "Digital Marketing Specialist Intern",
+      link: "/DigitalMarketingIntern",
+    },
+    { title: "Quality Assurance Engineer", link: "/QAEngineer" },
+    {
+      title: "Search Engine Optimization Specialist",
+      link: "/SearchEngineOptimizationSpecialist",
+    },
+    { title: "Customer Care Executive", link: "/CustomerCareExecutive" },
+    { title: "Business Analyst", link: "/BusinessAnalyst" },
+    { title: "Graphic Designer", link: "/GraphicDesigner" },
+    {
+      title: "Associate Software Engineer",
+      link: "/AssociateSoftwareEngineer",
+    },
+    { title: "Intern Business Analyst", link: "/InternBusinessAnalyst" },
+  ];
 
   const textVariants = {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
 
-   const [loading, setLoading] = useState(true);
-    
-      // Simulate a loading delay of 3 seconds
-      useEffect(() => {
-        const timer = setTimeout(() => {
-          setLoading(false);
-        }, 1000); // 3 seconds
-        return () => clearTimeout(timer);
-      }, []);
-    
-    
-      // Loading screen
-      if (loading) {
-        return (
-          <div className="flex items-center justify-center w-full h-screen bg-white">
-            <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
-          </div>
-        );
-      }
+  const [loading, setLoading] = useState(true);
+
+  // Simulate a loading delay of 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Loading screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen bg-white">
+        <img
+          src={logo}
+          alt="Loading..."
+          className="w-[200px] h-auto animate-bounce"
+        />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -131,145 +143,146 @@ function Vacancie() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center min-h-screen bg-white">
-        <div className="w-full max-w-4xl p-8 mb-5 border border-gray-500 rounded-md shadow-md">
-          <h1 className="w-full mb-2 text-[#333333] text-[38.81px] font-medium text-center mt-4 ">
+      <div className="flex items-center justify-center min-h-screen ">
+        <div className="w-full max-w-4xl p-10 border border-gray-200 rounded-lg shadow-lg bg-white">
+          <h1 className="text-3xl font-semibold text-gray-800 text-center mb-4">
             Position Not Available?
           </h1>
-          <p className="mb-6 font-normal text-center text-gray-500 border-b-2 border-gray-400">
-            Just Apply And we’ll Get back To You!
+          <p className="text-center text-gray-600 mb-8 border-b pb-4">
+            Submit your application, and we’ll get back to you!
           </p>
-          <form className="space-y-4">
+          <form className="space-y-6">
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="name"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Name
+                Full Name
               </label>
               <input
                 type="text"
                 id="name"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="Name"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Enter your full name"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Email
+                Email Address
               </label>
               <input
                 type="email"
                 id="email"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="Email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Enter your email"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="contactNumber"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Contact Number
               </label>
               <input
                 type="tel"
                 id="contactNumber"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="Contact Number"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Enter your contact number"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="nicNumber"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
                 NIC Number
               </label>
               <input
                 type="text"
                 id="nicNumber"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="NIC Number"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Enter your NIC number"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="linkedinProfile"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
                 LinkedIn Profile
               </label>
               <input
                 type="url"
                 id="linkedinProfile"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="LinkedIn Profile"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Provide your LinkedIn profile link"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="image"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Image
+                Upload Image
               </label>
               <input
                 type="file"
                 id="image"
-                className="block w-full p-4 py-4 mt-1 text-gray-500 border border-gray-300 text-[14px] rounded-md"
+                className="w-full px-4 py-3 text-sm text-gray-500 border border-gray-300 rounded-lg shadow-sm focus:outline-none"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="position"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Position
+                Position Applied For
               </label>
               <input
                 type="text"
                 id="position"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="Position looking for"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Enter desired position"
               />
             </div>
 
             <div>
               <label
-                className="block pl-2 text-sm font-medium text-gray-700"
                 htmlFor="message"
+                className="block text-sm font-medium text-gray-700 mb-1"
               >
-                Message
+                Additional Information
               </label>
               <textarea
                 id="message"
-                rows="3"
-                className="block w-full p-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500 text-[14px]"
-                placeholder="Your Message"
+                rows="4"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 text-sm"
+                placeholder="Share any additional details or message"
               ></textarea>
             </div>
 
-            <div className="text-end">
+            <div className="flex justify-end">
               <button
                 type="submit"
-                className="px-6 mb-10  py-2 w-[150px] xl:w-[222px] font-medium text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full shadow-md  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                className="px-6 py-3 text-sm font-semibold text-white bg-purple-600 rounded-full hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 shadow-lg"
               >
-                Submit
+                Submit Application
               </button>
             </div>
           </form>
         </div>
       </div>
+
       <Footer />
     </>
   );

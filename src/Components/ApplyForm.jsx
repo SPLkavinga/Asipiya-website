@@ -16,6 +16,7 @@ function ApplyForm() {
     const [successMessage, setSuccessMessage] = useState(""); // State for success message
     const [showModal, setShowModal] = useState(false); // State to control modal visibility
 
+    // Handle input and file changes
     const handleChange = (e) => {
         const { id, value, files } = e.target;
         setFormData({
@@ -24,9 +25,11 @@ function ApplyForm() {
         });
     };
 
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Prepare the form data for submission
         const formPayload = new FormData();
         Object.keys(formData).forEach((key) => {
             formPayload.append(key, formData[key]);
@@ -39,7 +42,7 @@ function ApplyForm() {
             });
 
             if (response.ok) {
-                setSuccessMessage("Application submitted successfully!"); // Set success message
+                setSuccessMessage("Application submitted successfully!");
             } else {
                 setSuccessMessage("Failed to submit the application.");
             }
@@ -59,20 +62,26 @@ function ApplyForm() {
 
     return (
         <>
-            <div className="flex items-center justify-center min-h-screen mt-8">
-                <div className="w-full max-w-4xl p-8 mb-5 border border-gray-500 rounded-md shadow-md">
-                    <h1 className="w-full mb-2 text-2xl font-semibold text-center">Apply for this job</h1>
-                    <div className="h-1 max-w-screen-xl mt-2 mb-5 bg-gray-600"></div>
+            <div className="flex items-center justify-center min-h-screen mt-10">
+                <div className="w-full max-w-4xl p-8 bg-white border border-gray-200 rounded-lg shadow-lg">
+                    <h1 className="text-2xl font-semibold text-center text-gray-800 mb-4">
+                        Apply for this Job
+                    </h1>
+                    <div className="h-1 w-full bg-gray-300 mb-6"></div>
 
-                    <form className="space-y-4" onSubmit={handleSubmit}>
-                        {Object.keys(formData).map((key) => (
+                    {/* Form Section */}
+                    <form className="space-y-6" onSubmit={handleSubmit}>
+                        {Object.keys(formData).map((key) =>
                             key !== "image" ? (
                                 <div key={key}>
                                     <label
-                                        className="block text-sm font-medium text-gray-700"
                                         htmlFor={key}
+                                        className="block text-sm font-medium text-gray-700 mb-1"
                                     >
-                                        {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, " $1")}
+                                        {key
+                                            .charAt(0)
+                                            .toUpperCase() +
+                                            key.slice(1).replace(/([A-Z])/g, " $1")}
                                     </label>
                                     {key === "message" ? (
                                         <textarea
@@ -80,7 +89,7 @@ function ApplyForm() {
                                             rows="3"
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="block w-full  py-2 mt-1 text-[14px] p-4 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 text-sm"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     ) : (
@@ -89,7 +98,7 @@ function ApplyForm() {
                                             id={key}
                                             value={formData[key]}
                                             onChange={handleChange}
-                                            className="block w-full text-[14px] py-2 mt-1 p-4 border border-gray-300 rounded-md shadow-sm focus:border-purple-500 focus:ring-purple-500"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-purple-500 focus:border-purple-500 text-sm"
                                             placeholder={`Enter your ${key}`}
                                         />
                                     )}
@@ -97,42 +106,43 @@ function ApplyForm() {
                             ) : (
                                 <div key={key}>
                                     <label
-                                        className="block text-sm font-medium text-gray-700"
                                         htmlFor={key}
+                                        className="block text-sm font-medium text-gray-700 mb-1"
                                     >
-                                        Image
+                                        Upload Image
                                     </label>
                                     <input
                                         type="file"
                                         id={key}
                                         onChange={handleChange}
-                                        className="block w-full py-4 mt-1 p-4 text-[14px] text-gray-500 border border-gray-300"
+                                        className="w-full px-4 py-3 text-sm text-gray-500 border border-gray-300 rounded-lg shadow-sm focus:outline-none"
                                     />
                                 </div>
                             )
-                        ))}
+                        )}
 
-                        <div className="text-end">
+                        {/* Submit Button */}
+                        <div className="flex justify-end">
                             <button
                                 type="submit"
-                                className="px-6 py-2 font-medium text-white bg-[#7D00C5]  hover:bg-[#5C0091] rounded-full shadow-md  focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                                className="px-6 py-3 text-sm font-semibold text-white bg-purple-600 rounded-full hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
                             >
                                 Submit
                             </button>
                         </div>
                     </form>
 
-                    {/* Success Modal Popup */}
+                    {/* Success Modal */}
                     {showModal && (
                         <div className="fixed inset-0 z-50 flex items-center justify-center bg-gray-800 bg-opacity-50">
-                            <div className="p-6 text-center bg-white rounded-md shadow-lg w-80">
+                            <div className="w-80 p-6 text-center bg-white rounded-lg shadow-lg">
                                 <div className="flex items-center justify-center mb-3 space-x-2">
                                     <FaCheckCircle className="text-3xl text-green-500" />
                                     <p className="font-semibold text-green-600">{successMessage}</p>
                                 </div>
                                 <button
                                     onClick={() => setShowModal(false)}
-                                    className="px-4 py-2 mt-4 text-white bg-purple-600 rounded-md hover:bg-purple-700"
+                                    className="px-4 py-2 mt-4 text-sm text-white bg-purple-600 rounded-lg hover:bg-purple-700 focus:outline-none"
                                 >
                                     Close
                                 </button>
