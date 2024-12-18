@@ -16,6 +16,16 @@ import LogoRow from "../Components/LogoRow";
 import ClientCarousel from "../Components/ClientCarousel";
 import Cooperate from "../Components/Cooperate";
 
+// Import images for services
+import erpImage from "../assets/SystemIcons/Icon5.png";
+import pawningImage from "../assets/SystemIcons/Icon2.png";
+import microfinanceImage from "../assets/SystemIcons/Icon1.png";
+import goldLoanImage from "../assets/SystemIcons/Icon4.png";
+import leasingImage from "../assets/SystemIcons/Icon3.png";
+import realEstateImage from "../assets/SystemIcons/Icon7.png";
+import socialMediaImage from "../assets/SystemIcons/Icon8.png";
+import printingImage from "../assets/SystemIcons/Icon9.png";
+
 function Home() {
   const textVariants = {
     hidden: { opacity: 0, y: 50 }, // Start off-screen (down)
@@ -26,35 +36,35 @@ function Home() {
       title: "Microfinance System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
-      icon: "🚀", // Replace this with an actual image if necessary
+      image: microfinanceImage,
       path: "/microfinance",
     },
     {
       title: "Pawning System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
-      icon: "🖥️", // Replace this with an actual image if necessary
+      image: pawningImage,
       path: "/Prawing",
     },
     {
       title: "Leasing System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
-      icon: "📱", // Replace this with an actual image if necessary
+      image: leasingImage,
       path: "/Leasing",
     },
     {
       title: "ERP Solutions",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
-      icon: "📊", // Replace this with an actual image if necessary
+      image: erpImage,
       path: "/ERP",
     },
     {
       title: "Invoice System",
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
-      icon: "📄", // Replace this with an actual image if necessary
+      image: goldLoanImage,
       path: "/ERP",
     },
   ];
@@ -255,8 +265,10 @@ function Home() {
                 to={feature.path} // Navigate to the feature path on click
                 className="flex items-center p-6 transition rounded-lg hover:bg-purple-50 hover:shadow-sm"
               >
-                {/* Icon on the left */}
-                <div className="mr-4 text-5xl">{feature.icon}</div>
+                {/* Image on the left */}
+                <div className="mr-4 ">
+                  <img src={feature.image} alt={feature.title} className="w-full h-[150px] object-contain" />
+                </div>
 
                 {/* Title and Description on the right */}
                 <div>
