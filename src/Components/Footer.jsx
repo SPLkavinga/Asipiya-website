@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/AsipiyawhiteLogo.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { MdCallToAction, MdOutlineAttachEmail } from "react-icons/md";
 import { IoCallOutline } from "react-icons/io5";
@@ -10,16 +10,16 @@ const Footer = () => {
     <footer className="py-3 text-white bg-purple-900 mt-[120px]">
       <div className="container mx-auto text-center md:text-left ">
         {/* Top Section - Logo, Tagline, Email, and Phone in one line */}
-        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-2 mb-2  md:flex-row md:gap-[150px]">
+        <div className="flex flex-col items-center gap-2 px-[20px] xl:px-24 pb-4 mb-4  md:flex-row md:gap-[150px]">
           {/* Logo */}
           <img
-            className="w-[160px] h-[60px] mb-2 md:mb-0"
+            className="w-[150px] h-[140px] "
             src={logo}
             alt="Asipiya Logo"
           />
 
           {/* Tagline */}
-          <p className="mb-2 text-sm md:text-[13.33px] font-medium md:ml-2 md:mb-0">
+          <p className="mb-2 text-sm md:text-[16px] text-center font-medium md:ml-2 md:mb-4">
             Your trusted partner for cutting-edge software solutions.
             Streamlining business operations at Asipiya
           </p>
@@ -34,7 +34,7 @@ const Footer = () => {
                 </a>
               </p>
               <p className="flex items-center">
-                <IoCallOutline className="mr-1" />
+                <IoCallOutline className="mr-2 text-lg" />
                 <a href="tel:+94778820000" className="underline">
                   +94 77 882 0000
                 </a>
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-[8px] text-center md:text-[13.33px] font-medium">
+        <div className="mt-[32px] text-center md:text-[13.33px] font-medium">
           <p className="pt-4 border-t border-white">
             &copy; All rights reserved © 2023
           </p>
