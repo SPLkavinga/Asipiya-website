@@ -34,7 +34,7 @@ function Home() {
       description:
         "Digital marketing is the marketing of products or services using digital technologies, mainly on the Internet.",
       icon: "🖥️", // Replace this with an actual image if necessary
-      path: "/Prawing", 
+      path: "/Prawing",
     },
     {
       title: "Leasing System",
@@ -59,8 +59,6 @@ function Home() {
     },
   ];
 
-  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
-
   const reviews = [
     {
       name: "Samantha Payne",
@@ -84,6 +82,17 @@ function Home() {
       date: "5 Mar 2023",
     },
   ];
+
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    }, 5000); // Switch review every 5 seconds (5000ms)
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, [reviews.length]);
 
   const handleDotClick = (index) => {
     setCurrentReviewIndex(index);
@@ -234,31 +243,31 @@ function Home() {
         <div className="px-[20px] mx-auto xl:mx-[120px]  max-w-7xl sm:px-6 lg:px-8 ">
           {/* Features Grid */}
           <motion.div
-  className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
-  initial={{ opacity: 0, x: 100 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  viewport={{ once: true, amount: 0.2 }}
-  transition={{ duration: 0.7, ease: "easeOut" }}
->
-  {features.map((feature, index) => (
-    <Link
-      key={index}
-      to={feature.path} // Navigate to the feature path on click
-      className="flex items-center p-6 transition rounded-lg hover:bg-purple-50 hover:shadow-sm"
-    >
-      {/* Icon on the left */}
-      <div className="mr-4 text-5xl">{feature.icon}</div>
+            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            {features.map((feature, index) => (
+              <Link
+                key={index}
+                to={feature.path} // Navigate to the feature path on click
+                className="flex items-center p-6 transition rounded-lg hover:bg-purple-50 hover:shadow-sm"
+              >
+                {/* Icon on the left */}
+                <div className="mr-4 text-5xl">{feature.icon}</div>
 
-      {/* Title and Description on the right */}
-      <div>
-        <h3 className="mb-2 text-[23.04px] font-semibold text-gray-800">
-          {feature.title}
-        </h3>
-        <p className="text-sm text-gray-600">{feature.description}</p>
-      </div>
-    </Link>
-  ))}
-</motion.div>
+                {/* Title and Description on the right */}
+                <div>
+                  <h3 className="mb-2 text-[23.04px] font-semibold text-gray-800">
+                    {feature.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">{feature.description}</p>
+                </div>
+              </Link>
+            ))}
+          </motion.div>
 
           {/* Button */}
           <div className="mt-12 text-center">
