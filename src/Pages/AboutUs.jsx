@@ -28,6 +28,7 @@ import Leadership from "./../Components/Leadership";
 import Cooperate from "../Components/Cooperate";
 import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
+import AnimatedSection from "../Components/AnimatedSection";
 
 function AboutUs() {
   const [loading, setLoading] = useState(true);
@@ -155,6 +156,7 @@ function AboutUs() {
       {/* Mission Vision Section */}
 
       <section className="container py-10 mt-5 md:mt-20 ">
+      <AnimatedSection>
         <div className="flex flex-col items-center justify-center gap-6 xl:flex-row md:gap-8 mx-[20px] xl:mx-[120px]">
           {/* Vision */}
           <div className="w-[350px] text-center">
@@ -209,6 +211,7 @@ function AboutUs() {
             </p>
           </div>
         </div>
+       </AnimatedSection>
       </section>
 
       {/* Why ChooseUs Section */}
@@ -219,6 +222,7 @@ function AboutUs() {
       <div className="w-full bg-white mt-[120px]">
         <div className="w-full ">
           {/* Design Section */}
+          <AnimatedSection>
           <div className="flex items-center justify-center  px-6 py-4 w-full h-full Xl:w-full xl:h-[163px] space-x-6 bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4]">
             <div className="flex-shrink-0 ">
               <img
@@ -236,8 +240,10 @@ function AboutUs() {
               </p>
             </div>
           </div>
+          </AnimatedSection>
 
           {/* Development Section */}
+          <AnimatedSection>
           <div className="flex items-center justify-center py-4 w-full h-full Xl:w-full xl:h-[163px] space-x-6 bg-white">
             <div className="flex-shrink-0">
               <img
@@ -257,8 +263,10 @@ function AboutUs() {
               </p>
             </div>
           </div>
+          </AnimatedSection>
 
           {/* Testing & QA Section */}
+          <AnimatedSection>
           <div className="flex items-center justify-center w-full h-full Xl:w-full xl:h-[163px] px-6 py-4 space-x-6 bg-gradient-to-r from-[#CFB1D4] via-[#FAEBFF] to-[#CFB1D4]">
             <div className="flex-shrink-0">
               <img
@@ -278,6 +286,7 @@ function AboutUs() {
               </p>
             </div>
           </div>
+          </AnimatedSection>
         </div>
       </div>
 

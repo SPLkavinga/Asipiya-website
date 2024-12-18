@@ -18,14 +18,14 @@ const services = [
   },
   {
     id: "pos",
-    title: "Prawing Systems",
+    title: "Pawning Systems",
     icon: "💳",
     link: "/Prawing",
     description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
   },
   {
     id: "micro-finance",
-    title: "Micro Finance",
+    title: "Microfinance",
     icon: "🚀",
     link: "/Microfinance",
     description: "Unleash the full potential of your online presence with our expert web development services. Whether you need a responsive website, an e-commerce platform, or a custom web application, our skilled team is dedicated to bringing your vision to life.",
