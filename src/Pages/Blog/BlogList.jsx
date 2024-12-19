@@ -19,26 +19,28 @@ const BlogList = () => {
     visible: { opacity: 1, y: 0 }, // Move to its final position (up)
   };
 
-   const [loading, setLoading] = useState(true);
-      
-        // Simulate a loading delay of 3 seconds
-        useEffect(() => {
-          const timer = setTimeout(() => {
-            setLoading(false);
-          }, 1000); // 3 seconds
-          return () => clearTimeout(timer);
-        }, []);
-      
-      
-        // Loading screen
-        if (loading) {
-          return (
-            <div className="flex items-center justify-center w-full h-screen bg-white">
-              <img src={logo} alt="Loading..." className="w-[200px] h-auto animate-bounce" />
-            </div>
-          );
-        }
-  
+  const [loading, setLoading] = useState(true);
+
+  // Simulate a loading delay of 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // 3 seconds
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Loading screen
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center w-full h-screen bg-white">
+        <img
+          src={logo}
+          alt="Loading..."
+          className="w-[200px] h-auto animate-bounce"
+        />
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -85,40 +87,45 @@ const BlogList = () => {
           </motion.p>
         </div>
       </div>
-      
-      <div className="mx-[20px] xl:mx-[120px] mt-16 ">
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8 w-full xl:w-[1000px] h-full">
-    {blogs.map((blog) => (
-      <Link
-        to={`/blog/${blog.slug}`}
-        key={blog.id}
-        className="flex flex-col h-full transition border rounded-lg hover:shadow-lg"
-      >
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className="object-cover w-full h-48 mb-4 rounded-md"
-        />
-        <h2 className="flex-grow p-4 text-xl font-semibold">{blog.title}</h2> {/* The title will expand with flex-grow */}
-        
-        <div className="flex items-center p-4 mt-auto mb-4"> {/* mt-auto ensures it stays at the bottom */}
-          <img
-            src={blog.profileimage}
-            className="w-[30px] h-[30px] object-cover rounded-full"
-          />
-          <div className="ml-4">
-            <h2 className="text-[14px] font-medium">{blog.contentwriter}</h2>
-            <h2 className="text-[13px] text-gray-500">{blog.date}</h2>
-          </div>
-        </div>
-      </Link>
-    ))}
-  </div>
-</div>
 
-      <Footer/>
+      <div className="mx-[20px] xl:mx-[120px] xxl:mx-[250px] mt-16 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-8 w-full xl:w-[1000px] h-full">
+          {blogs.map((blog) => (
+            <Link
+              to={`/blog/${blog.slug}`}
+              key={blog.id}
+              className="flex flex-col h-full transition border rounded-lg hover:shadow-lg"
+            >
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="object-cover w-full h-48 mb-4 rounded-md"
+              />
+              <h2 className="flex-grow p-4 text-xl font-semibold">
+                {blog.title}
+              </h2>{" "}
+              {/* The title will expand with flex-grow */}
+              <div className="flex items-center p-4 mt-auto mb-4">
+                {" "}
+                {/* mt-auto ensures it stays at the bottom */}
+                <img
+                  src={blog.profileimage}
+                  className="w-[30px] h-[30px] object-cover rounded-full"
+                />
+                <div className="ml-4">
+                  <h2 className="text-[14px] font-medium">
+                    {blog.contentwriter}
+                  </h2>
+                  <h2 className="text-[13px] text-gray-500">{blog.date}</h2>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <Footer />
     </div>
-    
   );
 };
 

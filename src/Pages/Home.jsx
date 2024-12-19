@@ -381,10 +381,10 @@ function Home() {
 
           {/* Right: Title and Description */}
           <div className="w-full text-center md:w-full lg:w-[575px] xl:text-left">
-            <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-medium">
+            <h2 className="text-[30px] md:text-[39.81px] font-medium">
               <span className="text-[#7D00C5]">Client’s</span> Reviews
             </h2>
-            <p className="mt-2 text-sm sm:text-base md:text-lg text-[#525252]">
+            <p className="mt-2 text-[15px] md:text-[16px] text-[#525252]">
               Our clients trust us for delivering reliable, innovative
               microfinance solutions that drive growth and success across
               industries worldwide.
@@ -422,7 +422,7 @@ function Home() {
             <h2 className="text-xl sm:text-2xl md:text-[39.81px] font-bold ">
               <span className="text-[#7D00C5]">Countries </span>We Serve
             </h2>
-            <p className="mt-4 text-sm sm:text-base md:text-lg  xl:mx-[0px] mx-[20px] text-[#525252] w-[600px]">
+            <p className="mt-4 text-[15px] md:text-[16px]  xl:mx-[0px] mx-[20px] text-[#525252] xxl:w-[600px]">
               We offer innovative microfinance solutions in Dubai, the United
               States, Canada, Singapore, Sri Lanka, and Australia, empowering
               businesses and communities with reliable financial support.
