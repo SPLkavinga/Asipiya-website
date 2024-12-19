@@ -122,7 +122,9 @@ function AboutUs() {
       </div>
 
       {/* Count Row Section (White) */}
-      <section className="container px-6 py-10 mx-auto text-black mt-28 bg-gradient-to-r from-purple-400 via-purple-100 to-purple-400 ">
+
+      <section className="container px-6 py-10 mx-auto text-black mt-28 bg-gradient-to-r from-purple-400 via-purple-100 to-purple-400 xl:px-20 xl:w-full">
+
         <Slide direction="up" triggerOnce>
           <div className="grid grid-cols-1 gap-6 text-center xl:grid-cols-4 xl:gap-8 xl:px-40">
             <div className="p-2">

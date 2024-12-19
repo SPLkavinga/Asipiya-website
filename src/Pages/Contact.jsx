@@ -223,7 +223,7 @@ function Contact() {
       </div>
       <br />
       <br />
-      <div className="container px-[40px] xl:px-[120px] xl:mt-[0px] mt-[500px] ">
+      <div className="container px-[40px] xl:px-[120px] xxl:px-[180px] xl:mt-[0px] mt-[500px] ">
         <motion.div
           className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 md:mt-0"
           initial={{ x: 100 }} // Start position off-screen to the right

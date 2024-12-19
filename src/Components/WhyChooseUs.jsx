@@ -84,7 +84,7 @@ function WhyChooseUs() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-between max-w-7xl p-4 mx-[20px] xl:mx-[120px] mb-10 space-y-8 md:space-y-12 ">
+    <div className="flex flex-col items-center justify-between max-w-7xl p-4 mx-[20px] xl:mx-[120px] xxl:mx-auto mb-10 space-y-8 md:space-y-12 ">
       {/* Content Section */}
       <div className="flex flex-col items-center justify-center w-full space-y-8 md:flex-row md:space-y-0 md:space-x-8">
         {/* Image Section with animation */}
