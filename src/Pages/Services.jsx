@@ -189,7 +189,7 @@ function Services() {
                 to={service.link}
                 className="block w-[300px] h-full xl:w-[350px] xl:h-[387px] p-6 bg-white rounded-lg shadow-md transition-transform transform hover:scale-105"
               >
-                <div className="mb-4 mt-8 text-center ">
+                <div className="mt-8 mb-4 text-center ">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -214,4 +214,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default Services;

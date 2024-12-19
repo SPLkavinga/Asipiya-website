@@ -252,7 +252,7 @@ function Home() {
         <div className="px-[20px] mx-auto max-w-7xl sm:px-6 lg:px-8">
           {/* Features Grid */}
           <motion.div
-            className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center"
+            className="grid justify-center grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -441,4 +441,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Home;

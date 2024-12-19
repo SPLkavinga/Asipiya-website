@@ -143,10 +143,149 @@ function Vacancie() {
         </div>
       </div>
 
-      <ApplyForm/>
+      <div className="flex items-center justify-center min-h-screen ">
+        <div className="w-full max-w-4xl p-10 bg-white border border-gray-200 rounded-lg shadow-lg">
+          <h1 className="mb-4 text-3xl font-semibold text-center text-gray-800">
+            Position Not Available?
+          </h1>
+          <p className="pb-4 mb-8 text-center text-gray-600 border-b">
+            Submit your application, and we’ll get back to you!
+          </p>
+          <form className="space-y-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter your full name"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter your email"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="contactNumber"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Contact Number
+              </label>
+              <input
+                type="tel"
+                id="contactNumber"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter your contact number"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="nicNumber"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                NIC Number
+              </label>
+              <input
+                type="text"
+                id="nicNumber"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter your NIC number"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="linkedinProfile"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                LinkedIn Profile
+              </label>
+              <input
+                type="url"
+                id="linkedinProfile"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Provide your LinkedIn profile link"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="image"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Upload Image
+              </label>
+              <input
+                type="file"
+                id="image"
+                className="w-full px-4 py-3 text-sm text-gray-500 border border-gray-300 rounded-lg shadow-sm focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="position"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Position Applied For
+              </label>
+              <input
+                type="text"
+                id="position"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Enter desired position"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block mb-1 text-sm font-medium text-gray-700"
+              >
+                Additional Information
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                className="w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500"
+                placeholder="Share any additional details or message"
+              ></textarea>
+            </div>
+
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="px-6 py-3 text-sm font-semibold text-white bg-purple-600 rounded-full shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              >
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <Footer />
     </>
   );
 }
 
-export default Vacancie;
+export default Vacancie;
